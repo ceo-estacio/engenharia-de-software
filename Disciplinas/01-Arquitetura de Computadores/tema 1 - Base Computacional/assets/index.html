@@ -1,0 +1,173 @@
+
+
+<style>
+   body {
+      color: #555;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+   main { margin: 0 auto; width: clamp( 100px, 100%, 1200px ); }
+   video { display: block; width: 80%; margin: 0 auto; }
+   page-header {
+      display: block;
+      background: #f5f5f5;
+      padding: 2vw;
+   }
+   destaq {
+      display: block;
+      margin: 0 auto;
+      padding: 1.5vw;
+      border-left: firebrick 5px solid;
+   }
+   card {
+      display: grid;
+      gap: 5vw;
+      padding: 2vw;
+   }
+   [grid] { display: grid; }
+   [flex] { display: flex; }
+   [grid="1/2"] { grid-template-columns: .5fr .5fr; }
+   [grid="1/2"] > * { width: 100%; }
+
+   [t="1"] { font-size: 3em; }
+   [t="2"] { font-size: 2.5em; }
+   [t="3"] { font-size: 2em; }
+
+   ul>li::marker { content: "⦿ "; color: deeppink; }
+</style>
+<header bg="#f5f5f5" pd="2vw">
+   <h1>Desenvolvimento do computador em quatro gerações</h1>
+   <p>Este módulo apresentará os principais marcos na invenção e evolução dos computadores para que você entenda como e por que os sistemas computacionais foram criados, além de conhecer as suas etapas.</p>
+</header>
+
+<body>
+   <main>
+      <card>
+         <h2 c="darkblue">Máquina de Turing</h2>
+         <p>Antes de entender o desenvolvimento do primeiro computador, assista a este vídeo sobre a máquina de Turing: um precursor matemático do computador.</p>
+         <video src="./Máquina de Turing.mp4" controls>
+         </video>
+         <p>Vamos ver agora como ocorreu o desenvolvimento do computador, conhecendo suas quatro gerações.</p>
+      </card>
+      <card>
+         <h2>Gerações dos computadores</h2>
+         <video src="./Gerações dos Computadores.mp4" controls width="350"></video>
+
+         <h2>Primeira geração: vávulas termiônicas</h2>
+         <p>Ainda durante a Segunda Guerra Mundial, nos Estados Unidos, foi desenvolvido o primeiro computador eletrônico da história. Trata-se do ENIAC, um computador integrador numérico eletrônico, cujos números impressionam.
+            Veja a seguir uma foto deste modelo:
+         </p>
+         <div grid="1/2">
+            <img src="./img-01.jpg" alt="">
+            <ul>
+               <li>
+                  <p>
+                     <strong>Componentes: </strong>
+                     <t>170.000 válvulas termiônicas.</t>
+                  </p>
+               </li>
+               <li>
+                  <p>
+                     <strong>Peso:</strong>
+                     <t>Cerca de 30 toneladas.</t>
+                  </p>
+               </li>
+               <li>
+                  <p>
+                     <strong>Espaço utilizado:</strong>
+                     <t>Sala de 150m².</t>
+                  </p>
+               </li>
+               <li>
+                  <p>
+                     <strong>Capacidade de processamento (número de cálculos por segundo): </strong>
+                     <t>1 bilhão de vezes menor que a dos celulares usados hoje em dia.</t>
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <p>Para evoluirmos desse verdadeiro elefante até os computadores atuais, foi preciso substituir as válvulas, já que elas eram pesadas e espaçosas.</p>
+
+         <destaq>
+            <h3 c="green">É possível que você esteja se perguntando: o que tornou isso viável?</h3>
+         </destaq>
+         
+         <p>Quem possibilitou isso foi o transistor, cuja criação iniciou a era da microeletrônica.</p>
+   
+         <h2>Segunda geração: transistores</h2>
+         <card grid="1/2">
+            <p>
+               <t>Os primeiros transistores ocupavam apenas alguns milímetros, precisando de bem menos energia que as válvulas. Assim, foi possível reduzir o tamanho de rádios, equipamentos eletrônicos em geral e computadores.</t>
+               <br><br>
+               <t>Na imagem, um transistor.</t>
+            </p>
+            <img src="./img-02.jpg" alt="">
+         </card>
+      </card>
+
+      <h2>Terceira geração: circuitos integrados</h2>
+      <card grid="1/2">
+         <p>
+            <t>Na década de 1960, o próximo salto de evolução foi dado com a criação dos circuitos integrados (CI): pastilhas de silício que contêm um circuito eletrônico miniaturizado. É o que, de forma comum, chamamos de chip de computador.
+               <br><br>
+               Na imagem, um circuito integrado.
+            </t>
+         </p>
+         <img src="./img-03.jpg" alt="">
+
+      </card>
+      <p>Com o uso de transistores e CI, os computadores ficaram menores e cada vez mais baratos.</p>
+
+      <destaq>Em meados da década de 1970, houve a eclosão dos computadores pessoais (denominados PCs, sigla em inglês para Personal Computers).</destaq>
+
+      <p>Duas famosas empresas do setor, aliás, surgiram nesse período:</p>
+
+      <card grid="1/2">
+         <div>
+            <img src="./img-04.jpg" alt="">
+            <h3>Microsoft Corporation</h3>
+            <p>
+               Empresa de maior faturamento em programas de computador, conhecida pelo sistema operacional Windows e pelo conjunto de ferramentas chamado de Office. Fundada em 1975, nos Estados Unidos, por Bill Gates (um dos homens mais ricos do mundo) e Paul Allen.
+            </p>
+         </div>
+         <div>
+            <img src="./img-05.jpg" alt="">
+            <h3>Apple Inc.</h3>
+            <p>
+               Em 1976, vendeu 200 unidades do seu primeiro PC, o Apple I. No ano seguinte, contudo, o Apple II vendeu milhares de unidades. A organização, então, abriu seu capital na bolsa de Nova York.
+            </p>
+         </div>
+      </card>
+      <card>
+         <h2>Quarta geração: microprocessadores</h2>
+
+         <p>A década de 1980 presenciou a proliferação de PCs cada vez mais potentes, baratos e conectados por meio do surgimento das redes locais de computadores e da internet: a rede mundial.</p>
+         <p>Além disso, um novo equipamento aparecia nos lares: o videogame, um tipo de computador especializado, cujos programas são jogos eletrônicos com ênfase nos gráficos e na interação com os usuários.</p>
+         <img src="./img-06.jpg" alt="">
+
+         <p>Após o fim do século XX, os computadores já eram tão pequenos e potentes que se encontravam embarcados em diversos equipamentos cotidianos, como automóveis, aviões e videogames, além de se tornar mais comum a presença dos laptops (microcomputadores pessoais portáteis) nas casas das pessoas.</p>
+         <p>Não tardou muito para que eles fossem integrados a televisões e celulares. Nos anos 2010, essa integração passou a ser feita por intermédio de smartphones e smart TVs.</p>
+      </card>
+   </main>
+
+   <script>
+      const 
+         $ = v => document.querySelector( v ),
+         $$ = v => document.querySelectorAll( v ),
+         _ = ( ...args ) => console.log( ...args );
+      ;
+      window.addEventListener( "load", () => {
+         let 
+            C = $$( "[c]" ),
+            BG = $$( "[bg]" ),
+            Pd = $$( "[pd]" )
+         ;
+
+
+
+         C.forEach( c => c.style.color = c.getAttribute( "c" ) );
+         BG.forEach( bg => bg.style.backgroundColor = bg.getAttribute( "bg" ) );
+         Pd.forEach( pd => pd.style.padding = pd.getAttribute( "pd" ) );
+
+      } );
+   </script>
+</body>
