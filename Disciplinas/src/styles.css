@@ -74,7 +74,7 @@ destaq {
 grid { display: grid; }
 flex { display: flex; }
 card {
-   display: grid;
+   display: block;
    gap: 5vw;
    padding: 2vw;
 }
@@ -104,6 +104,7 @@ t4 { font-size: 1.8rem; }
 t5 { font-size: 1.5rem; }
 t6 { font-size: 1.25rem; }
 t7 { font-size: 1.1rem; }
+tc { color: gray; font-style: italic; text-shadow: #149cbe 2px 2px 5px; }
 p { word-wrap: break-word; }
 li { margin: 0.8ch 0; font-size: inherit; }
 li > :nth-child( 1n ) {

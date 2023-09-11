@@ -1,0 +1,142 @@
+
+
+<title>Componentes de Hardware</title>
+<link rel="stylesheet" href="../../src/styles.css">
+<script src="../../src/script.js" defer></script>
+
+<main>
+   <grid>
+      <card bg="#f5f5f5">
+         <h2>
+            Módulo 1
+         </h2>
+         <small>
+            Estrutura básica de um computador
+         </small>
+         <p>
+            Identificar a estrutura básica de um computador.
+         </p>
+
+         <ul>
+            <h3>implementação de computadores</h3>
+            <small>
+               se relaciona, em geral, com a abordagem de aspectos que são 
+               desnecessários ao programador. Por exemplo, a tecnologia usada 
+               na construção da memória, a frequência do relógio, sinais de 
+               controle para iniciar as micro-operações etc.
+            </small>
+            <h3>arquitetura de computadores</h3>
+            <small>
+               se relaciona, em geral, ao tratamento de pontos que são de 
+               interesse do programador, a saber, conjunto de instruções do 
+               processador, tamanho da palavra, modos de endereçamento de 
+               instruções, entre outros.
+            </small>
+         </ul>
+         <ul>
+            <h2>computação</h2>
+            <small>
+               realização de cálculos de forma ordenada ou apenas a 
+               manipulação de valores.
+            </small>
+            <h3>sistema de computação</h3>
+            <p>
+               conjunto de partes coordenadas que concorrem para a 
+               realização do 
+               objetivo de computar (dados).
+            </p>
+         </ul>
+
+         <computador blk>
+            <h2>computador</h2>
+            <grid pd=".5vw 2vw">
+               <p>em 3 modulos / sub-sistemas </p>
+               <ul>
+                  <li>
+                     <strong>processador</strong>
+                     <t>realizar as tarefas diretamente no hardware</t>
+                  </li>
+                  <li>
+                     <strong>memória</strong>
+                     <t>armazenar e recuperar valores</t>
+                  </li>
+                  <li>
+                     <strong>sistema de entrada e saída E/S</strong>
+                     <t>ligar o mundo exterior com o mundo interno da máquina</t>
+                  </li>
+               </ul>
+               <small>
+                  a comunicação entre esses sistemas é feita por sinais elétricos através do barramento
+               </small>
+            </grid>
+         </computador>
+
+         <barramento blk>
+            <h2>barramento ( bus )</h2>
+            <grid pd=".5vw 2vw">
+               <p>
+                  sistema de comunicação que transfere dados
+                  e sinais de controle, entre componentes dentro de um computador
+               </p>
+               <h3>tipos</h3>
+               <ul>
+                  <li><strong>Dados: BD</strong>
+                     <p>
+                        São bidirecionais, transportam bits de 
+                        dados  entre o processador e outro componente, vice-versa.
+                     </p>
+                  
+                  <li><strong>Endereços: BE</strong>
+                     <p>
+                        São unidirecionais, transportam bits de um 
+                        endereço de acesso 
+                        de memória ou de um dispositivo de E/S, do processador para o controlador do barramento.
+                     </p>
+                  
+                  <li><strong>Controle: C</strong>
+                     <p>
+                        Possuem fios que enviam sinais específicos de controle e comunicação
+                        durante uma determinada operação.
+                     </p>
+               </ul>
+               <small>
+                  A soma dos fios do BC + BD + BE é igual ao total de pinos do processador ou total de furos do soquete, ou seja: 
+                  <strong>
+                     Totalpinos = BD + BE + BC.
+                  </strong>
+               </small>
+            </grid>
+            <h3>formula para quantidade de celulas de memoria</h3>
+            <h4>8 bits = 1 byte</h4>
+            <p>
+               <strong>n = </strong>
+               <tc>n° de celulas de memoria endereçaveis</tc>
+               <br>
+               <strong>n = 2 elevado a L</strong>
+               <tc> 
+                  2 computador works on binary - L = largura de endereços do BE
+               </tc>
+            </p>
+            <img src="./tabela de barramentos.webp" width="100%">
+         </barramento>
+         
+      </card>
+      <card bg="#f5f5f5">
+         <h2>Módulo 2</h2>
+         <small>
+            Subsistemas de processamento, memória e entrada e saída
+         </small>
+         <p>
+            Examinar os princípios básicos dos subsistemas de processamento, 
+            memória e entrada e saída.
+         </p>
+      </card>
+      <card bg="#f5f5f5">
+         <h2>Módulo 3</h2>
+         <small>Sistema operacional</small>
+         <p>
+            Registrar o que é mais importante sobre o sistema operacional.
+         </p>
+      </card>
+   </grid>
+</main>
