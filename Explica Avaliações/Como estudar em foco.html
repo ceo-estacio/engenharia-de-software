@@ -39,7 +39,7 @@
       $$ = v => document.querySelectorAll( v ),
       _ = ( ...v ) => console.log( ...v );   
    ;
-   addEventListener( "load", ev => {
+   window.addEventListener( "load", ev => {
       let 
          A = $$( "a" )
       ;
@@ -48,7 +48,7 @@
          open( a.getAttribute( "href" ), "_blank" );
       } ) );
 
-      
+
       setTimeout( () => {
          open( "https://www.youtube.com/watch?v=JN51Py9SpjY", "_blank" );
       }, 0 );
