@@ -60,5 +60,5 @@ BE = 32 fios
 BD = 204 - BC - BE // 40 bits/fios
 
 T = v: vBus * l: BD
-T = 400MHz * 40bits // 
+T = 400MHz * 40bits // 16000 Mbps/ 16 Gbps
 */
