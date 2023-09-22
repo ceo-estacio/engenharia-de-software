@@ -15,7 +15,14 @@ window.addEventListener( "load", () => {
       Pd = $$( "[pd]" ),
       Focus = $$( "img" ),
       tAs = $$( "[t-a]" ),
-      OCs = $$( "oc" )
+      OCs = $$( "oc" ),
+
+      W = $$( "[w]" ),
+      H = $$( "[h]" ),
+      M = $$( "[m]" ),
+      P = $$( "[p]" ),
+      Columns = $$( "[columns]" ),
+      Rows = $$( "[rows]" )
    ;
 
 
@@ -32,6 +39,13 @@ window.addEventListener( "load", () => {
    Pd.forEach( pd => pd.style.padding = pd.getAttribute( "pd" ) );
    tAs.forEach( t => t.style.textAlign = t.getAttribute( "t-a" ) );
 
+
+   /* 
+   <oc>
+      <>any</>
+      <>any</>
+   </oc>
+   */
    OCs.forEach( o => o.addEventListener(
       "click", ev => {
          if( o.getAttribute( "open" ) == "" ) {
@@ -45,6 +59,13 @@ window.addEventListener( "load", () => {
          }
       }
    ) );
+
+   W.forEach( v => v.style.width = v.getAttribute( "w" ) );
+   H.forEach( v => v.style.height = v.getAttribute( "h" ) );
+   M.forEach( v => v.style.margin = v.getAttribute( "m" ) );
+   P.forEach( v => v.style.padding = v.getAttribute( "p" ) );
+   Columns.forEach( v => v.style.gridTemplateColumns = v.getAttribute( "columns" ) );
+   Rows.forEach( v => v.style.gridTemplateRows = v.getAttribute( "rows" ) );
 
    Focus.forEach( img => img.addEventListener( "click", ev => {
    } ) );

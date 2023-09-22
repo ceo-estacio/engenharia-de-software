@@ -55,7 +55,7 @@ html {
 }
 
 body {
-   color: #555;
+   color: #ccc;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 main { margin: 0 auto; width: clamp( 100px, 100%, 1200px ); }
@@ -104,6 +104,32 @@ box > :first-child {
    padding: .5vw;
 }
 
+[card] {
+   display: block;
+}
+[card]:where( header ) {
+   display: grid;
+   grid-template-columns: clamp( 100px, 10vw, 78px ) 1fr;
+}
+[card] > header {
+   width: 100%;
+   height: 100%;
+   padding: 1vw;
+   text-align: center;
+   box-shadow: #0005 0 5px 10px;
+}
+[card] > home {
+   display: block;
+   padding: 1vw;
+   width: 100%;
+   height: 100%;
+}
+
+b {
+   color: var(--green-dark);
+}
+
+h1 { color: lightsalmon; }
 [t="1"] { font-size: 3em; }
 [t="2"] { font-size: 2.5em; }
 [t="3"] { font-size: 2em; }
@@ -116,7 +142,7 @@ t1, t2, t3, t4, t5, t6, t7 {
    word-wrap: break-word;
    color: #27f;
 }
-t { font-size: 1rem; }
+t { font-size: 1rem; font-weight: normal; }
 t1 { font-size: 3rem; color: #e33; }
 t2 { font-size: 2.5rem; color: #f29; }
 t3 { font-size: 2.25rem; }
@@ -126,11 +152,10 @@ t6 { font-size: 1.25rem; }
 t7 { font-size: 1.1rem; }
 tc { color: gray; font-style: italic; text-shadow: #149cbe 2px 2px 5px; }
 p { word-wrap: break-word; }
-li { margin: 0.8ch 0; font-size: inherit; }
-li > :nth-child( 1n ) {
-   padding-top: 1ch;
-   padding-bottom: 1ch;
+ul, ol {
+   margin: 0.5rem;
 }
+li { margin: 0.5rem 0; font-size: inherit; padding: 0; }
 li::marker {
    /* unicode-bidi: isolate;
    font-variant-numeric: tabular-nums;
@@ -145,3 +170,41 @@ li::marker {
 }
 /* ul>li::marker { content: "⦿ "; color: deeppink; } */
 
+oc {
+   display: block;
+}
+oc > :first-child {
+   cursor: pointer;
+}
+oc > :first-child::after {
+   content: "#";
+   margin: 0 1vw;
+   font-size: 1.5vw;
+   text-shadow: #fff 0 0 10px;
+   color: #000;
+}
+oc > :last-child {
+   display: block;
+   height: 0;
+   visibility: collapse;
+   box-shadow: #ff149350 0 2px 0;
+}
+oc > :last-child[open] {
+   height: auto;
+   visibility: visible;
+}
+
+center {
+   display: grid;
+   place-items: center;
+   text-align: center;
+   width: 100%;
+   height: 100%;
+}
+
+[columns] > *,
+[rows] > * {
+   width: 100%;
+   height: 100%;
+   margin: 0;
+}
