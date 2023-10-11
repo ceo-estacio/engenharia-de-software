@@ -7,7 +7,8 @@ const
    _e = ( ...args ) => console.error( ...args )
 ;
 
-window.addEventListener( "load", () => {
+// window.addEventListener( "load", () => {
+window.addEventListener( "DOMContentLoaded", () => {
    const 
       NavLinks = $$( "navlink" ),
       C = $$( "[c]" ),
