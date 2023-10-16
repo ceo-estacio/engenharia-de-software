@@ -9,6 +9,7 @@ const
 
 // window.addEventListener( "load", () => {
 addEventListener( "DOMContentLoaded", () => {
+   _( "oi" );
    const 
       NavLinks = $$( "navlink" ),
       C = $$( "[c]" ),

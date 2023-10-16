@@ -1,57 +1,212 @@
-
-
 <!DOCTYPE html>
 <html lang='pt-br'>
-   <head>
-      <title></title>
-      
-      <link rel='icon' href='src/pix/logo.svg' type='svg+xml'>
-      <meta charset='UTF-8'>
-      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-      <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-      <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-      <link rel="stylesheet" href="../src2/styles.css">
-      <script src="../src2/script.js" defer></script>
-   </head>
-   <body>
-      <appbar>
-         <appbar-body>
-            <appbar-brand></appbar-brand>
-            <t1></t1>
-            <appbar-options></appbar-options>
-         </appbar-body>
-      </appbar>
 
-      <drawer>
-         <app-drawer></app-drawer>
-      </drawer>
+<head>
+   <title></title>
 
-      <main>
+   <link rel='icon' href='src/pix/logo.svg' type='svg+xml'>
+   <meta charset='UTF-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+   <link rel="stylesheet" href="../src2/styles.css">
+   <script src="../src2/script.js" defer></script>
+</head>
 
-         <tema n="1" card>
-            <h2>Tema 01: </h2>
-            
-            <p>
-               <b>Software: "programa de computador"</b>
-               <br>
-               <t>é um conjunto de instruções a fim de orientar o hardware do computador para o que deve ser feito</t>
-            </p>
+<body>
+   <appbar>
+      <appbar-body>
+         <appbar-brand></appbar-brand>
+         <t1></t1>
+         <appbar-options></appbar-options>
+      </appbar-body>
+   </appbar>
 
-            <p>
-               <b>Software aplicativo: </b><br>
-               <t>para o usuário</t>
-            </p>
-            
-            <p>
-               <b>Siftware básico: </b><br>
-               <t>essenciais ao funcionamento do computador</t>
-            </p>
-            
-         </tema>
+   <drawer>
+      <app-drawer></app-drawer>
+   </drawer>
+
+   <main>
+
+      <tema n="1" card>
+         <h2>Tema 01: </h2>
+
+         <p>
+            <b>Software: "programa de computador"</b>
+            <br>
+            <t>é um conjunto de instruções a fim de orientar o hardware do computador para o que deve ser feito</t>
+         </p>
+
+         <p>
+            <b>Software aplicativo: </b><br>
+            <t>para o usuário</t>
+         </p>
+
+         <p>
+            <b>Siftware básico: </b><br>
+            <t>essenciais ao funcionamento do computador</t>
+         </p>
+
+         <p>
+            <b>Instrução</b> <br>
+            <t>length: 16 bits</t> <br>
+            <t>4: codigos da instrucao</t> <br>
+            <t>6: para cada operando</t>
+         </p>
          
-      </main>
+         <dominios-da-programacao>
+            <h2>Dominios da programacao</h2>
+            
+            <h3>aplicacoes: </h3>
+            <ul>
+               <li>cientifica</li>
+               <li>comerciais</li>
+               <li>i.a.</li>
+               <li>sistemas</li>
+               <li>web</li>
+               <li>mobile</li>
+            </ul>
+            
+            <h3>criterios de avaliação</h3>
+            <ul>
+               <li>
+                  <b>Legibilidade</b>
+                  <ul>
+                     <li>simplicidade</li>
+                     <li>ortogonalidade</li>
+                     <li>instruções de controle</li>
+                     <li>tipos e estrutura de dados</li>
+                     <li>sintaxe</li>
+                  </ul>
+               </li>
+               <li>
+                  <b>facilidade de escrita</b>
+                  <ul>
+                     <li>simplicidade e ortogonalidade</li>
+                     <li>expressividade</li>
+                     <li>auporte p/ abstração</li>
+                  </ul>
+               </li>
+               <li>
+                  <b>confiabilidade</b>
+                  <ul>
+                     <li>verificação de tipos</li>
+                     <li>tratamento de exeção</li>
+                     <li>aliasing</li>
+                     <li>legibilidade e facilidade de escrita</li>
+                  </ul>
+               </li>
+               <li>
+                  <b>custo</b>
+                  <ul>
+                     <li>treinamento</li>
+                     <li>escrever programa</li>
+                     <li>compilar</li>
+                     <li>executar</li>
+                     <li>implementar</li>
+                     <li>confiabilidade</li>
+                     <li>manutenção</li>
+                  </ul>
+               </li>
+            </ul>
+            
+            <paradigmas>
+               <h2>Paradigmas</h2>
+               <ul>
+                  <li>
+                     <b>Imperativo: </b>
+                     <small>são dependentes da arquitetura do pc, especificam seus programas como a computação é realizada</small>
+                     <ul>
+                        <li>
+                           <b>Estruturado</b>
+                        </li>
+                        <li>
+                           <b>OP</b>
+                        </li>
+                        <li>
+                           <b>Concorrente: </b>
+                           <small>processos executam simultaneamente e concorrem aos recursos de hardware</small>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <b>Declarativo: </b>
+                     <ul>
+                        <li>
+                           <b>Funcional</b>
+                        </li>
+                        <li>
+                           <b>Lógico</b>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </paradigmas>
+            
+            <traducao-de-linguagens>
+               <h2>Tradução de linguagens</h2>
+               
+               <b>etapas da tradução</b>
+               <ol>
+                  <li>
+                     <b>Compilação: </b>
+                  </li>
+                  <li>
+                     <b>Montagem: </b>
+                  </li>
+                  <li>
+                     <b>Carga: </b>
+                  </li>
+                  <li>
+                     <b>Ligação: </b>
+                  </li>
+               </ol>
+            </traducao-de-linguagens>
+            
+            <ul>
+               <li>
+                  <b>compilador: </b>
+                  codigo-fonte => Assembly
+               </li>
+               <li>
+                  <b>montador: </b>
+                  Assembly => bin
+               </li>
+               <li>
+                  <b>ligador: </b>
+                  relocável => chamadas as rotinas
+               </li>
+               <li>
+                  <b>carregador: </b>
+                  relocação do código-objeto
+               </li>
+            </ul>
+         </dominios-da-programacao>
 
-      <script>
-      </script>
-   </body>
+      </tema>
+
+   </main>
+
+   <script>
+   </script>
+</body>
+
 </html>
+
+<!-- 
+1 
+10  
+11 
+100 
+101 
+110 
+111 
+1000 
+1001 
+1010 
+1011 
+1100 
+1101 
+1110 
+1111 
+-->
