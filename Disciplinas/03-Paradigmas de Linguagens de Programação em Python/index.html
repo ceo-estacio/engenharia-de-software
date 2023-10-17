@@ -185,6 +185,246 @@
 
       </tema>
 
+      <tema n="4">
+         <h2>Tema 4: Python orientado a objetos</h2>
+
+         <java-cpp-python card>
+            <h3>comparações java c++ python</h3>
+            
+            <construtores-de-obj>
+               <h3>Construtores de objetos</h3>
+               <li>
+                  <b>java: </b>
+                  <t>Public Conta()</t>
+               </li>
+               <li>
+                  <b>c++: </b>
+                  <t>Conta::Conta(void)</t>
+               </li>
+               <li>
+                  <b>python: </b>
+                  <t>self: def __init__(self)</t>
+               </li>
+            </construtores-de-obj>
+
+            <instancia-de-obj>
+               <h4>Instanciação de objetos</h4>
+               <li>
+                  <b>java: </b>
+                  <t>Conta c1 = new Conta()</t>
+               </li>
+               <li>
+                  <b>c++: </b>
+                  <t>Conta *c1 = new Conta()</t>
+               </li>
+               <li>
+                  <b>python: </b>
+                  <t>c1 = Conta()</t>
+               </li>
+            </instancia-de-obj>
+
+            <modificadores-de-att>
+               <h3>Modificadores de acesso a atributos</h3>
+               <li>
+                  <b>java: </b>
+                  <t>public, private, protected, default</t>
+               </li>
+               <li>
+                  <b>c++: </b>
+                  <t>public, private</t>
+               </li>
+               <li>
+                  <b>python: </b>
+                  <t>público: , privado: _</t>
+               </li>
+            </modificadores-de-att>
+
+            <heranca-multipla-de-classes>
+               <h3>Herança múltipla de classes</h3>
+               <li>
+                  <b>java: </b>
+                  <t>Não implementa. Utiliza herança múltipla de interfaces para substituir essa característica.</t>
+               </li>
+               <li>
+                  <b>c++: </b>
+                  <t>Class ContaRemunerada: public Conta, public Poupanca)</t>
+               </li>
+               <li>
+                  <b>python: </b>
+                  <t>class ContaRemuneradaPoupanca(Conta, Poupanca):</t>
+               </li>
+            </heranca-multipla-de-classes>
+
+            <classes-sem-definicao-formal>
+               <h3>Classes sem definição formal</h3>
+               <li>
+                  <b>java: </b>
+                  <pre>protected void Calcular(){
+
+                     class Calculo{
+                 
+                        private int soma;
+                 
+                        public void setSoma(int soma) {
+                 
+                           this.soma = soma;
+                 
+                    }
+                 
+                       public int getSoma() {
+                 
+                          return soma;
+                 
+                       }
+                 
+                    }
+                 
+                 }</pre>
+               </li>
+               <li>
+                  <b>c++: </b>
+                  <pre>Existe o conceito de classes locais – internos a funções:
+
+                     void func() {
+                     
+                        class LocalClass {
+                     
+                        }
+                     
+                     }</pre>
+               </li>
+               <li>
+                  <b>python: </b>
+                  <pre>Existe o conceito de classes locais:
+
+                     def scope_test():
+                     
+                        def do_local():
+                     
+                           spam = "local spam"</pre>
+               </li>
+            </classes-sem-definicao-formal>
+
+            <tipos-primitivos>
+               <h3>Tipos primitivos</h3>
+               <li>
+                  <b>java: </b>
+                  <t>int, byte, short, long, float, double, boolean, char</t>
+               </li>
+               <li>
+                  <b>c++: </b>
+                  <t>bool, char, int, float, double, void, wchar_t </t>
+               </li>
+               <li>
+                  <b>python: </b>
+                  <pre>Todas as variáveis são consideradas objetos:
+
+                     >>>5.__add__(3)
+                     
+                     8</pre>
+               </li>
+            </tipos-primitivos>
+
+            <interfaces>
+               <h3>Interfaces</h3>
+               <li>
+                  <b>java: </b>
+                  <pre>Simples - Class Funcionario implements Autenticavel
+
+                     Múltipla - Class Funcionario implements Autenticavel, Descontavel</pre>
+               </li>
+               <li>
+                  <b>c++: </b>
+                  <pre>Simples - Class Funcionario: public Autenticavel
+
+                     Múltipla - Class Funcionario: public Autenticavel, public Descontavel</pre>
+               </li>
+               <li>
+                  <b>python: </b>
+                  <t>não implementa</t>
+               </li>
+            </interfaces>
+
+            <sobrecarga-de-metodos>
+               <h3>Sobrecarga de métodos</h3>
+               <li>
+                  <b>java: </b>
+                  <pre>calculaimposto(salario)
+
+                     calculaImposto(salario,IR)</pre>
+               </li>
+               <li>
+                  <b>c++: </b>
+                  <pre>calculaimposto(salario)
+
+                     calculaImposto(salario,IR)</pre>
+               </li>
+               <li>
+                  <b>python: </b>
+                  <t>não implementa</t>
+               </li>
+            </sobrecarga-de-metodos>
+
+            <tabela-comparativa card>
+               <h2>Tabela comparativa</h2>
+               <tabela tabela="repeat(4, 25%)">
+                  <b>Características</b>
+                  <t>Java </t>
+                  <t>C++ </t>
+                  <t>Python </t>
+                  
+                  <b>Instanciação de objetos</b>
+                  <t>x </t>
+                  <t>x </t>
+                  <t>x </t>
+                  
+                  <b>Construtores de objetos</b>
+                  <t>x </t>
+                  <t>x </t>
+                  <t>x </t>
+                  
+                  <b>Modificadores de acesso atributos</b>
+                  <t>x </t>
+                  <t>x </t>
+                  <t>x(*) </t>
+                  
+                  <b>Modificadores de acesso métodos</b>
+                  <t>x </t>
+                  <t>x </t>
+                  <t>x </t>
+                  
+                  <b>Herança múltipla</b>
+                  <t></t>
+                  <t>x </t>
+                  <t>x </t>
+                  
+                  <b>Classes informais</b>
+                  <t></t>
+                  <t>x </t>
+                  <t>x </t>
+                  
+                  <b>Tipos primitivos</b>
+                  <t>x </t>
+                  <t>x </t>
+                  <t></t>
+                  
+                  <b>Interfaces</b>
+                  <t>x </t>
+                  <t>x </t>
+                  <t></t>
+                  
+                  <b>Sobrecarga de métodos</b>
+                  <t>x </t>
+                  <t>x </t>
+                  <t></t>
+                  
+                  
+               </tabela>
+            </tabela-comparativa>
+
+         </java-cpp-python>
+      </tema>
+
    </main>
 
    <script>
