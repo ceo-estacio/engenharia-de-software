@@ -26,10 +26,12 @@
       <app-drawer></app-drawer>
    </drawer>
 
-   <main>
+   <main section>
 
       <tema-1 card>
-         <h2>Tema 01: </h2>
+         <header>
+            <h2>Tema 01: </h2>
+         </header>
 
          <p>
             <b>Software: "programa de computador"</b>
@@ -185,8 +187,10 @@
 
       </tema-1>
 
-      <tema-4>
-         <h2>Tema 4: Python orientado a objetos</h2>
+      <tema-4 card>
+         <header>
+            <h2>Tema 4: Python orientado a objetos</h2>
+         </header>
 
          <java-cpp-python card>
             <h3>comparações java c++ python</h3>
@@ -425,7 +429,7 @@
          </java-cpp-python>
       </tema-4>
 
-      <tema-5 card>
+      <tema-5 section>
          <header >
             <h2 center>Tema 5: Python em Outros Paradigmas</h2>
          </header>
@@ -457,6 +461,32 @@
                <t>Na programação funcional, devemos evitar alterar qualquer dado que já tenha sido criado.</t>
             </dados-imutaveis>
 
+            <small banner>O objetivo principal da programação funcional não é utilizar funções puras e dados imutáveis, mas sim evitar o efeito colateral.</small>
+
+            <funcao-de-ordem-superior>
+               <h3>Funções de ordem superior</h3>
+               <p>funções que aceitem outras funções, como parâmetros ou que retornem outra função.</p>   
+            </funcao-de-ordem-superior>
+
+            <funcao-lambda>
+               <h3>Funções lambda "anônimas"</h3>
+               <b>sintaxe: </b>
+               <t>lambda argumentos: expressão</t>
+               <small>lambda a, b: a*b</small>
+            </funcao-lambda>
+
+            <p>
+               <b>Não utilizar loops </b>
+               <t>( for, while )</t>
+            </p>
+
+            <maps>
+               <h3>Maps</h3>
+               <p>
+                  <b>sintaxe: </b>
+                  <t>map(função, iterável1, iterável2...)</t>
+               </p>   
+            </maps>
          </relacoes-entre-funcoes>
       </tema-5>
 

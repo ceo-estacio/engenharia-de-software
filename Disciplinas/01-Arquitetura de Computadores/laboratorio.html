@@ -1,0 +1,139 @@
+
+
+<!DOCTYPE html>
+<html lang='pt-br'>
+   <head>
+      <title></title>
+   
+      <link rel='icon' href='src/pix/logo.svg' type='svg+xml'>
+      <meta charset='UTF-8'>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+      <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+      <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+      <link rel="stylesheet" href="../src2/styles.css">
+      <script src="../src2/script.js" defer></script>
+   </head>
+   <body>
+      <appbar>
+         <appbar-body>
+            <appbar-brand></appbar-brand>
+            <t1></t1>
+            <appbar-options></appbar-options>
+         </appbar-body>
+      </appbar>
+
+      <main>
+         <lab n="01">
+            <h2>Portas Lógicas Básicas</h2>
+            <h3>Exercícios
+               <ol>
+                  <li>
+                     <b>
+                        Analise a situação a seguir:
+O cofre de uma agência bancária tem a seguinte lógica de funcionamento: só pode ser aberto se uma chave interruptora, localizada na cabine de segurança do banco, estiver desligada. 
+Assinale a alternativa que apresenta a porta lógica mais adequada para controlar o circuito digital proposto.
+                     </b>
+                     <small>NOT
+                        <b>
+                           A porta lógica NOT funciona como um inversor, sendo a função adequada a ser aplicada no circuito digital em que uma chave inverte o estado de um sinal, como o do cofre do banco apresentado no problema.
+                        </b>
+                     </small>
+                  </li>
+                  <li>
+                     <b>Um circuito em série tem duas ou mais cargas ligadas em sequência, havendo apenas uma passagem para a corrente elétrica. Diferentemente de um circuito em série, em um circuito paralelo as cargas têm o mesmo ponto em comum, ou seja, a corrente elétrica se divide proporcionalmente para cada carga.
+                        Entre os exemplos apresentados nas alternativas, assinale aquele que representa um circuito em série.</b>
+                     <small>Circuito elétrico de led utilizado em árvores de Natal.
+                        <b>
+                           Os elementos desse circuito estão conectados em sequência. Portanto, caso algum dos leds não funcione, os que estejam conectados posteriormente a ele não acenderão.
+                        </b>
+                     </small>
+                  </li>
+                  <li>
+                     <b>A boneca de Karen foi programada para emitir sons de frases ao se apertar o botão que está localizado na altura de seu umbigo. Karen notou que, ultimamente, ao apertar o botão, a boneca não emitia mais nenhum som. Então, resolveu tentar consertar o módulo eletrônico da boneca responsável pelo controle de emissão dos sons. Ela verificou que o circuito tinha uma chave de entrada que, ao ser pressionada, acionava o mecanismo de emissão de som.
+                        Qual das alternativas a seguir representa adequadamente o funcionamento do circuito analisado por Karen?</b>
+                     <small>NOT
+                        <b>
+                           O botão que aciona o circuito representa o sinal ALTO, que ativa a emissão do som.
+                        </b>
+                     </small>
+                  </li>
+                  <li>
+                     <b>Analise a seguinte sentença:
+                        Ao utilizar a porta lógica ______, a saída será 1 somente se todas as entradas forem 1. A porta lógica ______ apresenta saída 1, se uma ou mais entradas forem 0. Já a porta lógica ______ é conhecida também como inversora.
+                        Qual sequência de palavras é correta para preencher as lacunas?</b>
+                     <small>AND, NAND, NOT
+                        <b>
+                           As assertivas correspondem diretamente às regras de saída das portas lógicas AND, NAND e NOT.
+                        </b>
+                     </small>
+                  </li>
+                  <li>
+                     <b>O sistema de alarme da loja fictícia X funciona da seguinte maneira: caso o sensor da porta principal ou o sensor da janela do banheiro forem ativados, ou seja, tensão ALTO, valor binário 1, o alarme de emergência é ativado. 
+                        Entre as alternativas a seguir, assinale a opção de porta lógica mais adequada a ser aplicada nesse circuito digital.</b>
+                     <small>OR
+                        <b>
+                           Nesse sistema, existem três opções para ativação do alarme: apenas sensor da porta ativado, apenas sensor da janela ativado ou os dois sensores ativados. Ao aplicar a porta lógica OR, o alarme será ativado corretamente.
+                        </b>
+                     </small>
+                  </li>
+               </ol>
+            </h3>   
+         </lab>
+
+         <lab n="01-pos">
+            <h2>Pós Testes</h2>
+            <ol>
+               <li><b>Existem duas categorias básicas de portas lógicas: portas lógicas fundamentais e portas lógicas derivadas.  
+                  A respeito desse assunto, assinale a alternativa correta.</b>
+                  <small>
+                     <t>
+                        As portas lógicas fundamentais são representadas pelos operadores AND, OR e NOT.</t>
+                     <b></b>
+                  </small>
+               </li>
+               <li><b>A representação gráfica de um circuito digital auxilia no desenvolvimento de sua composição e na compreensão de seu funcionamento.  
+                  Sendo assim, analise o circuito apresentado na figura a seguir:</b>
+                  <img src="./laboratório/01 - portas lógicas digitais básicas/pos-02.png" alt="">
+                  <b>
+                     Nesse circuito, há duas chaves (1 e 2) conectadas sequencialmente e um alarme. A posição aberta da chave representa o valor 0 e a posição fechada, o valor 1.  
+A partir das assertivas apresentadas, qual porta lógica deve ser utilizada para que o alarme seja acionado, caso as posições das chaves sejam 1 e 1? 
+                  </b>
+                  <small>
+                     <t>As portas lógicas que podem ser utilizadas para produzir esse resultado são AND e OR.</t>
+                     <b></b>
+                  </small>
+               </li>
+               <li><b>
+                  Portas lógicas representam a combinação de entradas a partir de condições preestabelecidas, que resultam em uma saída. As entradas para essas portas lógicas podem ter os estados lógicos ALTO, valor binário 1 (verdadeiro), ou BAIXO, valor binário 0 (falso).  
+Fazendo uma correlação entre os estados lógicos de entrada de uma porta lógica, analise a figura a seguir:
+               </b>
+               <img src="./laboratório/01 - portas lógicas digitais básicas/pos-03.png" alt="">
+               <b>Qual é a porta lógica mais adequada a ser aplicada para o funcionamento desse circuito?</b>
+                  <small>
+                     <t></t>
+                     <b></b>
+                  </small>
+               </li>
+               <li><b></b>
+                  <small>
+                     <t></t>
+                     <b></b>
+                  </small>
+               </li>
+               <li><b></b>
+                  <small>
+                     <t></t>
+                     <b></b>
+                  </small>
+               </li>
+            </ol>
+         </lab>
+      </main>
+
+      <script>
+         'use strict';
+         /* ==[ properties ]================= */
+
+      </script>
+   </body>
+</html>

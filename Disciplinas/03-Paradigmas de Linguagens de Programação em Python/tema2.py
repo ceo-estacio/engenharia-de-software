@@ -59,7 +59,7 @@ while s < 5:
 
 print(rec(1)) """
 
-try:
+""" try:
    num = eval(input("Entre com um número inteiro: "))
    print(num)
 except ValueError:
@@ -67,4 +67,7 @@ except ValueError:
 except IndexError:
    print("Mensagem 2")
 except:
-   print("Mensagem 3")
+   print("Mensagem 3") """
+
+
+

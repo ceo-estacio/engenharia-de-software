@@ -112,9 +112,9 @@ box > :first-child {
    display: grid;
    grid-template-columns: clamp( 100px, 10vw, 78px ) 1fr;
 }
-[card] > header {
+[card] > header,
+[section] > header {
    width: 100%;
-   height: 100%;
    padding: 1vw;
    text-align: center;
    box-shadow: #0005 0 5px 10px;
@@ -124,6 +124,16 @@ box > :first-child {
    padding: 1vw;
    width: 100%;
    height: 100%;
+}
+
+[banner] {
+   display: grid;
+   padding: 2.5vw;
+}
+
+[section] {
+   display: grid;
+   padding: 2vw;
 }
 
 b { color: var(--green-dark); }
