@@ -12,6 +12,11 @@
       <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
       <link rel="stylesheet" href="../src2/styles.css">
       <script src="../src2/script.js" defer></script>
+      <style>
+         lab ~ * {
+            line-height: 1.5em;
+         } 
+      </style>
    </head>
    <body>
       <appbar>
@@ -23,111 +28,341 @@
       </appbar>
 
       <main>
-         <lab n="01">
-            <h2>Portas Lógicas Básicas</h2>
-            <h3>Exercícios
+         <portas-logicas-basicas>
+            <lab n="01">
+               <h2>Portas Lógicas Básicas</h2>
+               <h3>Exercícios</h3>
                <ol>
                   <li>
-                     <b>
+                     <p>
                         Analise a situação a seguir:
-O cofre de uma agência bancária tem a seguinte lógica de funcionamento: só pode ser aberto se uma chave interruptora, localizada na cabine de segurança do banco, estiver desligada. 
-Assinale a alternativa que apresenta a porta lógica mais adequada para controlar o circuito digital proposto.
+                        <br>
+                        O cofre de uma agência bancária tem a seguinte lógica de funcionamento: só pode ser aberto se uma chave interruptora, localizada na cabine de segurança do banco, estiver desligada. 
+                        <br>
+                        Assinale a alternativa que apresenta a porta lógica mais adequada para controlar o circuito digital proposto.
                      </b>
-                     <small>NOT
+                     <qna>NOT
                         <b>
                            A porta lógica NOT funciona como um inversor, sendo a função adequada a ser aplicada no circuito digital em que uma chave inverte o estado de um sinal, como o do cofre do banco apresentado no problema.
                         </b>
-                     </small>
+                     </qna>
                   </li>
                   <li>
-                     <b>Um circuito em série tem duas ou mais cargas ligadas em sequência, havendo apenas uma passagem para a corrente elétrica. Diferentemente de um circuito em série, em um circuito paralelo as cargas têm o mesmo ponto em comum, ou seja, a corrente elétrica se divide proporcionalmente para cada carga.
-                        Entre os exemplos apresentados nas alternativas, assinale aquele que representa um circuito em série.</b>
-                     <small>Circuito elétrico de led utilizado em árvores de Natal.
+                     <p>
+                        Um circuito em série tem duas ou mais cargas ligadas em sequência, havendo apenas uma passagem para a corrente elétrica. Diferentemente de um circuito em série, em um circuito paralelo as cargas têm o mesmo ponto em comum, ou seja, a corrente elétrica se divide proporcionalmente para cada carga.
+                        <br>
+                        Entre os exemplos apresentados nas alternativas, assinale aquele que representa um circuito em série.
+                     </p>
+                     <qna>Circuito elétrico de led utilizado em árvores de Natal.
                         <b>
                            Os elementos desse circuito estão conectados em sequência. Portanto, caso algum dos leds não funcione, os que estejam conectados posteriormente a ele não acenderão.
                         </b>
-                     </small>
+                     </qna>
                   </li>
                   <li>
-                     <b>A boneca de Karen foi programada para emitir sons de frases ao se apertar o botão que está localizado na altura de seu umbigo. Karen notou que, ultimamente, ao apertar o botão, a boneca não emitia mais nenhum som. Então, resolveu tentar consertar o módulo eletrônico da boneca responsável pelo controle de emissão dos sons. Ela verificou que o circuito tinha uma chave de entrada que, ao ser pressionada, acionava o mecanismo de emissão de som.
-                        Qual das alternativas a seguir representa adequadamente o funcionamento do circuito analisado por Karen?</b>
-                     <small>NOT
+                     <p>
+                        A boneca de Karen foi programada para emitir sons de frases ao se apertar o botão que está localizado na altura de seu umbigo. Karen notou que, ultimamente, ao apertar o botão, a boneca não emitia mais nenhum som. Então, resolveu tentar consertar o módulo eletrônico da boneca responsável pelo controle de emissão dos sons. Ela verificou que o circuito tinha uma chave de entrada que, ao ser pressionada, acionava o mecanismo de emissão de som.
+                        <br>
+                        Qual das alternativas a seguir representa adequadamente o funcionamento do circuito analisado por Karen?
+                     </p>
+                     <qna>NOT
                         <b>
                            O botão que aciona o circuito representa o sinal ALTO, que ativa a emissão do som.
                         </b>
-                     </small>
+                     </qna>
                   </li>
                   <li>
-                     <b>Analise a seguinte sentença:
+                     <p>Analise a seguinte sentença:
+                        <br>
                         Ao utilizar a porta lógica ______, a saída será 1 somente se todas as entradas forem 1. A porta lógica ______ apresenta saída 1, se uma ou mais entradas forem 0. Já a porta lógica ______ é conhecida também como inversora.
-                        Qual sequência de palavras é correta para preencher as lacunas?</b>
-                     <small>AND, NAND, NOT
+                        <br>
+                        Qual sequência de palavras é correta para preencher as lacunas?
+                     </p>
+                     <qna>AND, NAND, NOT
                         <b>
                            As assertivas correspondem diretamente às regras de saída das portas lógicas AND, NAND e NOT.
                         </b>
-                     </small>
+                     </qna>
                   </li>
                   <li>
-                     <b>O sistema de alarme da loja fictícia X funciona da seguinte maneira: caso o sensor da porta principal ou o sensor da janela do banheiro forem ativados, ou seja, tensão ALTO, valor binário 1, o alarme de emergência é ativado. 
-                        Entre as alternativas a seguir, assinale a opção de porta lógica mais adequada a ser aplicada nesse circuito digital.</b>
-                     <small>OR
+                     <p>
+                        O sistema de alarme da loja fictícia X funciona da seguinte maneira: caso o sensor da porta principal ou o sensor da janela do banheiro forem ativados, ou seja, tensão ALTO, valor binário 1, o alarme de emergência é ativado. 
+                        <br>
+                        Entre as alternativas a seguir, assinale a opção de porta lógica mais adequada a ser aplicada nesse circuito digital.
+                     </p>
+                     <qna>OR
                         <b>
                            Nesse sistema, existem três opções para ativação do alarme: apenas sensor da porta ativado, apenas sensor da janela ativado ou os dois sensores ativados. Ao aplicar a porta lógica OR, o alarme será ativado corretamente.
                         </b>
-                     </small>
+                     </qna>
+                  </li>
+               </ol> 
+            </lab>
+
+            <lab n="01-pos">
+               <h2>Pós Testes</h2>
+               <ol>
+                  <li>
+                     <p>
+                        Existem duas categorias básicas de portas lógicas: portas lógicas fundamentais e portas lógicas derivadas.  
+                        A respeito desse assunto, assinale a alternativa correta.
+                     </p>
+                     <qna>
+                        <t>
+                           As portas lógicas fundamentais são representadas pelos operadores AND, OR e NOT.
+                        </t>
+                        <b>As portas lógicas fundamentais estão diretamente relacionadas aos operadores lógicos da álgebra de Boole.</b>
+                     </qna>
+                  </li>
+                  <li>
+                     <tag>
+                        A representação gráfica de um circuito digital auxilia no desenvolvimento de sua composição e na compreensão de seu funcionamento.  
+                        Sendo assim, analise o circuito apresentado na figura a seguir:
+                     </tag>
+                     <pix>
+                        <img src="./laboratório/01 - portas lógicas digitais básicas/pos-02.png" alt="">
+                     </pix>
+                        Nesse circuito, há duas chaves (1 e 2) conectadas sequencialmente e um alarme. A posição aberta da chave representa o valor 0 e a posição fechada, o valor 1.  
+                        A partir das assertivas apresentadas, qual porta lógica deve ser utilizada para que o alarme seja acionado, caso as posições das chaves sejam 1 e 1? 
+                     <tag c="gray">
+                        <qna>
+                           <t>As portas lógicas que podem ser utilizadas para produzir esse resultado são AND e OR.</t>
+                           <b>De acordo com a tabela-verdade resultante da aplicação dos operadores lógicos AND e OR, é possível obter o acionamento do alarme com ambas as portas. </b>
+                        </qna>
+                     </tag>
+                  </li>
+                  <li>
+                     <p>
+                        Portas lógicas representam a combinação de entradas a partir de condições preestabelecidas, que resultam em uma saída. As entradas para essas portas lógicas podem ter os estados lógicos ALTO, valor binário 1 (verdadeiro), ou BAIXO, valor binário 0 (falso).  
+                        Fazendo uma correlação entre os estados lógicos de entrada de uma porta lógica, analise a figura a seguir:
+                        <pix>
+                           <img src="./laboratório/01 - portas lógicas digitais básicas/pos-03.png" alt="">
+                        </pix>
+                        Qual é a porta lógica mais adequada a ser aplicada para o funcionamento desse circuito?
+                     </p>
+                     <qna>
+                        <t>OR</t>
+                        <b>De acordo com o contexto da figura, tanto a porta do passageiro quanto a do motorista podem acionar a luz de teto, ou seja, quando apenas uma ou as duas entradas são ativadas, o circuito é ativado. Portanto, a porta lógica OR é a correta a ser aplicada.</b>
+                     </qna>
+                  </li>
+                  <li>
+                     <p>
+                        Um circuito digital pode ser representado de três maneiras diferentes: representação gráfica, expressão booleana e tabela-verdade. A tabela-verdade a seguir apresenta os valores resultantes da aplicação de uma determinada porta lógica.
+                     </p>
+                     <pix>
+                        <img src="./laboratório/01 - portas lógicas digitais básicas/pos-04.png" alt="">
+                     </pix>
+                     <p>
+                        Assinale a alternativa que apresenta a porta lógica que é correta para a tabela-verdade apresentada. 
+                     </p>
+                     <qna>
+                        <t>OR</t>
+                        <b>A tabela-verdade apresentada segue a regra básica de funcionamento da porta OR, que é: a saída será 1 se uma ou mais entradas forem 1. </b>
+                     </qna>
+                  </li>
+                  <li>
+                     <p>
+                        Os sistemas digitais são os grandes responsáveis pela maioria dos mais recentes avanços tecnológicos, uma vez que métodos analógicos vêm migrando para a tecnologia digital. Seu funcionamento é baseado em circuitos digitais e portas lógicas.  
+   Nesse sentido, analise a figura a seguir: 
+                     </p>
+                     <pix>
+                        <img src="./laboratório/01 - portas lógicas digitais básicas/pos-05.png" alt="">
+                     </pix>
+                     <p>De acordo com a simbologia utilizada para portas lógicas em circuitos digitais apresentada na figura, qual é a porta lógica utilizada e qual é a saída dessa operação?</p>
+                     <qna>
+                        <t>
+                           Porta lógica NOR e saída 0.
+                        </t>
+                        <b>A simbologia da figura refere-se à porta lógica NOR, e a saída da operação, ao receber as entradas 1 e 0, é 0.</b>
+                     </qna>
                   </li>
                </ol>
-            </h3>   
-         </lab>
+            </lab>
+         </portas-logicas-basicas>
 
-         <lab n="01-pos">
-            <h2>Pós Testes</h2>
-            <ol>
-               <li><b>Existem duas categorias básicas de portas lógicas: portas lógicas fundamentais e portas lógicas derivadas.  
-                  A respeito desse assunto, assinale a alternativa correta.</b>
-                  <small>
-                     <t>
-                        As portas lógicas fundamentais são representadas pelos operadores AND, OR e NOT.</t>
-                     <b></b>
-                  </small>
-               </li>
-               <li><b>A representação gráfica de um circuito digital auxilia no desenvolvimento de sua composição e na compreensão de seu funcionamento.  
-                  Sendo assim, analise o circuito apresentado na figura a seguir:</b>
-                  <img src="./laboratório/01 - portas lógicas digitais básicas/pos-02.png" alt="">
-                  <b>
-                     Nesse circuito, há duas chaves (1 e 2) conectadas sequencialmente e um alarme. A posição aberta da chave representa o valor 0 e a posição fechada, o valor 1.  
-A partir das assertivas apresentadas, qual porta lógica deve ser utilizada para que o alarme seja acionado, caso as posições das chaves sejam 1 e 1? 
-                  </b>
-                  <small>
-                     <t>As portas lógicas que podem ser utilizadas para produzir esse resultado são AND e OR.</t>
-                     <b></b>
-                  </small>
-               </li>
-               <li><b>
-                  Portas lógicas representam a combinação de entradas a partir de condições preestabelecidas, que resultam em uma saída. As entradas para essas portas lógicas podem ter os estados lógicos ALTO, valor binário 1 (verdadeiro), ou BAIXO, valor binário 0 (falso).  
-Fazendo uma correlação entre os estados lógicos de entrada de uma porta lógica, analise a figura a seguir:
-               </b>
-               <img src="./laboratório/01 - portas lógicas digitais básicas/pos-03.png" alt="">
-               <b>Qual é a porta lógica mais adequada a ser aplicada para o funcionamento desse circuito?</b>
-                  <small>
-                     <t></t>
-                     <b></b>
-                  </small>
-               </li>
-               <li><b></b>
-                  <small>
-                     <t></t>
-                     <b></b>
-                  </small>
-               </li>
-               <li><b></b>
-                  <small>
-                     <t></t>
-                     <b></b>
-                  </small>
-               </li>
-            </ol>
-         </lab>
+         <portas-logicas-secundarias card>
+            <header center  bg="crimson">
+               <h2>Portas Lógicas Secundárias</h2>
+            </header>
+            <teste>
+               <h3>Testes</h3>
+               <ol>
+                  <li>
+                     <p>
+                        Analise a situação a seguir:
+O cofre de uma agência bancária tem a seguinte lógica de funcionamento: só pode ser aberto se uma chave interruptora, localizada na cabine de segurança do banco, estiver desligada. 
+Assinale a alternativa que apresenta a porta lógica mais adequada para controlar o circuito digital proposto.
+                     </p>
+                     <qna>
+                        <b>NOT</b>
+                     </qna>
+                  </li>
+                  <li>
+                     <p>
+                        Um circuito em série tem duas ou mais cargas ligadas em sequência, havendo apenas uma passagem para a corrente elétrica. Diferentemente de um circuito em série, em um circuito paralelo as cargas têm o mesmo ponto em comum, ou seja, a corrente elétrica se divide proporcionalmente para cada carga.
+                        <br>
+                        Entre os exemplos apresentados nas alternativas, assinale aquele que representa um circuito em série.
+                     </p>
+                     <qna>
+                        <b>Circuito elétrico de led utilizado em árvores de Natal.</b>
+                     </qna>
+                  </li>
+                  <li>
+                     <p>
+
+                     </p>
+                  </li>
+                  <li></li>
+                  <li></li>
+               </ol>   
+            </teste>
+         </portas-logicas-secundarias>
+
+         <circuitos-logicos-digitais card>
+            <header bg="crimson">
+               <h2>Circuitos Lógicos Digitais</h2>
+            </header>
+
+
+         </circuitos-logicos-digitais>
+
+         <arquitetura-decomputadores-cicruitos-logicos-somadores card>
+            <header bg="crimson">
+               <h2>Arquitetura de Computadores - Circuitos Lógicos Somadores</h2>
+            </header>
+
+            <teste>
+               <h3>Teste</h3>
+               <ol>
+                  <li>
+                     <p>
+                        Os circuitos lógicos são obtidos a partir da combinação de portas lógicas. Nos computadores, temos inúmeros circuitos menores formando circuitos mais complexos, como a unidade lógica e aritmética (ULA), que fica dentro do processador, na placa-mãe.Sendo assim, assinale a alternativa correta.
+
+                     </p>
+                     <qna>
+                        Os circuitos somadores são circuitos lógicos digitais que integram a ULA.
+                        <b>
+                           Os circuitos somadores realmente são circuitos lógicos digitais que integram a ULA.
+                        </b>
+                     </qna>
+                  </li>
+                  <li>
+                     <p>
+                        As portas lógicas digitais AND, OR e NOT são classificadas como básicas. Já as portas NAND, NOR, XOR e XNOR são classificadas como secundárias, porque derivam das portas básicas. Sendo assim, assinale a alternativa correta a respeito da porta XOR.
+                     </p>
+                     <qna>
+                        A porta XOR também é chamada de OU exclusivo, por sua saída ser 1 somente quando suas entradas tiverem valores diferentes.
+                        <b>
+                           A porta XOR também é chamada de OU exclusivo, devido a sua saída ser 1 somente quando suas entradas tiverem valores diferentes.
+                        </b>
+                     </qna>
+                  </li>
+                  <li>
+                     <p>
+                        Podemos dizer que uma operação de soma é realizada diretamente pelo circuito ____________, e não por um software, gerando mais rapidez na execução da operação. Assim, os responsáveis pela realização de operações aritméticas no processador em nível de hardware são os ________________. Escolha a opção que preenche corretamente as lacunas.
+
+                     </p>
+                     <qna>
+                        lógico digital - circuitos somadores.
+                        <b>
+                           A primeira lacuna deve ser preenchida com “lógico digital”, e a segunda com “circuitos somadores”.
+                        </b>
+                     </qna>
+                  </li>
+                  <li>
+                     <p>
+                        O bloco de coincidência é assim chamado porque terá sua saída como 1 somente quando suas duas entradas tiverem valores iguais. Dessa forma, as duas entradas terão nível alto ou baixo. O bloco de coincidência também é chamado de:
+                     </p>
+                     <qna>
+                        porta XNOR.
+                        <b>
+                           O bloco de coincidência também é chamado de porta XNOR.
+                        </b>
+                     </qna>
+                  </li>
+                  <li>
+                     <p>
+                        O circuito ____________ tem duas entradas, que são os bits a serem somados, e duas saídas. Uma saída representa o valor obtido da soma e a outra, o valor do ___________, ou _____________.Assinale a alternativa que preenche corretamente as lacunas.
+                     </p>
+                     <qna>
+                        meio-somador – bit Vem 1 – bit Vai 1.
+                        <b>
+                           O circuito meio-somador tem duas entradas, que são os bits a serem somados, e duas saídas. Uma saída representa o valor obtido da soma e a outra, o valor do Vem 1, ou bit Vai 1.
+                        </b>
+                     </qna>
+                  </li>
+               </ol>   
+            </teste>
+            <pos-teste>
+               <h3>Pós Teste</h3>
+               <ol>
+                  <li>
+                     <p>
+                        Em um circuito, as portas digitais são responsáveis por tomar decisões que têm como base uma combinação de sinais digitais, provenientes de suas entradas. Considerando essa afirmação, assinale a alternativa correta.
+                     </p>
+                     <qna>
+                        O resultado da saída binária depende do tipo de porta lógica que será usada e da combinação de entradas.
+                        <b>
+                           O resultado da saída binária depende do tipo de porta lógica que será usada e da combinação de entradas.
+                        </b>
+                     </qna>
+                  </li>
+                  <li>
+                     <p>
+                        Nos circuitos combinacionais, diferentes portas lógicas são usadas para projetar codificador, multiplexador, decodificador e demultiplexador. Sendo assim, considere as seguintes afirmativas:
+                        <br><br>
+                        <ol>
+                           <li>
+                              Esses circuitos combinacionais não incluem nenhuma memória física, apenas um codificador.
+                           </li>
+                           <li>Alguns dos circuitos combinacionais são: somador, subtrator, codificador, decodificador, multiplexador e demultiplexador.</li>
+                           <li>
+                              Esses circuitos têm algumas características, como saída que depende principalmente dos níveis que existem nos terminais de entrada a qualquer momento.
+                           </li>
+                           <li>O estado anterior da entrada não tem nenhuma influência no estado atual desse circuito.</li>
+                        </ol>
+                     </p>
+                     <qna>
+                        II, III e IV.
+                        <b>A única afirmativa incorreta é a I, pois esse circuito não inclui nenhuma memória.</b>
+                     </qna>
+                  </li>
+                  <li>
+                     <p>
+                        Um somador é um _____________________ amplamente utilizado para a adição de números. Em muitos computadores e outros tipos de processadores, os ______________ são usados para calcular endereços e atividades relacionadas, além de índices de tabela nas unidades _________________, e até mesmo em outras partes dos ______________, para calcular endereços, operadores de incremento e decremento e operações semelhantes. Assinale a alternativa que preenche corretamente as lacunas.
+                     </p>
+                     <qna>
+                        Circuito lógico digital – somadores – lógicas aritméticas – processadores.
+                        <b>
+                           A primeira lacuna deve ser preenchida por “circuito lógico digital”; a segunda, por “somadores”; a terceira, por “lógicas aritméticas”; e a quarta, por “processadores”.
+                        </b>
+                     </qna>
+                  </li>
+                  <li>
+                     <p>
+                        Somadores podem ser construídos para muitas representações numéricas, como excesso de três ou decimal codificado binário. Sobre os circuitos somadores, assinale a alternativa correta.
+                     </p>
+                     <qna>
+                        Os somadores são classificados basicamente em dois tipos: meio-somador e somador completo.
+                        <b>
+                           Os somadores são classificados basicamente em dois tipos: meio-somador e somador completo.
+                        </b>
+                     </qna>
+                  </li>
+                  <li>
+                     <p>
+                        Os circuitos digitais são formados por blocos de construção compostos por um dispositivo, que é a porta lógica. A respeito disso, assinale a alternativa correta.
+                     </p>
+                     <qna>
+                        Um circuito lógico é responsável por executar uma função de processamento ou controle em um computador.
+                        <b>
+                           Um circuito lógico é responsável por executar uma função de processamento ou controle em um computador.
+                        </b>
+                     </qna>
+                  </li>
+               </ol>
+            </pos-teste>
+         </arquitetura-decomputadores-cicruitos-logicos-somadores>
       </main>
 
       <script>

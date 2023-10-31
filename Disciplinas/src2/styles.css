@@ -105,6 +105,9 @@ box > :first-child {
    padding: .5vw;
 }
 
+pix { display: block; }
+tag { display: block; }
+
 [card] {
    display: block;
 }
@@ -288,7 +291,7 @@ tema {
    display: grid;
    gap: 5vw;
 }
-exercicio {
+exercicio, qna {
    display: grid;
    padding: 2vw;
    border-radius: 1vw;
