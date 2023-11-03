@@ -94,6 +94,22 @@ grid > header {
    font-size: 1.2rem;
 }
 
+window {
+   display: block;
+}
+window > * {
+   display: block;
+}
+pane {
+   display: block;
+}
+[p] {
+   /* padding: ; */
+}
+[shd] {
+   box-shadow: #0005 0 3px 10px;
+}
+
 box {
    display: block;
    background: #f5f5f5;
