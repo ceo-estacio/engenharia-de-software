@@ -11,23 +11,19 @@
       <meta name='viewport' content='width=device-width, initial-scale=1.0'>
       <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
       <link rel="stylesheet" href="../src2/globals.css">
+      <link rel="stylesheet" href="../src2/Lab.css">
       <script src="../src2/globals.js" defer></script>
-      <style>
-         main {
-            padding-left: 79px !important;
-         }
-      </style>
    </head>
    <body>
       <appbar>
          <appbar-body>
             <appbar-brand></appbar-brand>
             <t1></t1>
-            <appbar-options></appbar-options>
+            <appbar-options c="transparent">&gap;</appbar-options>
          </appbar-body>
       </appbar>
 
-      <drawer>
+      <drawer closed>
          <app-drawer></app-drawer>
       </drawer>
 
@@ -41,178 +37,180 @@
                Instruções - Algetec
             </a>
          </docs>
+         <page>
 
-         <exercicios blk>
-            <ex1 blk="">
-               <p>
-                  Uma assinatura eletrônica permite que um documento seja assinado por meio eletrônico, e isso pode ser feito de várias maneiras, podendo servir para diversas finalidades, como nos casos de advogados para peticionar, apresentar contestação, interpor recursos, entre outras possibilidades. 
-                  Nesse cenário, a assinatura eletrônica que deve ser feita com o auxílio de criptografia, chaves públicas e privadas, hash e também registros em uma autoridade certificadora é chamada de: 
-               </p>
-               <qna>
-                  B. 
-                  assinatura digital.
-               </qna>
-            </ex1>
-            <ex2 blk="">
-               <p>
-                  A assinatura digital é um tipo de assinatura eletrônica que envolve um conjunto de conceitos computacionais, como: criptografia e chaves públicas e privadas. Esse tipo de assinatura permite validar a autenticidade de uma identidade de organizações, pessoas ou equipamentos.
-                  <br><br>
-                  Considere as seguintes etapas:
-                  <ol>
-                     <li>Requerer o certificado a uma autoridade registradora.</li>
-                     <li>Envio do requerimento a uma autoridade certificadora.</li>
-                     <li>Validação dos dados enviados.</li>
-                     <li>Emissão do certificado digital.</li>
-                  </ol>
-                  A ordem correta das etapas para obter um certificado digital é:
-               </p>
-               <qna>
-                  A. 1, 3, 2, 4.
-               </qna>
-            </ex2>
-            <ex3 blk="">
-               <p>
-                  Considerando o texto a seguir, complete as lacunas corretamente:
-                  <br><br>
-                  O processo para conseguir um certificado digital passa por uma I, que confere todos os dados do solicitante. Com os dados validados, a II solicita a emissão do certificado digital para a III. Somente após isso, é gerado um certificado digital que permite que documentos e transações sejam autenticados eletronicamente, tendo, inclusive para fins jurídicos, o mesmo valor da assinatura de próprio punho.
-                  <br><br>
-                  Os itens I, II e III são corretamente preenchidos por:
-               </p>
-               <qna>
-                  B. I – autoridade registradora; II – autoridade registradora; III – autoridade certificadora.
-               </qna>
-            </ex3>
-            <ex4 blk="">
-               <p>
-                  A assinatura digital garante a confiabilidade e validade da identidade de quem assinou um documento por um certificado digital. Exemplos de aplicações da assinatura digital utilizando o certificado digital são o e-CPF e o e-CNPJ, utilizados por pessoas físicas e jurídicas.
-                  <br><br>
-                  Com base nessas informações, analise os seguintes itens:
-                  <br><br>
-                  <ol>
-                     <li>
-                        O hash é utilizado no processo de assinatura digital para permitir que o resumo da mensagem tenha um tamanho fixo.
-                     </li>
-                     <li>
-                        A chave pública permite que uma mensagem seja descriptografada.
-                     </li>
-                     <li>
-                        Com o intuito de validar a assinatura digital, é comparado o hash original com o hash descriptografado.
-                     </li>
-                  </ol>
-               </p>
-               <qna>
-                  C. I, II e III.
-               </qna>
-            </ex4>
-            <ex5 blk="">
-               <p>
-                  A assinatura eletrônica permite que pessoas e organizações assinem seus documentos, garantido maior confiabilidade. Essa assinatura pode ser feita, por exemplo, por meio de senha, biometria e assinatura digital. 
-                  <br><br>
-                  Considerando a assinatura digital, analise as seguintes asserções:
-                  <br><br>
-                  A assinatura digital garante a confiabilidade e validade da identidade de quem assinou um documento por um certificado digital. No processo de assinatura digital, é utilizado um hash.
-                  <br><br>
-                  PORQUE
-                  <br><br>
-                  A aplicação do hash, independentemente do tamanho da mensagem, sempre gera um conjunto de caracteres único, com tamanho fixo, representando o resumo da mensagem.
-               </p>
-               <qna>
-                  C. ambas são verdadeiras, e a segunda justifica a primeira.
-               </qna>
-            </ex5>
-         </exercicios>
+            <exercicios blk>
+               <ex1 blk="">
+                  <p>
+                     Uma assinatura eletrônica permite que um documento seja assinado por meio eletrônico, e isso pode ser feito de várias maneiras, podendo servir para diversas finalidades, como nos casos de advogados para peticionar, apresentar contestação, interpor recursos, entre outras possibilidades. 
+                     Nesse cenário, a assinatura eletrônica que deve ser feita com o auxílio de criptografia, chaves públicas e privadas, hash e também registros em uma autoridade certificadora é chamada de: 
+                  </p>
+                  <qna>
+                     B. 
+                     assinatura digital.
+                  </qna>
+               </ex1>
+               <ex2 blk="">
+                  <p>
+                     A assinatura digital é um tipo de assinatura eletrônica que envolve um conjunto de conceitos computacionais, como: criptografia e chaves públicas e privadas. Esse tipo de assinatura permite validar a autenticidade de uma identidade de organizações, pessoas ou equipamentos.
+                     <br><br>
+                     Considere as seguintes etapas:
+                     <ol>
+                        <li>Requerer o certificado a uma autoridade registradora.</li>
+                        <li>Envio do requerimento a uma autoridade certificadora.</li>
+                        <li>Validação dos dados enviados.</li>
+                        <li>Emissão do certificado digital.</li>
+                     </ol>
+                     A ordem correta das etapas para obter um certificado digital é:
+                  </p>
+                  <qna>
+                     A. 1, 3, 2, 4.
+                  </qna>
+               </ex2>
+               <ex3 blk="">
+                  <p>
+                     Considerando o texto a seguir, complete as lacunas corretamente:
+                     <br><br>
+                     O processo para conseguir um certificado digital passa por uma I, que confere todos os dados do solicitante. Com os dados validados, a II solicita a emissão do certificado digital para a III. Somente após isso, é gerado um certificado digital que permite que documentos e transações sejam autenticados eletronicamente, tendo, inclusive para fins jurídicos, o mesmo valor da assinatura de próprio punho.
+                     <br><br>
+                     Os itens I, II e III são corretamente preenchidos por:
+                  </p>
+                  <qna>
+                     B. I – autoridade registradora; II – autoridade registradora; III – autoridade certificadora.
+                  </qna>
+               </ex3>
+               <ex4 blk="">
+                  <p>
+                     A assinatura digital garante a confiabilidade e validade da identidade de quem assinou um documento por um certificado digital. Exemplos de aplicações da assinatura digital utilizando o certificado digital são o e-CPF e o e-CNPJ, utilizados por pessoas físicas e jurídicas.
+                     <br><br>
+                     Com base nessas informações, analise os seguintes itens:
+                     <br><br>
+                     <ol>
+                        <li>
+                           O hash é utilizado no processo de assinatura digital para permitir que o resumo da mensagem tenha um tamanho fixo.
+                        </li>
+                        <li>
+                           A chave pública permite que uma mensagem seja descriptografada.
+                        </li>
+                        <li>
+                           Com o intuito de validar a assinatura digital, é comparado o hash original com o hash descriptografado.
+                        </li>
+                     </ol>
+                  </p>
+                  <qna>
+                     C. I, II e III.
+                  </qna>
+               </ex4>
+               <ex5 blk="">
+                  <p>
+                     A assinatura eletrônica permite que pessoas e organizações assinem seus documentos, garantido maior confiabilidade. Essa assinatura pode ser feita, por exemplo, por meio de senha, biometria e assinatura digital. 
+                     <br><br>
+                     Considerando a assinatura digital, analise as seguintes asserções:
+                     <br><br>
+                     A assinatura digital garante a confiabilidade e validade da identidade de quem assinou um documento por um certificado digital. No processo de assinatura digital, é utilizado um hash.
+                     <br><br>
+                     PORQUE
+                     <br><br>
+                     A aplicação do hash, independentemente do tamanho da mensagem, sempre gera um conjunto de caracteres único, com tamanho fixo, representando o resumo da mensagem.
+                  </p>
+                  <qna>
+                     C. ambas são verdadeiras, e a segunda justifica a primeira.
+                  </qna>
+               </ex5>
+            </exercicios>
 
-         <exercicios blk>
-            <ex1>blk
-               <p>
-                  A assinatura digital é um tipo de assinatura eletrônica que envolve um conjunto de recursos, termos e conceitos, como: chaves públicas e privadas, criptografia e modelos matemáticos. A assinatura digital permite assinar digitalmente documentos que podem ser validados verificando a autenticidade das identidades de organizações, pessoas ou equipamentos.
-                  <br><br>
-                  Para assinar documentos eletronicamente com uma assinatura digital, é preciso um:
-               </p>
-               <qna>
-                  A. certificado digital.
-               </qna>
-            </ex1>
-            <ex2>blk
-               <p>
-                  Existem vários tipos de assinaturas eletrônicas, permitindo que documentos sejam assinados por meio eletrônico mediante senha, biometria, reconhecimento da retina e muitas outras formas, incluindo a assinatura digital.
-                  Considerando a assinatura digital, analise os itens:
-                  <br><br>
-                  <ol>
-                     <li>
-                        A assinatura digital é um tipo de assinatura eletrônica que envolve um conjunto de conceitos, como: chaves públicas e privadas, criptografia e hash.
-                     </li>
-                     <li>
-                        A assinatura digital permite validar a autenticidade de organizações, pessoas ou equipamentos, por exemplo.
-                     </li>
-                     <li>
-                        Uma assinatura digital é feita por meio de autoridade certificadora que emite um certificado digital, o qual pode ser utilizado para assinar digitalmente diversos tipos de documentos.
-                     </li>
-                  </ol>
-               </p>
-               <qna>
-                  B. I, II, III.
-               </qna>
-            </ex2>
-            <ex3>blk
-               <p>
-                  Uma assinatura eletrônica permite que um documento seja assinado por meio eletrônico, e isso pode ser mediante senha, biometria, reconhecimento da retina e muitas outras formas, incluindo a assinatura digital.
-                  <br>
-                  Com base na assinatura digital, analise o seguinte caso hipotético:
-                  <br>
-                  Marcos, empresário individual, deseja emitir dois certificados digitais: um para sua pessoa física (e-CPF) e o outro para sua pessoa jurídica (e-CNPJ).
-                  <br>
-                  Nesse cenário, o primeiro passo que Marcos deve fazer para emitir os certificados digitais é:
-               </p>
-               <qna>
-                  C. iniciar o processo requerendo o certificado a uma autoridade registradora.
-               </qna>
-            </ex3>
-            <ex4>blk
-               <p>
-                  Criptografar dados permite que as mensagem sejam escritas de forma cifrada, só podendo ser entendidas por seu remetente e receptor, na teoria, pois, dependendo da criptografia, os dados podem ser quebrados por um conjunto de técnicas, ou até mesmo utilizando força bruta. Com chaves simétricas ou assimétricas, pode-se realizar a criptografia de dados.
-                  <br><br>
-                  Considerando esse cenário, analise os seguintes itens:
-                  <br><br>
-                  <ol>
-                     <li>
-                        A criptografia com chaves simétricas utiliza duas chaves públicas para cifrar e descifrar informações.
-                     </li>
-                     <li>
-                        A criptografia de chaves assimétricas utiliza uma chave privada e uma pública para criptografar e descriptografar as mensagens.
-                     </li>
-                     <li>
-                        Nas chaves assimétricas, somente a chave privada é divulgada. A chave pública fica em poder de quem envia a mensagem.
-                     </li>
-                  </ol>
-               </p>
-               <qna>
-                  C. II, apenas.
-               </qna>
-            </ex4>
-            <ex5>blk
-               <p>
-                  A assinatura digital é muito utilizada em diversas áreas para assinar eletronicamente diferentes documentos. Na área jurídica, por exemplo, pode ser utilizada para assinatura de petições.
-                  <br>
-                  Considerando os conceitos de assinatura digital e certificado digital, analise os seguintes itens:
-                  <br><br>
-                  <ol>
-                     <li>
-                        Um certificado digital contém a chave pública e os dados necessários para validar uma assinatura digital.
-                     </li>
-                     <li>
-                        Uma assinatura digital é solicitada por meio de autoridade registradora, que valida os dados e envia o pedido para uma autoridade certificadora.
-                     </li>
-                     <li>
-                        O certificado digital somente pode ser feito para pessoas físicas, pois pessoas jurídicas não podem ter certificado digital, uma vez que não assinam documentos.
-                     </li>
-                  </ol>
-               </p>
-               <qna>
-                  B. I e II, apenas.
-               </qna>
-            </ex5>
-         </exercicios>
+            <exercicios blk>
+               <ex1>blk
+                  <p>
+                     A assinatura digital é um tipo de assinatura eletrônica que envolve um conjunto de recursos, termos e conceitos, como: chaves públicas e privadas, criptografia e modelos matemáticos. A assinatura digital permite assinar digitalmente documentos que podem ser validados verificando a autenticidade das identidades de organizações, pessoas ou equipamentos.
+                     <br><br>
+                     Para assinar documentos eletronicamente com uma assinatura digital, é preciso um:
+                  </p>
+                  <qna>
+                     A. certificado digital.
+                  </qna>
+               </ex1>
+               <ex2>blk
+                  <p>
+                     Existem vários tipos de assinaturas eletrônicas, permitindo que documentos sejam assinados por meio eletrônico mediante senha, biometria, reconhecimento da retina e muitas outras formas, incluindo a assinatura digital.
+                     Considerando a assinatura digital, analise os itens:
+                     <br><br>
+                     <ol>
+                        <li>
+                           A assinatura digital é um tipo de assinatura eletrônica que envolve um conjunto de conceitos, como: chaves públicas e privadas, criptografia e hash.
+                        </li>
+                        <li>
+                           A assinatura digital permite validar a autenticidade de organizações, pessoas ou equipamentos, por exemplo.
+                        </li>
+                        <li>
+                           Uma assinatura digital é feita por meio de autoridade certificadora que emite um certificado digital, o qual pode ser utilizado para assinar digitalmente diversos tipos de documentos.
+                        </li>
+                     </ol>
+                  </p>
+                  <qna>
+                     B. I, II, III.
+                  </qna>
+               </ex2>
+               <ex3>blk
+                  <p>
+                     Uma assinatura eletrônica permite que um documento seja assinado por meio eletrônico, e isso pode ser mediante senha, biometria, reconhecimento da retina e muitas outras formas, incluindo a assinatura digital.
+                     <br>
+                     Com base na assinatura digital, analise o seguinte caso hipotético:
+                     <br>
+                     Marcos, empresário individual, deseja emitir dois certificados digitais: um para sua pessoa física (e-CPF) e o outro para sua pessoa jurídica (e-CNPJ).
+                     <br>
+                     Nesse cenário, o primeiro passo que Marcos deve fazer para emitir os certificados digitais é:
+                  </p>
+                  <qna>
+                     C. iniciar o processo requerendo o certificado a uma autoridade registradora.
+                  </qna>
+               </ex3>
+               <ex4>blk
+                  <p>
+                     Criptografar dados permite que as mensagem sejam escritas de forma cifrada, só podendo ser entendidas por seu remetente e receptor, na teoria, pois, dependendo da criptografia, os dados podem ser quebrados por um conjunto de técnicas, ou até mesmo utilizando força bruta. Com chaves simétricas ou assimétricas, pode-se realizar a criptografia de dados.
+                     <br><br>
+                     Considerando esse cenário, analise os seguintes itens:
+                     <br><br>
+                     <ol>
+                        <li>
+                           A criptografia com chaves simétricas utiliza duas chaves públicas para cifrar e descifrar informações.
+                        </li>
+                        <li>
+                           A criptografia de chaves assimétricas utiliza uma chave privada e uma pública para criptografar e descriptografar as mensagens.
+                        </li>
+                        <li>
+                           Nas chaves assimétricas, somente a chave privada é divulgada. A chave pública fica em poder de quem envia a mensagem.
+                        </li>
+                     </ol>
+                  </p>
+                  <qna>
+                     C. II, apenas.
+                  </qna>
+               </ex4>
+               <ex5>blk
+                  <p>
+                     A assinatura digital é muito utilizada em diversas áreas para assinar eletronicamente diferentes documentos. Na área jurídica, por exemplo, pode ser utilizada para assinatura de petições.
+                     <br>
+                     Considerando os conceitos de assinatura digital e certificado digital, analise os seguintes itens:
+                     <br><br>
+                     <ol>
+                        <li>
+                           Um certificado digital contém a chave pública e os dados necessários para validar uma assinatura digital.
+                        </li>
+                        <li>
+                           Uma assinatura digital é solicitada por meio de autoridade registradora, que valida os dados e envia o pedido para uma autoridade certificadora.
+                        </li>
+                        <li>
+                           O certificado digital somente pode ser feito para pessoas físicas, pois pessoas jurídicas não podem ter certificado digital, uma vez que não assinam documentos.
+                        </li>
+                     </ol>
+                  </p>
+                  <qna>
+                     B. I e II, apenas.
+                  </qna>
+               </ex5>
+            </exercicios>
+         </page>
       </main>
 
       <script>

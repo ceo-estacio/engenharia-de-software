@@ -1,0 +1,15 @@
+
+
+body {
+   background:var( --dark1 );
+   
+}
+/* main {
+   padding-left: 79px !important;
+} */
+
+page {
+   background: var( --dark2 );
+   border-radius: 2rem;
+   padding: 2vw;
+}

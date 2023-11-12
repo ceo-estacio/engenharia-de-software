@@ -209,6 +209,10 @@ let
 addEventListener( "DOMContentLoaded", () => {
    _( "oi" );
    const 
+      AppBarOptions = $( "appbar-options" ),
+      Drawer = $( "drawer" ),
+      Main = $( "body > main" ),
+
       NavLinks = $$( "navlink" ),
       C = $$( "[c]" ),
       BG = $$( "[bg]" ),
@@ -395,6 +399,18 @@ addEventListener( "DOMContentLoaded", () => {
       }
    ) );
 
+   AppBarOptions.addEventListener( "click", ev => {
+      if( Drawer.getAttribute( "closed" ) == "" ) {
+         _( "closed" );
+         Drawer.removeAttribute( "closed" );
+         Main.setAttribute( "active", "" );
+      } else {
+         _( "open" );
+         Drawer.setAttribute( "closed", "" );
+         Main.removeAttribute( "active" );
+      }
+   } );
+
    W.forEach( v => v.style.width = v.getAttribute( "w" ) );
    H.forEach( v => v.style.height = v.getAttribute( "h" ) );
    M.forEach( v => v.style.margin = v.getAttribute( "m" ) );
@@ -416,7 +432,7 @@ addEventListener( "DOMContentLoaded", () => {
          this.attachShadow( { mode: "open" } );
          this.shadowRoot.append( drawer.content.cloneNode( true ) );
          // this.shadowRoot.querySelector( "img" ).src = this.getAttribute( "src" );
-         this.shadowRoot.querySelector( "img" ).alt = this.getAttribute( "alt" );
+         // this.shadowRoot.querySelector( "img" ).alt = this.getAttribute( "alt" );
       } 
       connectedCallback() {
          this.render();
@@ -427,41 +443,12 @@ addEventListener( "DOMContentLoaded", () => {
          //    cardBase.style.transform = "rotateY( 180deg )";
          // } );
 
-         let DLink = this.shadowroot.querySelectorAll( "d-link > a" );
-         DLink.forEach( d => { 
-            // d.addEventListener( "touchstart", ev => {
-            d.addEventListener( "dragstart", ev => {
-               switch( d.innerText ) {
-               case "01": {
-                  d.title = "oi";
-               }
-                  break;
-               }
-            } );
-         } );
+         /*  */
       }
       render() {
       }
    }
    window.customElements.define( "app-drawer", AppDrawer );
 
-   // DLink.forEach( d => { 
-   //    // d.addEventListener( "touchstart", ev => {
-   //    d.addEventListener( "dragstart", ev => {
-   //       switch( d.innerText ) {
-   //       case "01": {
-   //          d.title = "oi";
-   //       }
-   //          break;
-   //       }
-   //    } );
-   // } );
-
-   start.addEventListener( "click", ev => {
-      open( "./index.html", "_self" );
-   } );
-   start.addEventListener( "contextmenu", ev => {
-      open( "https://www.youtube.com/playlist?list=PL866_LrQxNVipiEgWtJMK5Fcgc6IBfVvc", "_self" );
-   } );
 
 } );
