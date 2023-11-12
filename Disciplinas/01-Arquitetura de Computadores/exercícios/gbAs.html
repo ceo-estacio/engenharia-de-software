@@ -63,13 +63,13 @@
             background-image:   linear-gradient( 0deg, #00000000 24px, #212329 25px ),
             linear-gradient( 90deg, #00000000 24px, #212329 25px );
 
-            background: #000;
+            /* background: #000; */
             background-size: 25px 25px;
          }
 
          body {
             color: #ccc;
-            color: #1b1d22;
+            /* color: #1b1d22; */
             font-family: Verdana, Geneva, Tahoma, sans-serif;
          }
          main { margin: 0 auto; width: clamp( 100px, 100%, 1200px ); }
@@ -333,6 +333,10 @@
             padding: 2vw;
             gap: 2vw;
          }
+         exe e {
+            border-radius: 1.5rem;
+            background: #16181c30;
+         }
          exe qna {
             display: grid;
             padding: 2vw;
@@ -341,6 +345,10 @@
             background: #ffffff02;
          }
 
+      </style>
+      <style>
+         /* html { background: #000; }
+         body { color: #1b1d22; } */
       </style>
    </head>
    <body>
@@ -368,12 +376,38 @@
                <qna>LOAD e STORE</qna>
             </e>
             <e>
-               <p>Jõao foi à lanchonete</p>
+               <p>A arquitetura de instruções de um computador, frequentemente 
+                  abreviada como ISA (do inglês "Instruction Set Architeture"), 
+                  é uma parte fundamental que define a estrutura e o 
+                  funcionamento de um sistema de computador. 
+                  É interface que descreve as operações, a organização de 
+                  dados, a memória e outras características funcionais de 
+                  um processador, como as instruções que um 
+                  processador pode executar.
+                  <br><br>
+                  Qual das seguintes afirmações melhor descreve a 
+                  filosofia de design por trás da arquitetura RISC?
+               </p>
+               <qna>
+                  RISC emprega um conjunto de instruções pequeno e 
+                  altamente otimizado.
+               </qna>
+            </e>
+            <e>
+               <p>João foi à lanchonete e solicitou ao balconista 
+                  um hamburguer (X) ou uma batata frita (Y) 
+                  e um refrigerante (Z). 
+                  Qual expressão simboliza este pedido?
+               </p>
                <qna>( x + y ) . z</qna>
             </e>
             <e>
                <p>depois de buscarem os dados na memória, os processadores
-                  interpretam o que fazer
+                  interpretam o que fazer, por exemplo, 
+                  que a operação a ser executada é a de somar, e depois executam 
+                  a operação propriamente dita. 
+                  Cada operação a ser executada é identificada e definida por 
+                  um conjunto de bits denominado:
                </p>
                <qna>Instrução de máquina</qna>
             </e>
@@ -415,15 +449,789 @@
                <qna>As afirmações 1, 2, e 3</qna>
             </e>
             <e>
-               <p></p>
-               <qna></qna>
+               <p>
+                  Correlacione os exemplos abaixo com as seguintes classes, 
+                  segundo a taxonomia de Flynn.
+                  <br><br>
+                  <ol>
+                     <li>Single Instruction Single Data </li>
+                     <li>Single Instruction Multiple Data </li>
+                     <li>Multiple Instruction Single Data </li>
+                     <li>Multiple Instruction Multiple Data </li>
+                  </ol>
+                  com
+                  <ol>
+                     <li>Computadores sequencias <b>SISD</b></li>
+                     <li>Sistemas multiprocessados <b>MIMD</b></li>
+                     <li>Máquina teórica <b>MISD</b></li>
+                     <li>Processadores vetoriais <b>SIMD</b></li>
+                  </ol>
+               </p>
+               <qna>
+                  1-A, 2-D, 3-C, 4-B
+               </qna>
+            </e>
+            <e>
+               <p>
+                  De acordo com a classificação de Flynn, assinale a alternativa correta:
+               </p>
+               <qna>
+                  Computadores de fluxo múltiplo de instruções, fluxo múltiplo de dados - MIMD
+               </qna>
+            </e>
+
+
+
+
+            <e>
+               <p>Assinale a alternativa que apresenta a sequência correta da saída (S) da tabela verdade 
+                  para o circuito lógico, conforme a sequinte entrada de dados: 
+                  <br><br>
+                  <img src="./pix/entrada de dados 1.png" width="50%" alt="">
+               </p>
+               <qna>1101</qna>
+            </e>
+            <e>
+               <p>Assinale a alternativa que apresenta corretamente a representação 
+                  do circuito a seguir: 
+                  <br><br>
+                  <img src="./pix/circuito 1.png" width="50%" alt="">
+               </p>
+               <qna>
+                  <img src="./pix/res circuito 1.png" width="50%" alt="">
+               </qna>
+            </e>
+            <e>
+               <p>Assinale a alternativa que apresenta corretamente a 
+                  expressão para a representação do circuito a seguir: 
+                  <br><br>
+                  <img src="./pix/circuito 2.jpg" width="50%" alt="">
+               </p>
+               <qna>
+                  S = Ã + Õ
+               </qna>
+            </e>
+            <e>
+               <p>Assinale a alternativa que apresenta a sequencia 
+                  correta da saída (S) da Tabela verdade para o 
+                  circuito lógico, conforme a seguinte 
+                  entrada de dados: 
+                  <br><br>
+                  <img src="./pix/circuito 3.png" width="50%" alt="">
+               </p>
+               <qna>
+                  10001000
+               </qna>
+            </e>
+
+
+
+
+
+            <e>
+               <p>
+                  Para realizar as conversões e operações necessárias, considere:
+                  <ul>
+                     <li>Os valores como potências da base 10;</li>
+                     <li>Os resultados expressos com os números escritos por extenso (não usar notação científica, como, por exemplo, 1 x 103).</li>
+                  </ul>
+                  Dica: calcular usando a unidade de medida padrão como base de cálculo (bits ou Bytes).
+                  <br><br>
+                  A operação 128 Mbits - 2MBytes é igual a:
+               </p>
+               <qna>14.000 KB</qna>
+            </e>
+            <e>
+               <p>
+                  Para realizar as conversões e operações necessárias, considere:
+                  <ul>
+                     <li>Os valores como potências da base 10;</li>
+                     <li>Os resultados expressos com os números escritos por extenso (não usar notação científica, como, por exemplo, 1 x 103).</li>
+                  </ul>
+                  Dica: calcular usando a unidade de medida padrão como base de cálculo (bits ou Bytes).
+                  <br><br>
+                  A operação 64 MB - 400 KB é igual a:
+               </p>
+               <qna>0.0644 GB</qna>
             </e>
             <e>
                <p></p>
                <qna></qna>
             </e>
+
+
+
+
+
             <e>
-               <p></p>
+               <p>
+                  As memórias usadas no computadore são dividídas de acordo com 
+                  a sua tecnologia, velocidade, custo e capacidade. 
+                  Por conta disso, é feita uma distribuição dessas memórias com o objetivo 
+                  obter a melhor relação custo-benefício.
+                  Diante disso, qual é a função principal da memória cache? 
+               </p>
+               <qna>
+                  Armazenar certa quantidade de dados que estão sendo utilizados 
+                  no momento e transferi-los para o processador em alta velocidade.
+               </qna>
+            </e>
+            <e>
+               <p>A tecnologia que permite processamento paralelo em nível instruções, 
+                  isto é, que possui vários pipelines em um mesmo processador para processamento de 
+                  mais de uma instrução simultaneamente é a: 
+               </p>
+               <qna>Superescalar</qna>
+            </e>
+            <e>
+               <p>
+                  A colocação de memória cache no projeto de um computador 
+                  é um artifício para melhorar sua performance.
+                  Quanto a essa memória podemos afirmar que: 
+               </p>
+               <qna>
+                  Fica presente no processador e aumenta a eficiencia por 
+                  ser mais rápida que a memória principal.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  O último símbolo possível de ser representado 
+                  na base numérica 14 é o:
+               </p>
+               <qna>D</qna>
+            </e>
+            <e>
+               <p>
+                  A tabela-verdade é um conceito fundamental na lógica booleana e no design de circuitos digitais.
+                  <br><br>
+                  Qual é o propósito de uma tabela-verdade na lógica digital?
+               </p>
+               <qna>
+                  Descrever a relação entre a entrada e a saída de um circuito lógico.
+               </qna>
+            </e>
+            <e>
+               <p>"Qual as duas camadas principais do computador?"</p>
+               <qna>
+                  Hardware e Software
+               </qna>
+            </e>
+            <e>
+               <p>
+                  O tipo de transmissão na qual o periférico é conectado ao dispositivo controlador ou interface de E/S por várias linhas de transmissão de dados, de modo que a transferência de dados é realizada um bit em cada linha, com todos os bits alinhados dentro do mesmo intervalo de tempo de transmissão é denominado:
+               </p>
+               <qna>
+                  Paralela
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Relacione as colunas:
+                  <ul>
+                     <li>Multicore</li>
+                     <li>Superpipeline</li>
+                     <li>Superescalar</li>
+                     <li>Pipeline dinâmico</li>
+                     <li>Multiprocessadores</li>
+                  </ul>
+                  com
+                  <ul>
+                     <li>Múltiplos pipelines que operam em paralelo.</li>
+                     <li>Execução de instruções fora de ordem em um pipeline.</li>
+                     <li>Pipelines com grande número de estágios.</li>
+                     <li>Múltiplos processadores compartilhando um espaço de endereços.</li>
+                     <li>Múltiplos processadores em um único encapsulamento.</li>
+                  </ul>
+               </p>
+               <qna>
+                  I-E, II-C, III-A, IV-B, V-D
+               </qna>
+            </e>
+            <e>
+               <p>
+                  O número 1F2 na base 16 é representado por qual número na base 2?
+               </p>
+               <qna>
+                  000111110010
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Quanto é o resultado da operação 4765 + 3552 na base numérica 8?
+               </p>
+               <qna>
+                  10537
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Em 2019, os Sistemas Operacionais para dispositivos móveis (mobileOS) já respondiam por mais de 50% do market share dos Sistemas Operacionais. Qual das funcionalidades a seguir é responsabilidade do mobileOS de um celular?
+               </p>
+               <qna>
+                  <ul>
+                     <li>Mostrar notificações.</li>
+                     <li>Mostrar a carga restante da bateria.</li>
+                     <li>Ler a tela touchscreen.</li>
+                  </ul>
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Selecione o processador que segue a arquitetura RISC 
+                  dentre os processadores teóricos cujas 
+                  especificações técnicas são apresentadas a seguir:
+               </p>
+               <qna>
+                  Processador D: 16 registradores, 30 instruções de 4 bytes de tamanho.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Analise as seguintes definições de pipeline de instruções
+                  simples, sperescalar e multithreading simultãneo:
+                  <br><br>
+                  <ul>
+                     <li>
+                        I - Pipeline instruções simples: instruções individuais que são
+                        executadas através de um pipeline de estágios, 
+                        de maneira que, enquanto uma instrução está sendo executadaem um estágio,
+                        outra instrução está sendo executada em outro 
+                        estágio do pipeline.
+                     </li>
+                     <li>
+                        II - Superescalar: um pipeline é construído por meio da 
+                        replicação de recursos de execução, o que 
+                        permite e execução paralela de instruções 
+                        em pipelines paralelos.
+                     </li>
+                  </ul>
+               </p>
+               <qna>
+                  1 e 2
+                  <br><br>
+                  <ul>
+                     <li>Pipeline instruções simples</li>
+                     <li>Superescalar</li>
+                  </ul>
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Quando comparado a uma arquitetura superescalar, podemos considerar
+                  como vantagens para uma arquitetura superpipeline
+                  as seguintes características:
+                  <br><br>
+                  <ul>
+                     <li>
+                        I - A quebra de um estágio em estágios menores demandando uma quantidade
+                        de tempo menor para serem executados.
+                        Consequentemente, um período menor resultará em uma frequencia maior.
+                     </li>
+                     <li>
+                        III - Visa reduzir tempo de execução de um programa.
+                     </li>
+                  </ul>
+               </p>
+               <qna>
+                  1 e 3
+               </qna>
+            </e>
+            <e>
+               <p>
+                  O surgimento de processadores com a arquiterura RISC 
+                  foi fundamental para o desenvolvimento de smartphones,
+                  tablets, "smartwatches" entre muitos outros.
+                  <br><br>
+                  Com a restrição de espaço para construir esses equipamentos,
+                  a abprdagem RISC foi fundamental pois:
+               </p>
+               <qna>
+                  Priorizava execução em registradores, aumentando a eficiencia 
+                  dos programas.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  No contexto de arquitetura e organização de computadores, todo 
+                  processador é constituído de modo a ser
+                  capaz de realizar instruçõesbásicas como somar, multiplicar, subtrair
+                  ou dividir números.
+                  Em relação à arquitetura CISC, selecione a afirmação correta 
+                  dentre as seuintes:
+               </p>
+               <qna>
+                  O endereçamento múltiplo traz flexibilidade, permitindo
+                  operações diretamente em operandos na memória principal, 
+                  além dos presentes nos registradores.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  As principais variáveis em uma organização de 
+                  processadores multicore são o número de núcleos no chip,
+                  o número de níveis da memória cache e a quantidade
+                  de memória cache que é compartilhada.
+                  Neste contexto, o processador Intel Core I7, introduzido
+                  em 2008, implementava 4 processadores x86 SMT (
+                     Simultaneos Multithreading
+                  ), cada um com:
+               </p>
+               <qna>
+                  cache L2 dedicada e uma L3 compartilhada.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Sobre as arquiteturas CISC e RISC, considere
+                  as afirmativas:
+               </p>
+               <qna>
+                  <ul>
+                     <li>
+                        III - Os computadores atuais,
+                        em sua maioria, utilizam-se de ambas as 
+                        arquiteturas, num modelo híbrido.
+                     </li>
+                  </ul>
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Em relação à arquitetura CISC, selecione a afirmação correta dentre as seuintes:
+               </p>
+               <qna>
+                  O endereçamento múltiplo traz flexibilidade, permitindo operações diretamente em operandos na memória principal, além dos presentes nos registradores.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  A respsito do desenvolvimento do computador e suas gerações,
+                  assinale a alternativa que corresponde ao componente
+                  de segunda geração:
+               </p>
+               <qna>
+                  Transistores
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Assinale a alternativa correta sobre Overclocking.
+               </p>
+               <qna>
+                  É o processo para customizar a velocidade do clock 
+                  do processador acima de sua frequencia de uso normal.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  O parãmetro de análise de memórias eletrônicas
+                  que indica o tempo entre duas operações 
+                  sucessivas de leitura ou escrita é conhecido como:
+               </p>
+               <qna>Ciclo de Memória.</qna>
+            </e>
+            <e>
+               <p>
+                  Assinale a alternativa incorreta sobre Portas Lógicas 
+                  e Lógica Booleana.
+               </p>
+               <qna>
+                  A tabela verdade é uma técnica utilizada 
+                  para descrever ...
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Em relação aos operadores de portas lógicas 
+                  OR (OU), considere o seguinte cenário: 
+                  Quando abrimos a porta de um carro, a lâmpada de iluminação 
+                  da cabine do veículo acende.
+                  E ao fechar esta mesma porta, a lâmpada desliga...
+               </p>
+               <qna>
+                  X = A + B
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Assinale a alternativa correta:
+                  Em circuitos digitais, uma porta OR é?
+               </p>
+               <qna>
+                  Um circuito que tem duas ou mais entradas 
+                  e a sua saída é igual à combinação destas 
+                  entradas através de uma operação OR.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  O espaço existente em um processador é restrito, 
+                  e seu uso é definido, em muito, pela arquitetura 
+                  na qual ele se baseia.
+                  Considerando um processador RISC e um CISC, 
+                  as suas prioridades de espaço são, 
+                  respectivamente (baseadas nas arquiteturas):
+               </p>
+               <qna>
+                  Registradores de uso geral e unidade de controle.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  A arquitetura RISC (Reduced Instruction Set Computer) 
+                  apresenta um conjunto restrito de instruções, 
+                  executadas de forma altamente eficiente. 
+                  Uma das desvantagens dest arquitetura é: 
+               </p>
+               <qna>
+                  A necessidade conversão de código de alto nível 
+                  em diversas instruções em Assembly, 
+                  aumentando o número de instruções a serem executadas.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Assinale a opção que não representa um dispositivo 
+                  de entrada para um computador pessoal:
+               </p>
+               <qna>
+                  Impressora 3D.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Antônio enviou cinco arquivos de texto à João, 
+                  com diferentes tamanhos. 
+                  Selecione a opção que representa o arquivo 
+                  de menor tamanho em megabytes (MB).
+               </p>
+               <qna>
+                  3.000 Bytes
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Em um pipeline de seis estágios 
+                  a correta sequencia de execução de estágios é:
+               </p>
+               <qna>
+                  FI,DI,CO,FO,EI,WO 
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Usando as regras da álgebra booleana, 
+                  selecione a alternativa que apresenta 
+                  corretamente a simplificação da expressão a seguir:
+               </p>
+               <qna>
+                  A + (B.C)
+               </qna>
+            </e>
+            <e>
+               <p>
+                  O escalonador (scheduler) é uma parte fundamental de qualquer sistema operacional e desempenha um papel crucial na gestão do processamento de tarefas e na alocação de recursos do sistema.
+                  <br><br>
+                  Qual é a principal função do escalonador em um sistema operacional?
+               </p>
+               <qna>
+                  Decidir a alocação de tempo do processador para programas em execução.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Os componentes que formam o cerne da infraestrutura da internet, responsáveis por cobrir as enormes distâncias intercontinentais e transportar os datagramas pelo mundo, são chamados de:
+               </p>
+               <qna>
+                  Roteadores.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  A história dos computadores e da computação é marcada pela constante miniaturização e sofisticação do hardware. Uma tecnologia que alterou drasticamente os computadores foi o Circuito Integrado. A grande vantagem dessa tecnologia é:
+               </p>
+               <qna>
+                  Diminuição de tamanho do circuito.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  A tecnologia de SSD veio para substituir os discos rígidos. Sem partes móveis, é menos propensa a falhas, além de ser mais rápida que seus antecessores.
+                  <br><br>
+                  Os discos rígidos e os SSD não são fundamentais, de forma conceitual, para os computadores. Entretanto, são peças muito importantes, na prática, para os computadores pessoais. Isso se deve ao fato de:
+               </p>
+               <qna>
+                  A memória RAM ser volátil.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Considere as seguintes especificações de dois componentes:
+                  <ul>
+                     <li>I. Velocidade de 4,2 Ghz; 4 núcleos; 6 MB Smart Cache.</li>
+                     <li>II. Velocidade de 2133 MHz; capacidade de 16GB; voltagem 1,2V.</li>
+                  </ul>
+               </p>
+               <qna>
+                  Processador e memória RAM.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  O endereçamento IP (Internet Protocol Address) é um sistema utilizado em redes de computadores para identificar e localizar dispositivos em uma rede IP.
+                  <br><br>
+                  O que é o endereço IP e qual é sua função na comunicação em rede?
+               </p>
+               <qna>
+                  É uma sequência de quatro números usados para identificar unicamente um computador na rede.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  O computador é composto por diversos componentes, dentre eles encontra-se o barramento. Qual é a principal função do barramento em um sistema de computação?
+               </p>
+               <qna>
+                  Transportar sinais de informação e controle entre componentes interligados.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Os sistemas operacionais podem ser divididos em dois tipos básicos: Monoprogramáveis e Multiprogramáveis. Como os sistemas multiprogramáveis diferem dos monoprogramáveis?
+               </p>
+               <qna>
+                  Os sistemas multiprogramáveis permitem que vários programas sejam executados simultaneamente.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  As linguagens de programação são classificadas de acordo com a sua proximidade com o formato da máquina (baixo nível) ou com a proximidade com o formato humano (alto nível). Qual linguagem é classificada como de baixo nível de abstração e está relacionada diretamente à arquitetura do processador?
+               </p>
+               <qna>
+                  Assembly.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  As memórias RAMs passaram por muitas mudanças durante a sua evolução. Uma memória que trouxe um grande diferencial para as então tradicionais SDRAM foi a DDR-SDRAM. Qual é a principal diferença entre a memória DDR-SDRAM e a memória SDRAM em relação ao sinal de clock?
+               </p>
+               <qna>DDR-SDRAM transfere dados na subida e na descida do sinal de clock.</qna>
+            </e>
+            <e>
+               <p>
+                  No conceito de hierarquia de memória, temos uma classificação muito importante relacionada ao comportamento dos programas que sem ela a hierarquia de memória teria pouco efeito. Qual dos seguintes conceitos se refere à probabilidade de o processador acessar o mesmo endereço de memória em um curto período de tempo após um acesso anterior?
+               </p>
+               <qna>
+                  Localidade temporal.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Um processador possui resumidamente duas funções principais: Processamento e controle. Nesse contexto, em que área da UCP (processador) se realiza a movimentação de dados e de instruções de E/S para o processador?
+               </p>
+               <qna>
+                  Unidade de Controle - UC.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  A parte do estudo da ciência da computação que trata dos aspectos relativos às partes do computador que são mais conhecidas pelos especialistas que o construíram, e cujo entendimento é desnecessário para o programador é denominada especificamente de:
+               </p>
+               <qna>
+                  Implementação de Computadores.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Em um sistema operacional, o conjunto de rotinas que oferece serviços aos usuários, às suas aplicações e também ao próprio sistema é denominado especificamente como:
+               </p>
+               <qna>
+                  Núcleo.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Os processadores funcionam através de ordens simples e básicas, tais como:
+                  <br><br>
+                  <ul>
+                     <li>Efetuar a soma de dois números.</li>
+                     <li>Mover um dado de um local para outro.</li>
+                     <li>Adicionar 1 ao valor do número.</li>
+                     <li>Transferir 1 byte de dados da memória para uma porta de saída.</li>
+                  </ul>
+               </p>
+               <qna>Instrução</qna>
+            </e>
+            <e>
+               <p>
+                  A compreensão da conversão entre bases numéricas é crucial para programadores, especialmente ao lidar com programação de baixo nível, sistemas embarcados e manipulação de dados binários.
+                  <br><br>
+                  Qual é o valor em decimal do número binário 1011?
+               </p>
+               <qna>
+                  11
+               </qna>
+            </e>
+            <e>
+               <p>
+                  O conjunto de caracteres ASCII (American Standard Code for Information Interchange) e o Unicode são dois sistemas amplamente utilizados para representar caracteres em sistemas de computador e comunicação. Eles desempenham um papel crucial na codificação e na troca de informações em uma ampla variedade de aplicativos e linguagens em todo o mundo.
+                  <br><br>
+                  Qual é a principal diferença entre o conjunto de caracteres ASCII e o Unicode?
+               </p>
+               <qna>
+                  O ASCII usa 7 bits para representar cada caractere, enquanto o Unicode usa 16 bits.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  A conversão de bases numéricas é um processo fundamental na computação, pois os sistemas de computadores usam principalmente a base binária (base 2) para representar dados. No entanto, em determinadas situações, é necessário converter entre diferentes bases numéricas, como base 2 (binária), base 8 (octal), base 10 (decimal) e base 16 (hexadecimal).
+                  <br><br>
+                  Qual é o equivalente em hexadecimal do número binário 101010?
+               </p>
+               <qna>
+                  2A
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Os múltiplos da base 2 são valores que representam potências de 2. Eles são frequentemente usados na computação e na representação de unidades de informação, como bits e bytes.
+                  <br><br>
+                  Qual é o prefixo de múltiplos usado para representar 1.024 megabytes?
+               </p>
+               <qna>
+                  Giga
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Suponha que, para efeitos de aprendizagem em arquitetura de computadores (ignorando vários detalhes de implementação), você decidiu criar uma representação de conjunto de instruções hipotético muito simples e limitado para operações aritméticas de inteiros positivos com dois operandos, de um processador de 4 bits, cuja palavra de dados é de 4 bits.
+                  <br><br>
+                  É gasto 1 ciclo de instrução para cada palavra, e a quantidade de ciclos para execução de uma determinada instrução (operadores e operandos) é igual à quantidade de palavras dessa instrução.
+                  <br><br>
+                  O conjunto de instruções está representado a seguir:
+                  <br><br>
+                  <img src="./pix/quest4-representacao-de-dados.png" width="50%" alt="">
+                  <br><br>
+                  Caso seja desejável realizar o cálculo de 6 + 3, qual será o formato de instrução recebido?
+               </p>
+               <qna>
+                  1010 0110 0011
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Suponha que, para efeitos de aprendizagem em arquitetura de computadores (ignorando vários detalhes de implementação), você decidiu criar uma representação de conjunto de instruções hipotético muito simples e limitado para operações aritméticas de inteiros positivos com dois operandos, de um processador de 4 bits, cuja palavra de dados é de 4 bits.
+                  <br><br>
+                  É gasto 1 ciclo de instrução para cada palavra, e a quantidade de ciclos para execução de uma determinada instrução (operadores e operandos) é igual à quantidade de palavras dessa instrução.
+                  <br><br>
+                  O conjunto de instruções está representado a seguir:
+                  <br><br>
+                  <img src="./pix/quest4-representacao-de-dados.png" width="50%" alt="">
+                  <br><br>
+                  Como é a representação em hexadecimal da instrução 1011 1001 1000?
+               </p>
+               <qna>
+                  B 9 8
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Quanto é o resultado da operação 4765 + 3552 na base numérica 8?
+               </p>
+               <qna>
+                  10537
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Uma determinada porta lógica possui duas entradas, X e Y. Quando X e Y são 0 a saída é 0. Quando X e Y são 1 a saída também é 0. Qual é a porta lógica que possui esta tabela verdade?
+               </p>
+               <qna>
+                  XOR
+               </qna>
+            </e>
+            <e>
+               <p>
+                  A partir da expressão: A + (B . C). Escolha a única alternativa que representa uma expressão equivalente.
+               </p>
+               <qna>
+                  (A + B) . (A + C)
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Assinale a alternativa que apresenta a sequência correta da saída (S) para a expressão lógica S = AB + C, quando os valores de entrada são:
+                  <br><br>
+                  A = 010, B 110 e C=001.
+               </p>
+               <qna>S = 011</qna>
+            </e>
+            <e>
+               <p>
+                  Ana Carolina está adorando as aulas de Lógica Digital e tenta reproduzir em situações do cotidiano os conceitos aprendidos durante seus estudos. Recentemente, ela tentou reproduzir através de uma expressão booleana a seguinte situação hipotética: comprar legumes (A) e verduras (F), e ainda escolher entre carne (C) ou peixe (P). Qual das expressões melhor representa esta ação?
+               </p>
+               <qna>(A . F) . (C + P)</qna>
+            </e>
+            <e>
+               <p>
+                  A tabela-verdade é um conceito fundamental na lógica booleana e no design de circuitos digitais.
+                  <br><br>
+                  Qual é o propósito de uma tabela-verdade na lógica digital?
+               </p>
+               <qna>
+                  Descrever a relação entre a entrada e a saída de um circuito lógico.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  A Taxonomia de Flynn é uma classificação para arquiteturas de computadores proposta por Michael J. Flynn em 1966. Essa taxonomia é usada para categorizar os sistemas de computação com base no número de instruções e dados que podem ser processados simultaneamente.
+                  <br><br>
+                  Qual das seguintes categorias da taxonomia de Flynn é considerada principalmente teórica, com pouca ou nenhuma implementação prática?
+               </p>
+               <qna>MISD</qna>
+            </e>
+            <e>
+               <p>
+                  A memória cache é um tipo de memória de armazenamento temporário de alta velocidade utilizada por processadores de computador para armazenar rapidamente dados e instruções que são frequentemente requisitados ou que foram recentemente utilizados. Isso é feito para acelerar o processo de recuperação de dados, pois buscar dados na memória cache é muito mais rápido do que recuperá-los da memória principal (RAM).
+                  <br><br>
+                  Qual das seguintes afirmações sobre a memória cache L1 é verdadeira?
+               </p>
+               <qna>
+                  É a cache com menor capacidade, mas a mais rápida.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  O SMP é usado em muitos tipos de sistemas, desde servidores e centros de dados até desktops de alto desempenho e hardware de supercomputação. Embora a computação paralela e distribuída tenha introduzido novas arquiteturas e abordagens, o SMP permanece um conceito fundamental na ciência da computação e na engenharia de sistemas.
+                  <br><br>
+                  O que caracteriza principalmente um sistema SMP (Symmetric Multiprocessing)?
+               </p>
+               <qna>
+                  Todos os processadores desempenham as mesmas funções.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  O Hyper-Threading continua sendo uma tecnologia significativa na linha de processadores da Intel e é uma das muitas abordagens usadas para melhorar o desempenho paralelo dos computadores modernos.
+                  <br><br>
+                  O que a tecnologia Hyper-Threading (HT) da Intel faz?
+               </p>
+               <qna>
+                  Cria dois processadores virtuais a partir de um único físico.
+               </qna>
+            </e>
+            <e>
+               <p>
+                  Processadores superescalares são microprocessadores que implementam um tipo de paralelismo a nível de instrução (ILP - Instruction Level Parallelism) dentro de um único processador. Em outras palavras, eles têm a capacidade de executar mais de uma instrução durante um único ciclo de clock.
+                  <br><br>
+                  Qual das seguintes opções é uma característica dos processadores superescalares?
+               </p>
+               <qna>Execução de instruções de forma independente e possivelmente fora de ordem.</qna>
+            </e>
+            <e>
+               <p>
+                  
+               </p>
                <qna></qna>
             </e>
             <e>
