@@ -1,9 +1,9 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans:wght@500;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&display=swap');
-@import url( "./Colors.css" );
-@import url( "./AppBar.css" );
-@import url( "./Drawer.css" );
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Archivo+Black&family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans:wght@500;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&display=swap');
+@import url( "./globals/Colors.css" );
+@import url( "./globals/AppBar.css" );
+@import url( "./globals/Drawer.css" );
 
 *:not( h1,h2,h3,h4,h5,h6,p,menu,ul,ol,li,hr,pre,dd,blockquote,fieldset,legend ),
 *:not( h1,h2,h3,h4,h5,h6,p,menu,ul,ol,li,hr,pre,dd,blockquote,fieldset,legend )::before,
@@ -45,6 +45,7 @@ html {
    background-image:   linear-gradient( 0deg, #00000000 24px, #313339 25px ),
    linear-gradient( 90deg, #00000000 24px, #313339 25px );
    background-size: 25px 25px;
+
 }
 body {
    width: auto !important;
@@ -54,10 +55,20 @@ body {
    font-family: 'Poppins';
    -webkit-font-smoothing: antialiased;
    
+   font-size: 14px;
+   font-weight: 400;
+   font-family: Inter;
+   /* height: 16px; */
+   line-height: 150%;
+   /* margin-top: 4px; */
+   /* display: inline-block; */
+   text-overflow: ellipsis;
+   /* white-space: nowrap; */
+   /* overflow: hidden; */
 }
 body > main {
    margin: 0 auto;
-   padding: 2.5rem;
+   /* padding: 2.5rem; */
 }
 body > main[active] {
    padding-left: 79px !important;
