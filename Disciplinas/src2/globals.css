@@ -330,6 +330,8 @@ box {
    font-size: 1.9vw;
 }
 [tabela] :nth-child( 1n ) {
+   display: grid;
+   place-items: center;
    background: #0005;
    border: #27f5 solid 2px;
    margin: 0;
