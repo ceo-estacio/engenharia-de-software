@@ -219,6 +219,8 @@ addEventListener( "DOMContentLoaded", () => {
       Pd = $$( "[pd]" ),
       Focus = $$( "img" ),
       tAs = $$( "[t-a]" ),
+
+      DTs = $$( "dt" ),
       OCs = $$( "oc" ),
 
       W = $$( "[w]" ),
@@ -385,6 +387,22 @@ addEventListener( "DOMContentLoaded", () => {
       <>any</>
    </oc>
    */
+   DTs.forEach( o => o.addEventListener(
+      "click", ev => {
+         if( o.getAttribute( "open" ) == "" ) {
+            o.removeAttribute( "open" );
+            o.lastElementChild.style.display = "none";
+            o.lastElementChild.style.visibility = "collapse";
+            o.lastElementChild.style.height = "0";
+         } else {
+            o.setAttribute( "open", "" );
+            o.lastElementChild.style.display = "block";
+            o.lastElementChild.style.visibility = "visible";
+            o.lastElementChild.style.height = "auto";
+         }
+      }
+   ) );
+
    OCs.forEach( o => o.addEventListener(
       "click", ev => {
          if( o.getAttribute( "open" ) == "" ) {

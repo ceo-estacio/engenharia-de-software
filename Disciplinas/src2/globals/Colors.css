@@ -36,8 +36,20 @@
    --blue-light:  #267d97;     
    --blue-bg:     #ebf6fb;
 
-   --blue-estacio-0: #00384a;
+   --blue-estacio: #00384a;
    --blue-estacio-1: #006699;
    --blue-estacio-2: #4db4ba;
    --blue-estacio-3: #dddddd;
 }
+
+/* [general] {
+   --bg: #60347955;
+}
+
+[e1] {
+   --bg: #27f;
+}
+
+ex {
+   background: var( --bg, var( --pink, #27f ) );
+} */

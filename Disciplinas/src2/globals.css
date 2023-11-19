@@ -4,6 +4,7 @@
 @import url( "./globals/Colors.css" );
 @import url( "./globals/AppBar.css" );
 @import url( "./globals/Drawer.css" );
+@import url( "./globals/Details.css" );
 
 *:not( h1,h2,h3,h4,h5,h6,p,menu,ul,ol,li,hr,pre,dd,blockquote,fieldset,legend ),
 *:not( h1,h2,h3,h4,h5,h6,p,menu,ul,ol,li,hr,pre,dd,blockquote,fieldset,legend )::before,
@@ -52,6 +53,7 @@ body {
    min-height: 100vh;
    height: fit-content;
    color: var( --texto );
+   color: #bbb;
    font-family: 'Poppins';
    -webkit-font-smoothing: antialiased;
    
@@ -293,14 +295,49 @@ post-body:has( post-header ) post-body {
    padding-top: 0;
 }
 
+home-page {
+   display: block;
+   padding: 15px 0 15px 69px;
+}
+
 page {
    display: block;
 }
-tag {
+tag, ex {
    display: block;
+   padding: 2vw;
+   border-radius: 2vw;
+   box-shadow: #fff 0 0 2px;
+}
+
+tema, exercicio {
+   display: block;
+   padding: 2vw;
 }
 
 [card] { display: grid; }
-[grid] { display: grid; }
+grid, [grid] { display: grid; }
 [blk] { display: block; }
+box {
+   display: block;
+   border: #000 1px solid;
+   box-shadow: #fff 0 0 1px;
+}
 [r] { border-radius: 2vw; }
+
+[tabela] {
+   /* border: #27f5 solid 2px; */
+   font-size: 1.9vw;
+}
+[tabela] :nth-child( 1n ) {
+   background: #0005;
+   border: #27f5 solid 2px;
+   margin: 0;
+}
+
+qna {
+   display: block;
+   border-radius: 1.5rem;
+   border: #da05 solid 2px;
+   padding: 2vw;
+}
