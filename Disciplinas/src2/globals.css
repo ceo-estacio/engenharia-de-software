@@ -315,7 +315,10 @@ tema, exercicio {
    padding: 2vw;
 }
 
-[card] { display: grid; }
+[card] {
+   display: grid;
+   gap: 2vw;
+}
 grid, [grid] { display: grid; }
 [blk] { display: block; }
 box {
@@ -327,7 +330,7 @@ box {
 
 [tabela] {
    /* border: #27f5 solid 2px; */
-   font-size: 1.9vw;
+   font-size: clamp( 6px, 1.9vw, 17px );
 }
 [tabela] :nth-child( 1n ) {
    display: grid;
@@ -335,6 +338,7 @@ box {
    background: #0005;
    border: #27f5 solid 2px;
    margin: 0;
+   padding: 1vw 0;
 }
 
 qna {

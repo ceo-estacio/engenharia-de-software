@@ -33,14 +33,18 @@
             <h1 >Processos de Desenvolvimento de Software</h1>
          </header>
 
-         <disciplina>
+         <disciplina card>
+            <header bg="#525" pd="2vw" m="2vw 0">
+               <h2>Disciplina</h2>
+            </header>
+
             <tema n="1">
                <h5 bg="var( --dark1 )" c="var( --amber-0 )">Tema 1</h5>
                <h2>Fundamentos de Software e Gerenciamento de Projetos</h2>
                <main>
 
                </main>
-               <exercicios>
+               <exercicios card>
                   <ex>
                      <p>
                         As melhores práticas de gerenciamento de riscos estão contidas na 6ªed. do PMBOK (2017).
@@ -168,7 +172,7 @@
                <h5 bg="var( --dark1 )" c="var( --amber-0 )">Tema 2</h5>
                <h2>Fases do Desenvolvimento de Software</h2>
                <main></main>
-               <exercicios>
+               <exercicios card>
                   <ex>
                      <p>
                         Durante a produção de um software, defeitos podem ser descobertos.
@@ -272,7 +276,7 @@
                <h5 bg="var( --dark1 )" c="var( --amber-0 )">Tema 3</h5>
                <h2>Modelos de Processos de Desenvolvimento de Software</h2>
                <main></main>
-               <exercicios>
+               <exercicios card>
                   <ex>
                      <p>
                         A Unified Modeling Language (UML) e o Processo Unificado (Rational Unified Process - RUP) são fundamentais no desenvolvimento de software orientado a objetos. Enquanto a UML fornece uma linguagem padronizada para a criação de diagramas e a comunicação de ideias complexas, o RUP oferece uma estrutura para organizar o processo de desenvolvimento em fases distintas, cada uma com atividades específicas e objetivos claros. Esses conceitos são vitais para engenheiros de software na construção de sistemas eficientes, flexíveis e escaláveis.
@@ -332,7 +336,7 @@
                </exercicios>
             </tema>
             
-            <tema n="4">
+            <tema n="4" card>
                <h5 bg="var( --dark1 )" c="var( --amber-0 )">Tema 4</h5>
                <h2>Normas e Modelos de Qualidades de Processo de Software</h2>
                <main></main>
@@ -388,154 +392,156 @@
             </tema>
          </disciplina>
 
-         <exercicios-gerais card pd="2vw">
+         <exercicios-gerais card>
             <header pd="2vw" bg="#1b1d2299">
                <h2>Exercícios Gerais</h2>
             </header>
 
-            <ex>
-               <p>
-                  A Engenharia de Software é uma tecnologia em camada. Avalie a relação entre os conceitos e definições a seguir:
-                  <br></br>
-                  <center>
-                     <tabela grid tabela="repeat( 2, 5% 45% )">
+            <main card pd="2vw">
+               <ex>
+                  <p>
+                     A Engenharia de Software é uma tecnologia em camada. Avalie a relação entre os conceitos e definições a seguir:
+                     <br></br>
+                     <center>
+                        <tabela grid tabela="repeat( 2, 5% 45% )">
+                           <p>1</p>
+                           <p>Camada qualidade</p>
+                           <p>A</p>
+                           <p>Determina as etapas de desenvolvimento do software.</p>
+                           
+                           <p>2</p>
+                           <p>Camada de processo</p>
+                           <p>B </p>
+                           <p>Garante que os requisitos que atendem as expectativas do usuário serão cumpridos</p>
+                           
+                           <p>3</p>
+                           <p>Camada de métodos</p>
+                           <p>C </p>
+                           <p>Define os artefatos gerados em função da técnica de modelagem adotada, tal como modelo de casos de uso ou de classes</p>
+                           
+                        </tabela>
+                     </center>
+                  </p>
+                  <qna>[1][B] - [2][A] - [3][C]</qna>
+                  
+               </ex>
+               <ex>
+                  <p>
+                     Os engenheiros de software têm na atualidade uma série de desafios que devem ser superados no dia a dia do trabalho. Os desafios podem ser agrupados em sete grandes categorias. Sobre essas categorias, analise as afirmativas abaixo.
+                     <ul>
+                        <p>I - Os sistemas de gestão empresarial (ERP) são um exemplo típico de Software de Aplicação.</p>
+                        <p>II - Redes neurais e técnicas de aprendizado de máquina constituem algoritmos e métodos utilizados na construção de sistemas de inteligência artificial.</p>
+                        <p>III - O software embarcado geralmente possui funções e tarefas bem definidas, com o objetivo de controlar o funcionamento do sistema embarcado.</p>
+                     </ul>
+                  </p>
+                  <qna>As afirmativas I, II e III estão corretas.</qna>
+                  
+               </ex>
+               <ex>
+                  <p>
+                     O Fluxo de Processo ou Ciclo de Vida é uma especificação do processo de desenvolvimento de software. No fluxo serão apresentadas as formas como essas atividades serão encadeadas. Sobre o fluxo de processos, analise as asserções I e II.
+                     <br></br>
+                     <ul>
+                        <p>I - No fluxo de Processo Linear as atividades são executadas em sequência de forma unidirecional.</p>
+                     </ul>
+                     PORQUE
+                     <ul>
+                        <p>II - No fluxo de processo paralelo as atividades podem ocorrer em paralelo. </p>
+                     </ul>
+                  </p>
+                  <qna>
+                     As duas afirmativas estão corretas e a segunda não justifica a primeira.
+                  </qna>
+                  
+               </ex>
+               <ex>
+                  <p>
+                     Durante a produção de um software, defeitos podem ser descobertos.
+                     <br></br>
+                     Qual cenário apresenta uma solução mais rápida para um defeito identificado na versão de software em produção?
+                  </p>
+                  <qna>Corrigir o defeito na versão 1 e liberá-la imediatamente, enquanto ajusta a versão 2 em desenvolvimento.</qna>
+                  
+               </ex>
+               <ex>
+                  <p>
+                     Em engenharia de software, o termo "requisito-chave" ou "requisito crítico" refere-se a um requisito que é considerado essencial ou de alta prioridade para o sucesso do projeto.
+                     <br></br>
+                     Qual é o requisito-chave não funcional ao definir a interface gráfica com o usuário?
+                  </p>
+                  <qna>Usabilidade.</qna>
+                  
+               </ex>
+               <ex>
+                  <p>
+                     No contexto da etapa de projeto do processo de desenvolvimento de software, avalie a relação entre os conceitos e definições a seguir: 
+                     <br>
+                     <center grid tabela="repeat( 2, 5% 45% )">
                         <p>1</p>
-                        <p>Camada qualidade</p>
-                        <p>A</p>
-                        <p>Determina as etapas de desenvolvimento do software.</p>
+                        <p>Implantação</p>
+                        <p>A </p>
+                        <p>Inclui a correção de defeitos não identificados nas etapas anteriores do processo de desenvolvimento de software</p>
                         
                         <p>2</p>
-                        <p>Camada de processo</p>
+                        <p>Manutenção </p>
                         <p>B </p>
-                        <p>Garante que os requisitos que atendem as expectativas do usuário serão cumpridos</p>
+                        <p>Permite a modificação de um software existente a partir de alterações significativas nas regras de negócio. </p>
                         
                         <p>3</p>
-                        <p>Camada de métodos</p>
+                        <p>	
+                           Reengenharia de software </p>
                         <p>C </p>
-                        <p>Define os artefatos gerados em função da técnica de modelagem adotada, tal como modelo de casos de uso ou de classes</p>
-                        
-                     </tabela>
-                  </center>
-               </p>
-               <qna>[1][B] - [2][A] - [3][C]</qna>
-               
-            </ex>
-            <ex>
-               <p>
-                  Os engenheiros de software têm na atualidade uma série de desafios que devem ser superados no dia a dia do trabalho. Os desafios podem ser agrupados em sete grandes categorias. Sobre essas categorias, analise as afirmativas abaixo.
-                  <ul>
-                     <p>I - Os sistemas de gestão empresarial (ERP) são um exemplo típico de Software de Aplicação.</p>
-                     <p>II - Redes neurais e técnicas de aprendizado de máquina constituem algoritmos e métodos utilizados na construção de sistemas de inteligência artificial.</p>
-                     <p>III - O software embarcado geralmente possui funções e tarefas bem definidas, com o objetivo de controlar o funcionamento do sistema embarcado.</p>
-                  </ul>
-               </p>
-               <qna>As afirmativas I, II e III estão corretas.</qna>
-               
-            </ex>
-            <ex>
-               <p>
-                  O Fluxo de Processo ou Ciclo de Vida é uma especificação do processo de desenvolvimento de software. No fluxo serão apresentadas as formas como essas atividades serão encadeadas. Sobre o fluxo de processos, analise as asserções I e II.
-                  <br></br>
-                  <ul>
-                     <p>I - No fluxo de Processo Linear as atividades são executadas em sequência de forma unidirecional.</p>
-                  </ul>
-                  PORQUE
-                  <ul>
-                     <p>II - No fluxo de processo paralelo as atividades podem ocorrer em paralelo. </p>
-                  </ul>
-               </p>
-               <qna>
-                  As duas afirmativas estão corretas e a segunda não justifica a primeira.
-               </qna>
-               
-            </ex>
-            <ex>
-               <p>
-                  Durante a produção de um software, defeitos podem ser descobertos.
-                  <br></br>
-                  Qual cenário apresenta uma solução mais rápida para um defeito identificado na versão de software em produção?
-               </p>
-               <qna>Corrigir o defeito na versão 1 e liberá-la imediatamente, enquanto ajusta a versão 2 em desenvolvimento.</qna>
-               
-            </ex>
-            <ex>
-               <p>
-                  Em engenharia de software, o termo "requisito-chave" ou "requisito crítico" refere-se a um requisito que é considerado essencial ou de alta prioridade para o sucesso do projeto.
-                  <br></br>
-                  Qual é o requisito-chave não funcional ao definir a interface gráfica com o usuário?
-               </p>
-               <qna>Usabilidade.</qna>
-               
-            </ex>
-            <ex>
-               <p>
-                  No contexto da etapa de projeto do processo de desenvolvimento de software, avalie a relação entre os conceitos e definições a seguir: 
-                  <br>
-                  <center grid tabela="repeat( 2, 5% 45% )">
-                     <p>1</p>
-                     <p>Implantação</p>
-                     <p>A </p>
-                     <p>Inclui a correção de defeitos não identificados nas etapas anteriores do processo de desenvolvimento de software</p>
-                     
-                     <p>2</p>
-                     <p>Manutenção </p>
-                     <p>B </p>
-                     <p>Permite a modificação de um software existente a partir de alterações significativas nas regras de negócio. </p>
-                     
-                     <p>3</p>
-                     <p>	
-                        Reengenharia de software </p>
-                     <p>C </p>
-                     <p>Etapa do processo de desenvolvimento de software relacionada com a transferência do sistema da comunidade de desenvolvimento para a comunidade de usuários. </p>
-                  </center>
-               </p>
-               <qna>[1][C] - [2][A] - [3][B]. </qna>
-               
-            </ex>
-            <ex>
-               <p>
-                  No que diz respeito aos processos e práticas no desenvolvimento ágil de software:
-               </p>
-               <qna>a XP (Extreme Programming), é considerada um processo de desenvolvimento de software ágil que exige entre outras coisas: padronização do código, interação contínua e teste.</qna>
-               
-            </ex>
-            <ex>
-               <p>
-                  Uma equipe de desenvolvimento adota o método SCRUM para gerenciar seu projeto. Para iniciar a reunião de planejamento da Sprint, deve(m)-se definir e atualizar:
-               </p>
-               <qna>o Backlog do Produto </qna>
-               
-            </ex>
-            <ex>
-               <p>
-                  A Softex atua há 25 anos em prol do fomento da Transformação Digital Brasileira, criando, promovendo e executando iniciativas no âmbito nacional e internacional nas áreas de tecnologia e inovação.  Ela apresenta em seu programa MPS (Melhoria de Processo de Software) três Guias e os fornece gratuitamente em sua página. Quais são os 3 Guias disponíveis pela SOFTEX?
-               </p>
-               <qna>Software, Serviços e Gestão de Pessoas.</qna>
-               
-            </ex>
-            <ex>
-               <p>
-                  Já se sabe que utilizando o CMMI é possível alcançar resultados efetivos nas organizações, especialmente àquelas que mantêm seu foco em melhoria de desempenho. São várias as vantagens em utilizar o CMMI, analise as opções a seguir:
-                  <br></br>
-                  <ul>
-                     <p>1 - Retorno de Marketing e mídias digitais</p>
-                     <p>2 - Maior qualidade de produtos e cumprimento de prazos, menor retrabalho</p>
-                     <p>3 - Maior satisfação e menos reclamações de clientes</p>
-                     <p>4 - Menor turnover de profissionais</p>
-                     <p>5 - Aumento dos custos gerais</p>
-                  </ul>
-               </p>
-               <qna>Apenas as opções II, III e IV são vantagens em utilizar o CMMI.</qna>
-               
-            </ex>
+                        <p>Etapa do processo de desenvolvimento de software relacionada com a transferência do sistema da comunidade de desenvolvimento para a comunidade de usuários. </p>
+                     </center>
+                  </p>
+                  <qna>[1][C] - [2][A] - [3][B]. </qna>
+                  
+               </ex>
+               <ex>
+                  <p>
+                     No que diz respeito aos processos e práticas no desenvolvimento ágil de software:
+                  </p>
+                  <qna>a XP (Extreme Programming), é considerada um processo de desenvolvimento de software ágil que exige entre outras coisas: padronização do código, interação contínua e teste.</qna>
+                  
+               </ex>
+               <ex>
+                  <p>
+                     Uma equipe de desenvolvimento adota o método SCRUM para gerenciar seu projeto. Para iniciar a reunião de planejamento da Sprint, deve(m)-se definir e atualizar:
+                  </p>
+                  <qna>o Backlog do Produto </qna>
+                  
+               </ex>
+               <ex>
+                  <p>
+                     A Softex atua há 25 anos em prol do fomento da Transformação Digital Brasileira, criando, promovendo e executando iniciativas no âmbito nacional e internacional nas áreas de tecnologia e inovação.  Ela apresenta em seu programa MPS (Melhoria de Processo de Software) três Guias e os fornece gratuitamente em sua página. Quais são os 3 Guias disponíveis pela SOFTEX?
+                  </p>
+                  <qna>Software, Serviços e Gestão de Pessoas.</qna>
+                  
+               </ex>
+               <ex>
+                  <p>
+                     Já se sabe que utilizando o CMMI é possível alcançar resultados efetivos nas organizações, especialmente àquelas que mantêm seu foco em melhoria de desempenho. São várias as vantagens em utilizar o CMMI, analise as opções a seguir:
+                     <br></br>
+                     <ul>
+                        <p>1 - Retorno de Marketing e mídias digitais</p>
+                        <p>2 - Maior qualidade de produtos e cumprimento de prazos, menor retrabalho</p>
+                        <p>3 - Maior satisfação e menos reclamações de clientes</p>
+                        <p>4 - Menor turnover de profissionais</p>
+                        <p>5 - Aumento dos custos gerais</p>
+                     </ul>
+                  </p>
+                  <qna>Apenas as opções II, III e IV são vantagens em utilizar o CMMI.</qna>
+                  
+               </ex>
+            </main>
          </exercicios-gerais>
 
-         <exercicios-por-temas>
+         <exercicios-por-temas card>
             <header bg="#525" pd="2vw">
                <h2>Exercícios por temas </h2>
             </header>
 
-            <tema n="1">
+            <tema n="1" card>
                <h5 bg="#16181c">Tema 1</h5>
                <h2>FUNDAMENTOS DE SOFTWARE E GERENCIAMENTO DE PROJETOS</h2>
                
@@ -658,175 +664,234 @@
                </ex>
             </tema>
             
-            <tema n="2">
+            <tema n="2" card>
                <h5 bg="#16181c">Tema 2</h5>
                <h2>FASES DO DESENVOLVIMENTO DE SOFTWARE</h2>
                
                <ex n="1">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="2">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="3">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="4">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="5">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="6">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="7">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="8">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="9">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="10">
-                  <p></p>
-                  <qna></qna>
+                  <p>
+                     Requisitos de um sistema são frequentemente classificados como funcionais, não-funcionais e de domínio. Qual a definição que melhor descreve requisitos não-funcionais?                     
+                  </p>
+                  <qna>São requisitos que não estão diretamente relacionados com as funções específicas do sistema.</qna>
                </ex>
                
             </tema>
             
-            <tema n="3">
+            <tema n="3" card>
                <h5 bg="#16181c">Tema 3</h5>
                <h2>MODELOS DE PROCESSOS DE DESENVOLVIMENTO DE SOFTWARE</h2>
                
                <ex n="1">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="2">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="3">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="4">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="5">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="6">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="7">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="8">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="9">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="10">
-                  <p></p>
-                  <qna></qna>
+                  <p>
+                     Ao analisar a aplicação da prototipação em seus projetos de software, decidiu-se utilizar um processo que define 4 etapas para o desenvolvimento de protótipos, sendo essas etapas: 
+                     <br></br>
+                     <ol type="1">
+                        <li>Avaliar Protótipo.</li>
+                        <li>Estabelecer Objetivos do Protótipo.</li>
+                        <li>Desenvolver o Protótipo.</li>
+                        <li>Definir a Funcionalidade do Protótipo.</li>
+                     </ol>
+                     <p>
+                        A ordem sequencial correta para a execução dessas quatro etapas é:
+                     </p>
+                  </p>
+                  <qna>
+                     II, IV, III e I.
+                  </qna>
                </ex>
                
             </tema>
             
-            <tema n="4">
+            <tema n="4" card>
                <h5 bg="#16181c">Tema 4</h5>
                <h2>NORMAS E MODELOS DE QUALIDADES DE PROCESSO DE SOFTWARE</h2>
                
                <ex n="1">
                   <p></p>
-                  <qna></qna>
+                  A Softex atua há 25 anos em prol do fomento da Transformação Digital Brasileira, criando, promovendo e executando iniciativas no âmbito nacional e internacional nas áreas de tecnologia e inovação.  Ela apresenta em seu programa MPS (Melhoria de Processo de Software) três Guias e os fornece gratuitamente em sua página. Quais são os 3 Guias disponíveis pela SOFTEX?
+                  <qna>Software, Serviços e Gestão de Pessoas.</qna>
                </ex>
                
                <ex n="2">
-                  <p></p>
-                  <qna></qna>
+                  <p>
+                     (FADESP/2017 - Adaptada) A norma definida pela International Organization for Standardization (ISO) que se aplica em engenharia de software, estabelece um processo de ciclo de vida deste, contendo processos e atividades, e é aplicada durante a aquisição e a configuração dos serviços do sistema, de forma a melhorá-lo, é a:
+                  </p>
+                  <qna>ISO/IEC 12207</qna>
                </ex>
                
                <ex n="3">
-                  <p></p>
-                  <qna></qna>
+                  <p>
+                     O MPS.BR1 é um programa mobilizador, de longo prazo, criado em dezembro de 2003, coordenado pela Associação para Promoção da Excelência do Software Brasileiro (SOFTEX), que conta com apoio do Ministério da Ciência, Tecnologia e Inovação (MCTI), Financiadora de Estudos e Projetos (FINEP), Serviço Brasileiro de Apoio às Micro e Pequenas Empresas (SEBRAE) e Banco Interamericano de Desenvolvimento (BID/FUMIN).  Define 7 níveis de maturidade (A a G), sendo que cada nível de maturidade possui áreas de processo que a empresa deve atender. Para o nível de maturidade F, assinale a opção a seguir que indica os processos ORGANIZACIONAIS:
+                  </p>
+                  <qna>Gerência de Configuração, Gerência Organizacional, Gerência de Processos, Medição, Aquisição</qna>
                </ex>
                
                <ex n="4">
-                  <p></p>
-                  <qna></qna>
+                  <p>
+                     A Norma ISO/IEC 12207 descreve as atividades que são associadas ao ciclo de vida do software desde sua concepção até o seu encerramento. Em sua organização, agrupa essas atividades em sete grupos de processos. Assinale a opção a seguir que indica um grupo de processos da ISO/IEC 12207:
+                  </p>
+                  <qna>Processos de apoio ao software.</qna>
                </ex>
                
                <ex n="5">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="6">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="7">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="8">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="9">
-                  <p></p>
-                  <qna></qna>
-               </ex>
-               
-               <ex n="10">
-                  <p></p>
-                  <qna></qna>
+                  <p>
+                     O modelo do CMMI é estruturado de forma na qual primeiramente é apresentada as Categorias e dentro de cada Categoria, estão as áreas de Capacidade, que são os agrupamentos dos processos relacionados e dentro das capacidades estão as áreas práticas. Nesse sentido, numere a coluna da direita de acordo com sua correspondência com a coluna da esquerda, associando a sua área de capacidade com as áreas práticas.
+                     <center grid>
+                        <tabela grid tabela="repeat( 2, 50% )">
+                           <p>1. Desenvolvimento e Engenharia do Produto</p>
+                           <p>(  ) Solução Técnica / Integração do Produto</p>
+                           
+                           <p>2. Garantia da Qualidade</p>
+                           <p>(  ) Treinamento Organizacional</p>
+                           
+                           <p>3. Seleção e Gerência de Fornecedores</p>
+                           <p>(  ) Gerência de Acordo com Fornecedores</p>
+                           
+                           <p>4. Planejamento e Gerência do Trabalho</p>
+                           <p>(  ) Análise e Resolução de Causas / Análise e Tomada de Decisões / Gerência de Configuração</p>
+                           
+                           <p>5. Gerência de Resiliência do Negócio</p>
+                           <p>(  ) Gerência de Processos / Definição de Ativos de Processos / Medição e Gerência de Desempenho</p>
+                           
+                           <p>6. Gerência da Força do Trabalho</p>
+                           <p>(  ) Realização de Estimativas / Planejamento / Monitoração e Controle</p>
+                           
+                           <p>7. Apoio à Implementação</p>
+                           <p>(  ) Gerência de Riscos e Oportunidades</p>
+                           
+                           <p>8. Manutenção de Hábito e Persistência</p>
+                           <p>(  ) Governança / Implementação da Infraestrutura</p>
+                           
+                           <p>9. Melhoria do Desempenho</p>
+                           <p>(  ) Desenvolvimento e Gerência de Requisitos / Garantia da Qualidade do Processo / Revisão por Pares / Verificação e Validação</p>
+                           
+                        </tabela>
+                     </center>
+                  </p>
+                  <qna>1-6-3-7-9-4-5-8-2</qna>
                </ex>
                
             </tema>
             
          </exercicios-por-temas>
+
+         <ava>
+            <header bg="#525" pd="2vw" m="2vw 0">
+               <h2>AVA</h2>
+            </header>
+            <main card pd="2vw">
+               <ex>
+                  <p>
+                     O MPS.BR1 é um programa mobilizador, de longo prazo, criado em dezembro de 2003, coordenado pela Associação para Promoção da Excelência do Software Brasileiro (SOFTEX), que conta com apoio do Ministério da Ciência, Tecnologia e Inovação (MCTI), Financiadora de Estudos e Projetos (FINEP), Serviço Brasileiro de Apoio às Micro e Pequenas Empresas (SEBRAE) e Banco Interamericano de Desenvolvimento (BID/FUMIN).  Define 7 níveis de maturidade (A a G), sendo que cada nível de maturidade possui áreas de processo que a empresa deve atender. Para o nível de maturidade F, assinale a opção a seguir que indica os processos ORGANIZACIONAIS:
+                  </p>
+                  <qna>Gerência de Configuração, Gerência Organizacional, Gerência de Processos, Medição, Aquisição</qna>
+               </ex>
+            </main>
+         </ava>
+
+         <av>
+            <header bg="#525" pd="2vw" m="2vw 0">
+               <h2>AV</h2>
+            </header>
+            <main card pd="2vw">
+               <ex>
+                  <p>
+                     Considerando as áreas de conhecimento do gerenciamento de projetos, avalie as seguintes afirmativas:
+                     <br></br>
+                     <ul>
+                        <li>__________________ é a área de conhecimento que permite identificar os pacotes de trabalho.</li>
+                        <li>O sequenciamento das atividades, definido pelo diagrama de redes do projeto, é elaborado na área de conhecimento ______________________.</li>
+                        <li>O Termo de Abertura do Projeto é o documento que autoriza a alocação de recursos ao projeto, sendo elaborado na área de conhecimento ___________________.</li>
+                     </ul>
+                     <p>Assinale a alternativa que preenche as lacunas na sequência correta:</p>
+                  </p>
+                  <qna>Gerenciamento do Escopo do Projeto, Gerenciamento do Cronograma do Projeto, Gerenciamento da Integração do Projeto.</qna>
+               </ex>
+               
+               <ex>
+                  <p>
+                     A gestão de requisitos é um conjunto de atividades que tem como principal objetivo ajudar a equipe de projeto a:
+                  </p>
+                  <qna>identificar, controlar e rastrear requisitos e modificações de requisitos em qualquer época, à medida que o projeto prossegue.</qna>
+               </ex>
+               
+               <ex>
+                  <p>
+                     A Engenharia de Requisitos inclui as atividades de descobrir, analisar, documentar e verificar os serviços fornecidos pelo sistema e suas restrições operacionais. Considere as seguintes afirmativas relacionadas com essa engenharia: 
+                     <br></br>
+                     <ol>
+                        <li> Na etapa de especificação ocorre a priorização e a resolução de conflitos entre os requisitos definidos nas etapas anteriores. </li>
+                        <li>Na etapa de elaboração os engenheiros de software realizam um estudo detalhado dos requisitos levantados e, a partir desse estudo, são construídos modelos para representar o sistema a ser construído.</li>
+                        <li>Na etapa de levantamento é gerada uma especificação de requisitos que serve como um contrato entre clientes e equipe de projeto, esclarecendo aos clientes o que será entregue como produto do trabalho da equipe de desenvolvimento.</li>
+                     </ol>
+                     <p>Assinale a alternativa CORRETA:</p>
+                  </p>
+                  <qna>Apenas as afirmativas II e III são verdadeiras.</qna>
+               </ex>
+               
+               <ex>
+                  <p>
+                     O processo de desenvolvimento de software, muitas vezes denominado ciclo de vida do software ou processo de software, descreve as fases e atividades associadas à criação e manutenção de sistemas de software.
+                     <br></br>
+                     Por que é importante que todas as etapas do processo de desenvolvimento de software sejam cumpridas corretamente?
+                  </p>
+                  <qna>Para garantir que o software não apresente nenhum erro.</qna>
+               </ex>
+               
+               <ex>
+                  <p>
+                     Considerando o uso do RUP (Rational Unified Process), deve-se considerar que, segundo essa técnica:
+                  </p>
+                  <qna>o número de iterações em cada uma de suas quatro fases é variável, conforme o projeto.</qna>
+               </ex>
+               
+               <ex>
+                  <p>
+                     Uma das principais práticas de XP (Extreme Programming) é o Iteration Planning Game. Entre as atividades realizadas em uma sessão de Iteration Planning, está a:
+                  </p>
+                  <qna>estimação, feita por cada programador, do tempo que será necessário para realizar cada tarefa sob sua responsabilidade.</qna>
+               </ex>
+               
+               <ex>
+                  <p>
+                     (CESPE/CEBRASPE/2022) Gerência de decisões é um processo organizacional no MPS.BR:2021 que possui implementação inicial no nível:
+                  </p>
+                  <qna>B </qna>
+               </ex>
+               
+               <ex>
+                  <p>
+                     (COVEST-COPSET/2019) A norma ISO/IEC 15504 está intrinsecamente associada à metodologia Software Process Improvement and Capability Determination (SPICE). Acerca dessa norma, é correto afirmar que:
+                  </p>
+                  <qna></qna>
+               </ex>
+               
+               <ex>
+                  <p>
+                     A norma NBR ISO/IEC 12207 é composta por um conjunto de processos, atividades e tarefas que podem ser adaptados de acordo com os projetos de software. Nesse sentido, numere a coluna da direita de acordo com sua correspondência com a coluna da esquerda, associando o processo e a sua descrição.
+                     <center>
+                        <tabela grid="" tabela="repeat( 1, 50% 50% )">
+                           <p>1. Gerência</p>
+                           <p>() define atribuições genéricas e as responsabilidades do gerente em relação ao ciclo de vida do software</p>
+                           
+                           <p>2. Infraestrutura</p>
+                           <p>() desenvolvimento de treinamento</p>
+                           
+                           <p>3. Melhoria</p>
+                           <p>() descreve as atividades básicas para a criação e manutenção de uma infraestrutura adequada para os processos que envolvem o ciclo de vida do software</p>
+                           
+                           <p>4. Treinamento</p>
+                           <p>() processo voltado para o estabelecimento de melhoria de processos da organização através de execuções de avaliação, medição, controle e a melhoria em um processo do ciclo de vida do software</p>
+                           
+                        </tabela>
+                        <p>Com a coluna da direita preenchida, escolha a opção com a sequência correta da numeração:</p>
+                     </center>
+                  </p>
+                  <qna></qna>
+               </ex>
+               
+            </main>
+         </av>
          
       </home-page>
 
