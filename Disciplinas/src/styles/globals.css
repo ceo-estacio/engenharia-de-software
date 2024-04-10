@@ -1,11 +1,89 @@
 
 
 :root {
-   background: #1e2021;
+   font: 1em sans-serif;
+   font-weight: 400;
+   color: #bbb;
+   
+   
+   color-scheme: light dark;
+   background-color: #242424; /* vite */
+   background: #1e2021;       /* dark reader */
+  background-color: #212329;  /* céo */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
    margin: 0;
    min-height: 100vh;
    height: 100%;
+}
+
+
+table {
+   border-collapse: collapse;
+   width: 95%;
+   margin: auto;
+}
+td {
+   text-align: center;
+}
+th, td {
+   padding: 0.5rem;
+}
+
+
+
+@media ( prefers-color-scheme: light ) {
+   :root {
+      color: #213547;
+      background-color: #ffffff;
+   }
+   a:hover {
+      color: #747bff;
+   }
+   button {
+      background-color: #27f;
+   } button a {
+      color: #e9e6e3;
+   }
+}
+
+@media ( prefers-color-scheme: dark ) {
+   :root {
+      color: #bbb;
+      background-color: #212329;
+   }
+
+   appbar {
+      background: #1b1d22 !important;
+   }
+   a:hover {
+      color: #747bff;
+   }
+   button {
+      background-color: #fc0;
+   } button a {
+      color: #16181c;
+   }
+}
+
+
+/* == [ modulos ] 
+== == == == == == == == == */
+modulo {
+   display: flex;
+   flex-direction: column;
+}
+
+
+/* == [ properties ] 
+== == == == == == == == == */
+[dm] {
+   display: flex;
+   flex-direction: column;
 }

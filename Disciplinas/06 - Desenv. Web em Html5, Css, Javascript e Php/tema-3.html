@@ -17,7 +17,140 @@
       <appbar></appbar>
       
       <main>
-         <title>Tema 3: Linguagem de Marcação de Hypertexto - Html</title>
+         <h2>Tema 3: Linguagem de Marcação de Hypertexto - Html</h2>
+
+         <modulo n="1">
+            <h4>Módulo 1</h4>
+            <h2>Estrutura de uma página Web</h2>
+
+            <listas dm="">
+               <ol>
+                  <li>item 1</li>
+                  <li>item 2</li>
+                  <li>item 3</li>
+               </ol>
+
+               <ul>
+                  <li>item 1</li>
+                  <li>item 2</li>
+                  <li>item 3</li>
+               </ul>
+
+               <dl>
+                  <dt>lista 1</dt>
+                  <dd>item 1</dd>
+                  <dd>item 2</dd>
+                  <dd>item 3</dd>
+                  
+                  <dt>lista 2</dt>
+                  <dd>item 1</dd>
+                  <dd>item 2</dd>
+                  <dd>item 3</dd>
+                  
+                  <dt>lista 3</dt>
+                  <dd>item 1</dd>
+                  <dd>item 2</dd>
+                  <dd>item 3</dd>
+               </dl>
+            </listas>
+            
+            <tabelas dm="">
+               <table border="1">
+                  <thead>
+                     <tr>
+                        <th>nome 1</th>
+                        <th>nome 2</th>
+                        <th>nome 3</th>
+                     </tr>
+                     <tbody>
+                        <tr>
+                           <td>item 1</td>
+                           <td>item 2</td>
+                           <td>item 3</td>
+                        </tr>
+                        <tr>
+                           <td>item 1</td>
+                           <td>item 2</td>
+                           <td>item 3</td>
+                        </tr>
+                        <tr>
+                           <td>item 1</td>
+                           <td>item 2</td>
+                           <td>item 3</td>
+                        </tr>
+                     </tbody>
+                     <tfoot>
+                        <tr>
+                           <th>item 1</th>
+                           <th>item 2</th>
+                           <th>item 3</th>
+                        </tr>
+                     </tfoot>
+                  </thead>
+               </table>
+            </tabelas>
+         </modulo>
+         
+         <modulo n="2">
+            <h4>Módulo 2</h4>
+            <h2>Tags HTML básicas</h2>
+         </modulo>
+         
+         <modulo n="3">
+            <h4>Módulo 3</h4>
+            <h2>Tags HTML complexas</h2>
+         </modulo>
+         
+         <modulo n="4">
+            <h4>Módulo 4</h4>
+            <h2>Formulários em páginas Web</h2>
+
+            <tag-form dm>
+               <h3>Tag &lt;form&gt;</h3>
+
+               <h4>atributos</h4>
+               <dl>
+                  <dt>action</dt>
+                  <dd>Define a URL (endereço) para a qual os dados do formulário serão enviados.</dd>
+
+                  <dt>method</dt>
+                  <dd>Define o método HTTP (POST ou GET) para envio dos dados.</dd>
+
+                  <dt>novalidate</dt>
+                  <dd>não valida o form</dd>
+               </dl>
+            </tag-form>
+            
+            <tag-input dm>
+               <h4>atributos para inputs</h4>
+               <dl>
+                  <dt>placeholder</dt>
+                  <dd>Exibir um texto no campo de input.</dd>
+                  
+                  <dt>required</dt>
+                  <dd>Determinar se um campo é obrigatório.</dd>
+                  
+                  <dt>autofocus</dt>
+                  <dd>Fixar o foco no campo.</dd>
+                  
+                  <dt>pattern</dt>
+                  <dd>RegEX - expressões regulares</dd>
+                  
+               </dl>
+            </tag-input>
+
+            <regex-pattern dm>
+               <h3>pattern regex</h3>
+               <strong>pattern=“[0-9]{5}-[0-9]{3,4}$”</strong>
+               <p>
+                  o DDD, com dois caracteres numéricos, 
+                  seguido por dois conjuntos de números: 
+                  <br />
+                  um contendo 5 e outro contendo 3 ou 4 caracteres. 
+               </p>
+            </regex-pattern>
+         </modulo>
+         
       </main>
       
       <script type="module">
@@ -28,3 +161,4 @@
       </script>
    </body>
 </html>
+
