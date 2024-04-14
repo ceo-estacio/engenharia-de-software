@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title></title>
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../src/styles/globals.css">
+      <script src="../src/Widgets/AppBar.js" defer></script>
+      <style>
+      </style>
+   </head>
+   <body>
+      <appbar></appbar>
+      
+      <main>
+         <h2>Tema 7: Integração do Php Com Banco de Dados</h2>
+
+         <modulo n="1" dm="">
+            <h4>Módulo 1</h4>
+            <h2>A Classe PDO em banco de dados</h2>
+
+            <h4>conexão com mysql</h4>
+            <code>
+   &lt;?php
+      $conn = myswli_connect(
+         HOST,
+         USER,
+         PASSWORD,
+         DBNAME
+      );
+      
+      $instrucaoSQL = "Select nome, cpf, telefone From Cliente";
+
+      $stmt = mysqli_prepare(
+         $conn,
+         $instrucaoSQL
+      );
+
+      mysqli_stmt_bind_result(
+         $stmt,
+         $nome,
+         $cpf,
+         $tel
+      );
+
+      mysqli_stmt_execute(
+         $stmt
+      );
+      
+      while( mysqli_stmt_fetch( $stmt ) ) {
+         echo $nome . "&lt;br /&gt;";
+      }
+
+      mysqli_close( $conn );
+   ?&gt;
+            </code>
+
+            <h4>conexão com postgreeSQL</h4>
+            <code>
+               <?php
+                  $conn = pg_connect( $stringConn );
+                  $instrucaoSQL = ;
+                  $result = ;
+               ?>
+            </code>
+         </modulo>
+         
+         <modulo n="2" dm="">
+            <h4>Módulo 2</h4>
+            <h2>Métodos da Classe PDO</h2>
+         </modulo>
+         
+         <modulo n="3" dm="">
+            <h4>Módulo 3</h4>
+            <h2>Construir uma aplicação com banco de dados</h2>
+         </modulo>
+         
+         &#9776;
+      </main>
+      
+      <script type="module">
+         // import AppBar from "../../Components/AppBar.js";
+
+         
+         AppBar();
+      </script>
+   </body>
+</html>
+

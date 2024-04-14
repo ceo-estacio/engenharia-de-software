@@ -115,6 +115,13 @@ t {
 modulo {
    display: flex;
    flex-direction: column;
+   width: calc( 100% - 2rem );
+   margin: auto;
+   padding: 1rem;
+   gap: 1rem;
+   border-radius: .3rem;
+   box-shadow: var(--paper-border-c);
+   background: var( --paper-c );
 }
 
 
