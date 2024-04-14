@@ -1,0 +1,116 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title></title>
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <style>
+         :root {
+            background: #16181c;
+            color: #bbb;
+         }   
+
+         body {
+            margin: 0;
+         }
+         
+         disciplinas {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+         }
+
+         header {
+            padding: 1.5rem;
+         }
+         
+         [dm] {
+            display: flex;
+            flex-direction: column;
+         }
+      </style>
+   </head>
+   <body>
+
+      <disciplinas>
+
+         <Desenv-Web-em-Html5-Css-Javascript-e-Php dm>
+            <header>
+               <h4>06</h4>
+               <h2>Desenv. Web em Html5, Css, Javascript e Php</h2>
+            </header>
+            <Link 
+               to="https://stecine.azureedge.net/repositorio/00212ti/00172/index.html?brand=estacio#imprimir" 
+               txt="Tema 2: O Ambiente Web Cliente X Servidor e as Tecnologias"
+            ></Link>
+            <Link 
+               to="https://stecine.azureedge.net/repositorio/00212ti/00084/index.html?brand=estacio#" 
+               txt="Tema 3: Linguagem de Marcação de Hypertexto - Html"
+            ></Link>
+            <Link 
+               to="https://stecine.azureedge.net/repositorio/00212ti/00468/index.html?brand=estacio#imprimir" 
+               txt="Tema 4: Linguagem de Marcação e Estilos - Css"
+            ></Link>
+            <Link 
+               to="https://stecine.azureedge.net/repositorio/00212ti/00385/index.html?brand=estacio#imprimir" 
+               txt="Tema 5 - Linguagem Javascript"
+            ></Link>
+            <Link 
+               to="https://stecine.azureedge.net/repositorio/00212ti/00297/index.html?brand=estacio#" 
+               txt="Tema 6 - PROGRAMAÇÃO DE PÁGINAS DINÂMICAS COM PHP"
+            ></Link>
+            <Link 
+               to="" 
+               txt=""
+            ></Link>
+            <Link 
+               to="" 
+               txt=""
+            ></Link>
+         </Desenv-Web-em-Html5-Css-Javascript-e-Php>
+
+      </disciplinas>
+      
+
+      <script>
+         "use strict";
+         const 
+            _ = ( ...v ) => console.log( ...v )
+            ,
+            $ = v => document.querySelector( v )
+            ,
+            $$ = v => document.querySelectorAll( v )
+         ;
+
+         Element.prototype.attribute = function( v ) {
+            return(
+               this.getAttribute( v )
+            );
+         };
+
+         /* == [ methods ] 
+         == == == == == == == == == */
+         $$( "Link" ).forEach( l => {
+            return( l.outerHTML = `
+               <p>
+                  <style>
+                     a {
+                        color: #fc0;
+                        text-decoration: transparent;
+                     }
+                  </style>
+                  <a href="${ l.attribute( "to" ) }"
+                     target="_blank" >
+                     ${ l.attribute( "txt" ) }
+                  </a>
+               </p>
+            ` );
+         } );
+      </script>
+   </body>
+</html>

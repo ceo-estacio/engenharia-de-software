@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title></title>
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../src/styles/globals.css">
+      <script src="../src/Widgets/AppBar.js" defer></script>
+      <style>
+      </style>
+   </head>
+   <body>
+      <appbar></appbar>
+      
+      <main>
+         <h2>Tema 5: Linguagem Javascript</h2>
+
+         <modulo n="1">
+            <h4>Módulo 1</h4>
+            <h2>Conceitos e sintaxe do Javascript</h2>
+
+            <article central>
+               <h3>Árvore DOM</h3>
+               <img src="./assets/img/Árvore DOM.jpg" alt="" medium="">   
+            </article>
+         </modulo>
+         
+         <modulo n="2">
+            <h4>Módulo 2</h4>
+            <h2>Estruturas de decisão e de repetição</h2>
+         </modulo>
+         
+         <modulo n="3">
+            <h4>Módulo 3</h4>
+            <h2>Vetores</h2>
+
+            <p>
+               <b>vetor </b> é um array unidimensional
+            </p>
+            <p>
+               <b>matriz </b> é um vetor multidimensional
+            </p>
+
+            <p>
+               alunos[alunos.length] = 'Maria';
+            </p>
+
+            <pre>
+   Array.splice(
+      posição,          // indice onde será a inserção 
+      0,                // método da inserção 
+      novo_elemento,    // novo elemento para ser inserido 
+      novo_elemento,... // || 
+   )
+   // *metodo da inserção: 
+   //    0 = nenhum elemento será excluido
+   //    1 ou ... = substitui o elemento no indice pelo novo elemento
+            </pre>
+
+            <p>
+               delete frutas[0];
+            </p>
+
+            <h4>Excluir o ultimo item de um array</h4>
+            <ul>
+               <li>pares.pop();</li>
+               <li>pares.splice( 5, 1 );</li>
+               <li>pares.length = 5;</li>
+               <li>delete pares[ pares.length -1 ];</li>
+            </ul>
+
+         </modulo>
+         
+         <modulo n="4">
+            <h4>Módulo 4</h4>
+            <h2>Ajax e JSON</h2>
+
+            <requisicoes dm="">
+               <p>
+                  <b>Requisições síncronas</b>
+                  bloqueiam o cliente até que a solicitação seja respondida,
+                  consegue fazer apenas uma requisição por vez.
+               </p>
+
+               <b>
+                  <b>Requisições assíncronas</b>
+
+               </b>
+
+               <h4>AJAX</h4>
+               <t>Asynchronous JavaScript and XML</t>
+               <small>HTML (ou XHTML), CSS, JavaScript, DOM, XML (e XSLT), além do elemento mais importante, o objeto XMLHttpRequest</small>
+               <t>caracterista de ter um resultado sem precisar recarregar a pagina</t>
+
+               <h4>XMLHttpRequest</h4>
+               <h5>exemplo: </h5>
+               <pre>
+   function carregarImagens(){
+
+      var xmlHttpRequest = new XMLHttpRequest();
+      var url = "https://dog.ceo/api/breeds/image/random"
+
+      xmlHttpRequest.open("GET", url, true);
+
+      xmlHttpRequest.onreadystatechange = function() {
+         if (xmlHttpRequest.readyState == 3) {
+            console.log('Carregando o conteúdo');
+         }
+         if (xmlHttpRequest.readyState == 4) {
+                  
+            var jsonResponse = JSON.parse(xmlHttpRequest.responseText);
+      
+            console.log('Requisição Finalizada');
+            console.log('Resultado da Requisição: ' + jsonResponse);
+            console.log('Resultado da Requisição: ' + jsonResponse.message);
+      
+            var imgDog = document.getElementById("img_dog");
+            imgDog.src = jsonResponse.message;
+         }
+      };
+               
+      xmlHttpRequest.send(null);
+   
+   }
+               </pre>
+
+
+               <h4>API Fetch</h4>
+               <h5>exemplo: </h5>
+               <pre>
+   function carregarImagens(){
+   
+      var url = "https://dog.ceo/api/breeds/image/random" 
+      fetch(url, { 
+         method: 'get' 
+      })
+      .then(function(response) { 
+         response.json().then(function(data){
+            console.log('Resultado da Requisição: ' + data.message); 
+                        
+            var imgDog = document.getElementById("img_dog");
+            imgDog.src = data.message;
+         });
+      })
+      .catch(function(err) { 
+         console.error('O seguinte erro ocorreu durante a requisição: ' + err);
+      });
+   
+   }
+               </pre>
+
+               <h4>JSON</h4>
+
+            </requisicoes>
+         </modulo>
+
+         
+      </main>
+      
+      <script type="module">
+         // import AppBar from "../../Components/AppBar.js";
+
+         
+         AppBar();
+      </script>
+   </body>
+</html>
+

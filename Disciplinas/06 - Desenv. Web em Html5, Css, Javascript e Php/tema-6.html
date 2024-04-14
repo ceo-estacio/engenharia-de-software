@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title></title>
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../src/styles/globals.css">
+      <script src="../src/Widgets/AppBar.js" defer></script>
+      <style>
+      </style>
+   </head>
+   <body>
+      <appbar></appbar>
+      
+      <main>
+         <h2>Tema 6 - PROGRAMAÇÃO DE PÁGINAS DINÂMICAS COM PHP</h2>
+
+         para rodar o servidor php precisa ter um servidor com suporte:
+         <ul>
+            <li>Apache</li>
+            <li>IIS</li>
+            <li>Nginx</li>
+         </ul>
+
+         <p>
+            o ambiente php é chamado de <b>AMP</b>
+            <br>
+            <b>A</b>pache: ( server ) <br>
+            <b>M</b>ysql: ( database ) <br>
+            <b>P</b>hp
+         </p>
+
+         <p>
+            Uma opção para a configuração mais simples do php é o <b>XAMP</b>
+         </p>
+
+         <modulo n="1">
+            <h4>Módulo 1</h4>
+            <h2>Conceitos básicos de PHP</h2>
+
+            <escopo dm="" central="">
+               <h3>Escopo</h3>
+               <p>
+                  todo script em php deve ser colocado dentro da tag &lt;?php ... ?&gt;
+               </p>
+            </escopo>
+            
+            <variaveis dm central>
+               <h3>Variaveis</h3>
+               <p>toda variavel no php começa com $</p>
+               <p>
+                  $name = "Nome";
+                  $idade = 30;
+               </p>  
+            </variaveis>
+
+            <arrays dm="" central="">
+               <h3>Arrays</h3>
+
+               <pre>
+   &lt;?php
+      $colors = array( "red", "green", "blue" );
+   ?&gt;
+               </pre>
+            </arrays>
+            
+            <functions dm="" central="">
+               <h3>Funções</h3>
+               <pre>
+   function addNumbers( $a, $b ) {
+      return $a + $b;
+   }
+
+   function addNumbersStrict( int $a, int $b ) {
+      echo $a;
+      return $a + $b;
+   }
+
+   &lt;?php declare( strict_types=1 ) // força o modo estrito
+      function addNumbersStrict( int $a, int $b ) {
+         return $a + $b;
+      }
+   ?&gt;
+               </pre>
+            </functions>
+
+            <loops dm="" central="">
+               <h3>Laços de repetição</h3>
+
+               <pre>
+   &lt;?php
+      for( $i = 0; $i <= 10; $i++ ) {
+         echo "the number is: $i &lt;br /&gt;";
+      }
+
+      foreach( $colors as $value ) {
+         echo "$value &lt;br /&gt;";
+      } 
+
+      $cars = array( "volvo", "toyota", "volkswagem" );
+      echo count( $cars );
+      echo shuffle( $cars );
+
+      $bikes = [ "cicle", "motorcicle", "mountain bike" ];
+      echo sort( $bikes );
+
+      $idades = ( "Eu" => "39", "Ela" => "28", "Ele" => "8" );
+      echo "nossa idade ".$idades[ "Eu" ]
+
+
+   ?&gt;
+               </pre>
+            </loops>
+
+            <h3>Conceitos básicos da linguagem</h3>
+
+            <formularios dm="" central="">
+               <h4>Trabalhando com formulários</h4>
+               
+               <ul>
+                  <li>
+                     <dt><strong>$_GET</strong></dt>
+                     <dd>
+                        $_GET[ "name" ] pega os dados transmitidos com get 
+                        <br />
+                        a informação é enviada no header
+                     </dd>
+                  </li>
+                  <li>
+                     <dt><strong>$_POST</strong></dt>
+                     <dd>
+                        $_POST[ "name" ] pega os dados transmitidos através de post 
+                        <br />
+                        a informação é enviada em background
+                     </dd>
+                  </li>
+                  <li>
+                     <dt><strong>$_REQUEST</strong></dt>
+                     <dd>$_REQUEST[ "name" ] coringa</dd>
+                  </li>
+               </ul>
+            </formularios>
+
+         </modulo>
+         
+         <modulo n="2">
+            <h4>Módulo 2</h4>
+            <h2>Estruturas de decisão e de repetição</h2>
+         </modulo>
+         
+         <modulo n="3">
+            <h4>Módulo 3</h4>
+            <h2>Vetores e funções</h2>
+         </modulo>
+
+         
+      </main>
+      
+      <script type="module">
+         // import AppBar from "../../Components/AppBar.js";
+
+         
+         AppBar();
+      </script>
+   </body>
+</html>
+

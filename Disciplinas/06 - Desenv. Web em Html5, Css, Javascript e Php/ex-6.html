@@ -1,0 +1,211 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title>Exercícios</title>
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../src/styles/globals.css">
+      <script src="../src/Widgets/AppBar.js" defer></script>
+      <style>
+      </style>
+   </head>
+   <body>
+      <appbar></appbar>
+      
+      <main>
+         <h2>Exercícios Tema 6 - </h2>
+
+         <ex n="1">
+            <header></header>
+            <home>
+               <p>
+                  (FUNDATEC/2021) A partir do código-fonte da Figura abaixo, escrito na linguagem PHP (versão 7.4), o que deverá ser impresso?
+               </p>
+               <code>
+   &lt;?php
+      for ($num1 = 1; $num1 <= 9; $num1++) {
+            for ($num2 = 1; $num2 <= 10; $num2++) {
+               echo "$num1 * $num2 = " . $num1 * $num2;
+               echo "&lt;br&gt;";
+            }
+            echo "&lt;br&gt;";
+      }
+   ?&gt;
+               </code>   
+            </home>
+            <respostas>
+               <r>
+                  a tabuada do 1 ao 9
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="2">
+            <header></header>
+            <home>
+               <p>
+                  (FGV/2022 - Adaptada) PHP é uma linguagem server side, gratuita e multiplataforma. Numa página web, um script PHP deve ser localizado entre as tags:
+               </p>
+            </home>
+            <respostas>
+               <r>
+                  &lt;?php  ?&gt;
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="3">
+            <header></header>
+            <home>
+               <p>
+                  (IDECAN/2021 - Adaptada) PHP é uma tecnologia que disponibiliza um comando para uso nas estruturas foreach, while, do-while ou switch. No seu funcionamento, ao ser detectado entre os comandos inseridos em um loop, faz com que ocorra o término imediato da execução do loop. Esse comando é conhecido por:
+               </p>
+            </home>
+            <respostas>
+               <r>
+                  break.
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="4">
+            <header></header>
+            <home>
+               <p>
+                  Qual instrução apresenta o conteúdo do primeiro elemento do vetor ou array declarado em PHP na forma: $estados = array("AM", "AP", "DF", "PR", "SP","SC", "RS"); ?
+               </p>
+            </home>
+            <respostas>
+               <r>
+                  echo $estados[ 0 ];
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="5">
+            <header></header>
+            <home>
+               <p>
+                  (VUNESP/2020) Analise o trecho de código PHP a seguir.
+               </p>
+               
+               <code>
+   ?php
+      $x = 10;
+      if( $x == '10' ) {
+         echo "SIM";
+      }  else  {
+         echo "NÃO";
+      }
+   ?
+               </code>
+            </home>
+            <respostas>
+               <r>
+                  "SIM", pois o operador "==" compara apenas o valor e não o tipo.
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="6">
+            <header></header>
+            <home>
+               <p>
+                  (FUNRIO/2018) A figura abaixo ilustra uma sequência de instruções em PHP.
+               </p>
+               <code>
+   ?php
+      $x = 10;
+      $y = 19;
+      $z = 28;
+      echo ++$x;
+      echo $y++;
+      echo --$z;
+   ?
+               </code>
+            </home>
+            <respostas>
+               <r>
+                  11 19 27
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="7">
+            <header></header>
+            <home>
+               <p></p>
+            </home>
+            <respostas>
+               <r></r>
+            </respostas>
+         </ex>
+         
+         <ex n="8">
+            <header></header>
+            <home>
+               <p>
+                  (UNIOESTE/2022 - Adaptada) Com relação ao PHP (Hypertext Preprocessor), há um comando para criar um conjunto (array) ou vetor associativo. Indique a alternativa que contém o uso correto desse comando.
+               </p>
+            </home>
+            <respostas>
+               <r>
+                  $cadastro =array(''CPF''=>''1234567890'',''Nome''=>''Pedro'',''Cidade''=>''Cascavel'');
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="9">
+            <header></header>
+            <home>
+               <p>
+                  Analise o código PHP a seguir:
+               </p>
+               <code>
+   ?php
+      $x = 3;
+      $y = $x * 3;
+      $z = 4 * $x / $y;
+      echo $x + $y * $z;
+   ?
+               </code>
+            </home>
+            <respostas>
+               <r>
+                  15
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="10">
+            <header></header>
+            <home>
+               <p>
+                  (NC-UFPR/2019) Qual instrução apresenta o conteúdo do primeiro elemento do vetor ou array declarado em PHP na forma:
+               </p>
+               <code>
+   $estados = array("AM", "AP", "DF", "PR", "SP","SC", "RS");
+               </code>
+            </home>
+            <respostas>
+               <r>
+                  echo $estados[ 0 ];
+               </r>
+            </respostas>
+         </ex>
+         
+      </main>
+      
+      <script type="module">
+         // import AppBar from "../../Components/AppBar.js";
+
+         
+         AppBar();
+      </script>
+   </body>
+</html>
+

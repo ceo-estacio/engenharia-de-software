@@ -23,7 +23,6 @@ function AppBar( props ) {
                flex-direction: column;
                width: 100%;
                height: 72px;
-               background: #181a1b;
                box-shadow: #0005 0 0 10px;
                position: sticky;
                top: 0;
@@ -94,6 +93,6 @@ function AppBar( props ) {
                </drawer-btn>
             </appbar-options>
          </home>         
-      `)
+      `);
    } );
 }

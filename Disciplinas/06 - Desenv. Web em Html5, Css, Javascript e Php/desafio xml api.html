@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title>Requisição XMLHttpRequest</title>
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../src/styles/globals.css">
+      <script src="../src/Widgets/AppBar.js" defer></script>
+      <style>
+      </style>
+   </head>
+   <body>
+      <appbar></appbar>
+      
+      <main>
+         <h1>Imagens Aleatórios de Cachorros</h1>
+         <p>A partir do click no botão abaixo uma nova imagem aleatória de cachorros será carregada utilizando requisições assíncronas com XMLHttpRequest</p>
+      
+         <img id="img_dog" src="" alt="Aguardando a imagem ser carregada" />
+         <br/>
+         <button onclick="carregarImagens()">Carregar Imagens</button>
+         
+      </main>
+      
+      <script type="module">
+         // import AppBar from "../../Components/AppBar.js";
+
+         function carregarImagens(){
+		
+            var url = "https://dog.ceo/api/breeds/image/random"
+            fetch(url, {
+               method: 'get'
+            })
+            .then(function(response) {
+               response.json().then(function(data){
+                  console.log('Resultado da Requisição: ' + data.message);
+
+                  var imgDog = document.getElementById("img_dog");
+                  imgDog.src = data.message;
+               });
+            })
+            .catch(function(err) {
+               console.error('O seguinte erro ocorreu durante a requisição: ' + err);
+            });
+
+         }
+
+         AppBar();
+      </script>
+   </body>
+</html>

@@ -1,0 +1,84 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title>Praticando Javascript - Exercício 1</title>
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../src/styles/globals.css">
+      <script src="../src/Widgets/AppBar.js" defer></script>
+      <style>
+         form {
+            width: 70%;
+            margin: auto;
+         }
+         form * {
+            width: 90%;
+         }
+      </style>
+   </head>
+   <body>
+      <appbar></appbar>
+      
+      <main>
+         <h2>Praticando Javascript - Exercício 1</h2>
+
+         <form action="" id="form">
+            <label>
+               <p>Insira o primeiro número: </p>
+               <input type="number" id="input_numero1" placeholder="Insira o primeiro número: ">
+            </label>
+            <label>
+               <p>Insira o segundo número: </p>
+               <input type="number" id="input_numero2" placeholder="Insira o segundo número: ">
+            </label>
+            <input type="submit" id="submit_calcular" value="CALCULAR" block>
+            <label>
+               <p>Resultado</p>
+               <input type="text" id="input_resultado" readonly>
+            </label>
+         </form>
+         
+      </main>
+      
+      <script type="module">
+         AppBar();
+
+         // import AppBar from "../../Components/AppBar.js";
+
+
+         // var 
+         //    numero1 = prompt( "Insira o primeiro número: " )
+         //    ,
+         //    numero2 = prompt( "Insira o segundo número: " )
+         //    ,
+         //    resultadoDivisao = divida( numero1, numero2 )
+         // ;
+
+         // alert(
+         //    `O resultado da divisão é igual a: ${ resultadoDivisao }`
+         // ); 
+         
+         form.addEventListener( "submit", () => {
+            event.preventDefault();
+            const result = `O resultado da divisão é igual a: ${ input_numero1.value / input_numero2.value }`;
+            [ input_numero1, input_numero2 ].forEach(
+               input => {
+                  input.value === "" ? alert( "faltou digitar um numero!" ) 
+                  : 
+                  input_resultado.value = result;
+               }
+            );
+         } );
+         
+         function divida( numero1, numero2 ) {
+            return( 
+               numero1 / numero2
+            );
+         }
+      </script>
+   </body>
+</html>

@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title></title>
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../src/styles/globals.css">
+      <script src="../src/Widgets/AppBar.js" defer></script>
+      <style>
+      </style>
+   </head>
+   <body>
+      <appbar></appbar>
+      
+      <main>
+         <h2>Tema 4: Linguagem de Marcação e Estilos - Css</h2>
+
+         <modulo n="1">
+            <h4>Módulo 1</h4>
+            <h2>Fundamentos da CSS</h2>
+         </modulo>
+         
+         <modulo n="2">
+            <h4>Módulo 2</h4>
+            <h2>CSS3</h2>
+
+            <regra-font-face>
+               <h3>regra @font-face</h3>
+
+               <pre>
+                  @font-face {
+                     font-family: "awesome";
+                     font-style: normal;
+                     font-weight: 400;
+
+                     src: local ( "Awesome font" ), 
+                        url( "./..." ) format( "" );
+                  }
+               </pre>
+
+               <h4>Font types: </h4>
+               <ul>
+                  <li>TTF/OTF</li>
+                  <li>WOFF</li>
+                  <li>WOFF2</li>
+                  <li>SVG</li>
+                  <li>EOT</li>
+               </ul>
+            </regra-font-face>
+
+            <background dm="">
+   <pre>
+      background {
+         background-color: #fff;
+         background-image: url();
+         background-repeat: no-repeat;
+         background-position: 0 0;
+
+         background: #fff url() no-repeat 0 0;
+      }
+
+      font {
+         font-size: 1em;
+         line-height: 1.5em;
+         font-weight: bold;
+         font-style: italic;
+         font-family: verdana;
+
+         font: 1em/1.5em bold italic verdana;
+      }
+
+      ul {
+         list-style: #000;
+         list-style-type: disc;
+         list-style-position: outside;
+         list-style-image: url();
+
+         list-style: disc outside url();
+      }
+   </pre>
+            </background>
+         </modulo>
+         
+         <modulo n="3">
+            <h4>Módulo 3</h4>
+            <h2>Conceitos avançados de CSS</h2>
+         </modulo>
+         
+         <modulo n="4">
+            <h4>Módulo 4</h4>
+            <h2>Frameworks CSS</h2>
+         </modulo>
+
+         <div id="box">
+            <style>
+               #identificador { color: #27f; }
+               p#identificador { color: #72f; }
+               .classe { color: #f72; }
+               #box {
+                  display: flex;
+                  flex-direction: column;
+                  width: 150px;
+                  height: 150px;
+                  padding: 1.5rem;
+                  background: #242424;
+                  outline: #27f 5px solid;
+                  border: #72f 5px solid;
+               }
+            </style>
+
+            <p id="identificador" class="classe">
+
+               Texto do parágrafo.
+
+            </p>
+
+         </div>
+         
+      </main>
+      
+      <script type="module">
+         // import AppBar from "../../Components/AppBar.js";
+
+         
+         AppBar();
+      </script>
+   </body>
+</html>
+
