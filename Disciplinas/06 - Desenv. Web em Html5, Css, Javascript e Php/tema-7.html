@@ -25,47 +25,133 @@
 
             <h4>conexão com mysql</h4>
             <code>
-   &lt;?php
-      $conn = myswli_connect(
-         HOST,
-         USER,
-         PASSWORD,
-         DBNAME
-      );
-      
-      $instrucaoSQL = "Select nome, cpf, telefone From Cliente";
+&lt;?php
+   $conn = myswli_connect(
+      HOST,
+      USER,
+      PASSWORD,
+      DBNAME
+   );
+   
+   $instrucaoSQL = "Select nome, cpf, telefone From Cliente";
 
-      $stmt = mysqli_prepare(
-         $conn,
-         $instrucaoSQL
-      );
+   $stmt = mysqli_prepare(
+      $conn,
+      $instrucaoSQL
+   );
 
-      mysqli_stmt_bind_result(
-         $stmt,
-         $nome,
-         $cpf,
-         $tel
-      );
+   mysqli_stmt_bind_result(
+      $stmt,
+      $nome,
+      $cpf,
+      $tel
+   );
 
-      mysqli_stmt_execute(
-         $stmt
-      );
-      
-      while( mysqli_stmt_fetch( $stmt ) ) {
-         echo $nome . "&lt;br /&gt;";
-      }
+   mysqli_stmt_execute(
+      $stmt
+   );
+   
+   while( mysqli_stmt_fetch( $stmt ) ) {
+      echo $nome . "&lt;br /&gt;";
+   }
 
-      mysqli_close( $conn );
-   ?&gt;
+   mysqli_close( $conn );
+?&gt;
             </code>
 
-            <h4>conexão com postgreeSQL</h4>
+            <h4>conexão com postgreSQL</h4>
             <code>
-               <?php
-                  $conn = pg_connect( $stringConn );
-                  $instrucaoSQL = ;
-                  $result = ;
-               ?>
+&lt;?php
+   $connection = pg_connect( $stringConnection );
+   $instrucaoSQL = "Select nome, cpf, telefone, From Cliente";
+   $result = pg_query(
+      $connection,
+      $instrucaoSQL
+   );
+
+   while( $row = pg_fetch_array( $result ) ) {
+      echo $row[ "nome" ] . "&lt;br /&lt;";
+   }
+
+   pg_close( $connection );
+?&lt;
+            </code>
+
+            <h4>PDO ( PFP Data Objects ) </h4>
+            <code>
+&lt;?php
+   define ( "HOST", "127.0.0.1" );
+   define ( "PORT", "5432" );
+   define ( "DBNAME", "test" );
+   define ( "USER", "user" );
+   define ( "PASSWORD", "psswd" );
+
+   try {
+      $dsn = new PDO( "myswl:host=". HOST . 
+                      ";port=".PORT.";dbname=" . DBNAME . 
+                      ";password=" . PASSWORD );
+   } catch( PDOException $e ) {
+      echo "A conexão falhou : " . $e->getMessage();
+   }
+
+   $dsn = null;
+?&lt;
+            </code>
+
+            <h4>Classes no PHP</h4>
+            <code>
+&lt;?php
+   class Pessoa {
+      var $nome;
+      var $idade;
+
+      public function __construct() {
+      }
+      
+      public function setNome( $nome ) {
+         $this->nome = $nome;
+      }
+
+      public function getIdade() {
+         return $this->idade;
+      }
+   }
+
+   var $p1 = new Pessoa();
+
+   $p1->setNome( "Ana" );
+?&lt;
+            </code>
+
+            <h4>DML ( Data Manipulation Language )</h4>
+            <code>
+&lt;?php
+   $qtdDeLinhasAfetadas = $dsn->exec(
+      "Delete From Cliente Where codigo_cliente = 1"
+   );
+?&lt;
+            </code>
+
+            <h4>consulta ( query )</h4>
+            <code>
+&lt;?php
+   $instrucaoSQL = "Select nome, cpf, telefone From Cliente";
+
+   $resultSet = $dsn->query( $sql );
+
+   while( $row = $resultSet->fetch() ) {
+      echo $row[ "nome" ] . "\n\t";
+      echo $row[ "cpf" ] . "\n\t";
+      echo $row[ "telefone" ] . "\n\t";
+   }
+?&lt;
+            </code>
+
+            <h4>proteção contra injection</h4>
+            <code>
+&lt;?php
+   $
+?&lt;
             </code>
          </modulo>
          

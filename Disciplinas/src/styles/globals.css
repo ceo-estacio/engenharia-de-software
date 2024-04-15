@@ -52,6 +52,11 @@ th, td {
    padding: 0.5rem;
 }
 
+h1, h2, h3, h4, h5, h6,
+p, t, txt {
+   overflow-wrap: break-word;
+}
+
 t { 
    display: block; 
    font-size: 1em;
