@@ -1,0 +1,181 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title>Exercícios</title>
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../src/styles/globals.css">
+      <script src="../src/Widgets/AppBar.js" defer></script>
+      <style>
+      </style>
+   </head>
+   <body>
+      <appbar></appbar>
+      
+      <!-- (ex[n="$"]>header+home>p^respostas>r^^{})*10 -->
+      <main>
+         <h2>Exercícios Tema 6 - </h2>
+   
+         <ex n="1">
+            <header></header>
+            <home>
+               <p>
+                  (IFB - 2017 - IFB - Professor - Informática/ Desenvolvimento de Sistemas)
+                  <br></br>
+                  Segundo Beighley e Morrison (2010), quando um formulário HTML envia dados a um script PHP, utiliza-se um conjunto de variáveis superglobais (superglobais são variáveis pré-definidas pelo interpretador PHP e que estão sempre disponíveis em todos os escopos) para acessar os dados enviados pelo formulário HTML. Assinale a alternativa que apresenta os identificadores/nomes de variáveis superglobais corretos para a tarefa de acessar dados enviados por um formulário HTML:
+               </p>
+            </home>
+            <respostas>
+               <r>
+                  $_GET, $_POST
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="2">
+            <header></header>
+            <home>
+               <p>
+                  (Colégio Pedro II - 2016 - Colégio Pedro II - Professor - Ciência da Computação)
+                  <br></br>
+                  O código de PHP abaixo insere dados em um banco de dados local MySQL, cujo usuário é root; a senha é mypsw e o nome do banco de dados, bdConcurso.
+               </p>
+               <img src="./assets/img/tema7-ex7-e-2.png" medium alt="">
+            </home>
+            <respostas>
+               <r>
+                  mysqli_connect, localhost, bdConcurso, !mysqli_query, $sql, mysqli_close, $con
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="3">
+            <header></header>
+            <home>
+               <p>(FCC - 2017 - DPE-RS - Analista - Desenvolvimento de Sistemas)</p>
+               <p>Considere o fragmento de código abaixo, em um ambiente PHP em condições ideais.</p>
+               <img src="./assets/img/tema7-ex7-e-3.png" alt="" medium="">
+               <p>Para que o comando DELETE possa ser executado corretamente, a lacuna I deve ser preenchida com:</p>
+            </home>
+            <respostas>
+               <r>
+                  $dbh->exec
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="4">
+            <header></header>
+            <home>
+               <p>(FADESP - 2017 - COSANPA - Analista de Sistema)</p>
+               <p>A implementação correta de uma classe chamada Usuário em PHP é:</p>
+            </home>
+            <respostas>
+               <r>
+                  <code>
+?php
+
+   class Usuario
+   
+   {
+   
+   var $nome; var $cpf;
+   
+   public function _contruct($nome, $cpf){
+   
+   $this->nome = $nome;
+   
+   $this->cpf = $cpf;
+   
+   }
+   
+   }
+
+?
+                  </code>
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="5">
+            <header></header>
+            <home>
+               <p>(FCC - 2013 - AL-RN - Técnico Legislativo - Programador)</p>
+               <p>
+                  Para receber, em um arquivo PHP no servidor, os valores enviados em campos texto de um formulário HTML, utilizam-se variáveis predefinidas. Se o elemento form do formulário contiver method="get", a variável utilizada será ..I.. . Caso contenha method="post", a variável utilizada será ..II.. . Pode-se também utilizar a variável ..III.. que recebe os valores tanto se method="get" quanto se method="post".
+               </p>
+               <p>As lacunas I, II e III da frase acima são preenchidas, correta e respectivamente, com:</p>
+            </home>
+            <respostas>
+               <r>
+                  $_GET, $_POST e $_REQUEST
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="6">
+            <header></header>
+            <home>
+               <p></p>
+            </home>
+            <respostas>
+               <r></r>
+            </respostas>
+         </ex>
+         
+         <ex n="7">
+            <header></header>
+            <home>
+               <p></p>
+            </home>
+            <respostas>
+               <r></r>
+            </respostas>
+         </ex>
+         
+         <ex n="8">
+            <header></header>
+            <home>
+               <p></p>
+            </home>
+            <respostas>
+               <r></r>
+            </respostas>
+         </ex>
+         
+         <ex n="9">
+            <header></header>
+            <home>
+               <p></p>
+            </home>
+            <respostas>
+               <r></r>
+            </respostas>
+         </ex>
+         
+         <ex n="10">
+            <header></header>
+            <home>
+               <p></p>
+            </home>
+            <respostas>
+               <r></r>
+            </respostas>
+         </ex>
+         
+         
+      </main>
+      
+      <script type="module">
+         // import AppBar from "../../Components/AppBar.js";
+
+         
+         AppBar();
+      </script>
+   </body>
+</html>
+
