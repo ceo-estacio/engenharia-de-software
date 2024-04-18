@@ -31,7 +31,15 @@ appbar {
    background: var(--appbar-c);
 }
 
-main {
+homepage {
+   display: flex;
+   flex-direction: column;
+   /* padding: 1rem; */
+   /* gap: 1rem; */
+   /* background: var(--main-c); */
+}
+
+main,tema {
    display: flex;
    flex-direction: column;
    padding: 1rem;
