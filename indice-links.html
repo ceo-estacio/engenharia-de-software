@@ -33,6 +33,11 @@
             display: flex;
             flex-direction: column;
          }
+
+         content {
+            display: block;
+            padding: 1.5rem;
+         }
       </style>
    </head>
    <body>
@@ -44,35 +49,71 @@
                <h4>06</h4>
                <h2>Desenv. Web em Html5, Css, Javascript e Php</h2>
             </header>
-            <Link 
-               to="https://stecine.azureedge.net/repositorio/00212ti/00172/index.html?brand=estacio#imprimir" 
-               txt="Tema 2: O Ambiente Web Cliente X Servidor e as Tecnologias"
-            ></Link>
-            <Link 
-               to="https://stecine.azureedge.net/repositorio/00212ti/00084/index.html?brand=estacio#" 
-               txt="Tema 3: Linguagem de Marcação de Hypertexto - Html"
-            ></Link>
-            <Link 
-               to="https://stecine.azureedge.net/repositorio/00212ti/00468/index.html?brand=estacio#imprimir" 
-               txt="Tema 4: Linguagem de Marcação e Estilos - Css"
-            ></Link>
-            <Link 
-               to="https://stecine.azureedge.net/repositorio/00212ti/00385/index.html?brand=estacio#imprimir" 
-               txt="Tema 5 - Linguagem Javascript"
-            ></Link>
-            <Link 
-               to="https://stecine.azureedge.net/repositorio/00212ti/00297/index.html?brand=estacio#" 
-               txt="Tema 6 - PROGRAMAÇÃO DE PÁGINAS DINÂMICAS COM PHP"
-            ></Link>
-            <Link 
-               to="https://stecine.azureedge.net/repositorio/00212ti/00120/index.html?brand=estacio#imprimir" 
-               txt="Tema 7: Integração do Php Com Banco de Dados"
-            ></Link>
-            <Link 
-               to="" 
-               txt=""
-            ></Link>
+            <content>
+               <nav-link 
+                  to="https://stecine.azureedge.net/repositorio/00212ti/00172/index.html?brand=estacio#imprimir" 
+                  txt="Tema 2: O Ambiente Web Cliente X Servidor e as Tecnologias"
+               ></nav-link>
+               <nav-link 
+                  to="https://stecine.azureedge.net/repositorio/00212ti/00084/index.html?brand=estacio#" 
+                  txt="Tema 3: Linguagem de Marcação de Hypertexto - Html"
+               ></nav-link>
+               <nav-link 
+                  to="https://stecine.azureedge.net/repositorio/00212ti/00468/index.html?brand=estacio#imprimir" 
+                  txt="Tema 4: Linguagem de Marcação e Estilos - Css"
+               ></nav-link>
+               <nav-link 
+                  to="https://stecine.azureedge.net/repositorio/00212ti/00385/index.html?brand=estacio#imprimir" 
+                  txt="Tema 5 - Linguagem Javascript"
+               ></nav-link>
+               <nav-link 
+                  to="https://stecine.azureedge.net/repositorio/00212ti/00297/index.html?brand=estacio#" 
+                  txt="Tema 6 - PROGRAMAÇÃO DE PÁGINAS DINÂMICAS COM PHP"
+               ></nav-link>
+               <nav-link 
+                  to="https://stecine.azureedge.net/repositorio/00212ti/00120/index.html?brand=estacio#imprimir" 
+                  txt="Tema 7: Integração do Php Com Banco de Dados"
+               ></nav-link>
+            </content>
          </Desenv-Web-em-Html5-Css-Javascript-e-Php>
+         
+         <Sistemas-de-Informacao-e-Sociedade dm>
+            <header>
+               <h4>10</h4>
+               <h2>Sistemas de Informação e Sociedade</h2>
+            </header>
+            <content>
+               <nav-link 
+                  to="" 
+                  txt="Tema 1: Caminho do Brilho: Saiba Quais Conteúdos Você Irá Aprender Conosco"
+               ></nav-link>
+               <nav-link 
+                  to="https://stecine.azureedge.net/repositorio/00212ti/07407/index.html?brand=estacio#" 
+                  txt="Tema 2: Sistemas de Informação"
+               ></nav-link>
+               <nav-link 
+                  to="" 
+                  txt="Tema 2: Relacionamento Interpessoal"
+               ></nav-link>
+               <nav-link 
+                  to="" 
+                  txt="Tema 3: "
+               ></nav-link>
+               <nav-link 
+                  to="" 
+                  txt="Tema 4: "
+               ></nav-link>
+               <nav-link 
+                  to="" 
+                  txt="Tema 5: "
+               ></nav-link>
+               <!-- <nav-link 
+                  to="" 
+                  txt="Tema : "
+               ></nav-link> -->
+               
+            </content>
+         </Sistemas-de-Informacao-e-Sociedade>
 
       </disciplinas>
       
@@ -95,12 +136,12 @@
 
          /* == [ methods ] 
          == == == == == == == == == */
-         $$( "Link" ).forEach( l => {
+         $$( "nav-link" ).forEach( l => {
             return( l.outerHTML = `
                <p>
                   <style>
                      a {
-                        color: #fc0;
+                        color: #29f;
                         text-decoration: transparent;
                      }
                   </style>

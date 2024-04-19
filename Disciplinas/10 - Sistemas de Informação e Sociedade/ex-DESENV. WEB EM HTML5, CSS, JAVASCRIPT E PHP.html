@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title>Exercícios</title>
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../src/styles/globals.css">
+      <script src="../src/Widgets/AppBar.js" defer></script>
+      <style>
+      </style>
+   </head>
+   <body>
+      <appbar></appbar>
+      
+      <!-- (ex[n="$"]>header+home>p^respostas>r^^{})*10 -->
+      <main>
+         <h2>Exercicio: DESENV. WEB EM HTML5, CSS, JAVASCRIPT E PHP</h2>
+         <!-- 
+            1.	O AMBIENTE WEB CLIENTE X SERVIDOR E AS TECNOLOGIAS
+            2.	LINGUAGEM DE MARCAÇÃO DE HYPERTEXTO - HTML
+            3.	LINGUAGEM DE MARCAÇÃO E ESTILOS - CSS
+            4.	LINGUAGEM JAVASCRIPT
+            5.	PROGRAMAÇÃO DE PÁGINAS DINÂMICAS COM PHP
+            6.	INTEGRAÇÃO DO PHP COM BANCO DE DADOS
+          -->
+         
+         <ex n="1">
+            <header></header>
+            <home>
+               <p>
+                  Dentre as alternativas a seguir, assinale a que NÃO se aplica ao conceito de Design Responsivo:
+               </p>
+            </home>
+            <respostas>
+               <r>
+                  Como uma estratégia de desenvolvimento, recomenda-se começar o design responsivo pelas interfaces maiores e mais complexas.
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="2">
+            <header></header>
+            <home>
+               <p>
+                  Analise o seguinte código escrito na linguagem JavaScript:
+               </p>
+               <code>
+   var frutas = new Array("banana", "laranja", "limão");
+
+   frutas.shift();
+   frutas.splice(1, 1, "uva");
+   
+   for (var i = 0; i < frutas.length; i++) {
+         document.write(frutas[i] + " | ");
+   }
+               </code>
+            </home>
+            <respostas>
+               <r>
+                  laranja | uva | 
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="3">
+            <header></header>
+            <home>
+               <p>
+                  Em um documento HTML, o lugar correto para se declarar folhas de estilo CSS externas é dentro da seção:
+               </p>
+            </home>
+            <respostas>
+               <r>
+                  < head >
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="4">
+            <header></header>
+            <home>
+               <p>
+                  (COPESE/2020 - Adaptada) O modelo cliente X servidor é a base do ambiente web e de suas aplicações. Sobre a arquitetura cliente-servidor, marque a opção CORRETA.
+               </p>
+            </home>
+            <respostas>
+               <r>
+                  O navegador Web Opera é um exemplo de cliente.
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="5">
+            <header></header>
+            <home>
+               <p>
+                  (OBJETIVA/2021 - Adaptada) HTML é uma linguagem de marcação que faz uso de tags para estruturar o seu conteúdo. Em uma página HTML, para que é utilizada a tag abaixo?
+               </p>
+               <p>
+                  a> /a>
+               </p>
+            </home>
+            <respostas>
+               <r>
+                  Inserção de link.
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="6">
+            <header></header>
+            <home>
+               <p>
+                  (FURB/2022) Considere um código HTML 5, o qual está sendo estilizado utilizando CSS 3. Isso posto, você precisa modificar certa propriedade de um grupo de elementos para torná-los animados. Ao encontro disso, do(s) seletor(es) CSS a seguir listado(s), aquele(s) utilizado(s) para especificar um grupo de elementos é/são:
+               </p>
+            </home>
+            <respostas>
+               <r>
+                  Classe.
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="7">
+            <header></header>
+            <home>
+               <p>
+                  (IDECAN/2023) JavaScript é uma linguagem de programação interpretada estruturada de script muito usada para programação FrontEnd. Selecione o método em JavaScript que remove de um vetor o primeiro elemento e o retorna como resultado.
+               </p>
+            </home>
+            <respostas>
+               <r>
+                  shift();
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="8">
+            <header></header>
+            <home>
+               <p>
+                  (FGV/2022 - Adaptada) PHP é uma linguagem server side, gratuita e multiplataforma. Numa página web, um script PHP deve ser localizado entre as tags:
+               </p>
+            </home>
+            <respostas>
+               <r>
+                  < ?php   ?>
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="9">
+            <header></header>
+            <home>
+               <p>
+                  (COPEL/2015 - Adaptada) Com a utilização de CSS, podemos manipular as cores dos elementos HTML. Assinale a alternativa que apresenta apenas padrões válidos para a definição de cores em CSS.
+               </p>
+            </home>
+            <respostas>
+               <r>
+                  HSL - RGB - números hexadecimais.
+               </r>
+            </respostas>
+         </ex>
+         
+         <ex n="10">
+            <header></header>
+            <home>
+               <p>
+                  (Colégio Pedro II - 2016 - Colégio Pedro II - Professor - Ciência da Computação)
+               </p>
+               <p>
+                  O código de PHP abaixo insere dados em um banco de dados local MySQL, cujo usuário é root; a senha é mypsw e o nome do banco de dados, bdConcurso.
+               </p>
+               <img src="./assets/img/tema7-ex7-e-2.png" alt="" medium="">
+            </home>
+            <respostas>
+               <r>
+                  mysqli_connect; localhost; bdConcurso; !mysqli_query; $sql; mysqli_close; $con;
+               </r>
+            </respostas>
+         </ex>
+         
+      </main>
+      
+      <script type="module">
+         // import AppBar from "../../Components/AppBar.js";
+
+         
+         AppBar();
+      </script>
+   </body>
+</html>
