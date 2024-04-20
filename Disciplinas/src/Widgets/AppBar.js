@@ -37,7 +37,7 @@ function AppBar( props ) {
             
             appbar-options {
                display: flex;
-               flex: .15;
+               flex: .1;
                align-items: center;
                justify-content: center;
                font-size: 1.7rem;
@@ -53,13 +53,13 @@ function AppBar( props ) {
 
             appbar-logo {
                display: flex;
-               flex: .7;
+               flex: .8;
                align-items: center;
                justify-content: center;
             } 
             
             #estacio_logo {
-               height: 95%;
+               height: 72px;
             }
 
             #estacio-logo-name-color {
@@ -75,7 +75,6 @@ function AppBar( props ) {
             <appbar-logo>
                <svg id="estacio_logo" xmlns="http://www.w3.org/2000/svg"
                   width="100%" height="75" 
-                  viewBox="0 0 100% 100%" 
                   viewBox="0 0 232 75" 
                   fill="none" 
                >
