@@ -16,7 +16,7 @@ function Drawer( props ) {
                width: 0;
                height: 100dvh;
                background: #1b1d22;
-               box-shadow: #0005 0 0 10px;
+               box-shadow: #0009 0 0 5px;
                position: fixed;
                top: 0;
                left: 0;
