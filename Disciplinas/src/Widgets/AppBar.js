@@ -95,3 +95,5 @@ function AppBar( props ) {
       `);
    } );
 }
+
+AppBar();
