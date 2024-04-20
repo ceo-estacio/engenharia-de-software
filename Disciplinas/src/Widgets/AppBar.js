@@ -23,7 +23,7 @@ function AppBar( props ) {
                flex-direction: column;
                width: 100%;
                height: 72px;
-               box-shadow: #0009 0 0 5px;
+               box-shadow: #0009 0 0 5px 1px;
                position: sticky;
                top: 0;
                left: 0;
