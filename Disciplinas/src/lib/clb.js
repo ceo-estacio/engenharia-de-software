@@ -10,4 +10,4 @@ const CLB = [
    $a = ( e, a ) => e.getAttribute( a )
 ];
 
-export default CLB;
+// export default CLB;

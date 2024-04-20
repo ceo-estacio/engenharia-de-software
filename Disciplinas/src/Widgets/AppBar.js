@@ -2,15 +2,15 @@
 
 // import CLB from "../lib/clb";
 // const CLB = require( "../lib/clb" );
-const CLB = [
-   _ = ( ...v ) => console.log( ...v )
-   ,
-   $ = v => document.querySelector( v )
-   ,
-   $$ = v => document.querySelectorAll( v )
-   ,
-   $a = ( e, a ) => e.getAttribute( a )
-];
+// const CLB = [
+//    _ = ( ...v ) => console.log( ...v )
+//    ,
+//    $ = v => document.querySelector( v )
+//    ,
+//    $$ = v => document.querySelectorAll( v )
+//    ,
+//    $a = ( e, a ) => e.getAttribute( a )
+// ];
 
 
 // export default function AppBar( props ) {
@@ -27,7 +27,7 @@ function AppBar( props ) {
                position: sticky;
                top: 0;
                left: 0;
-               z-index: 9;
+               z-index: 6;
             }
 
             appbar > home {
@@ -68,7 +68,7 @@ function AppBar( props ) {
          </style>
          <home>
             <appbar-options left>
-               <drawer-btn>
+               <drawer-btn id="btn_openDrawer">
                   &#9776;
                </drawer-btn>
             </appbar-options>
