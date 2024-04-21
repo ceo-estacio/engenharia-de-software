@@ -1,5 +1,12 @@
 
 
+/* montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* roboto */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
    font: 1em sans-serif;
    font-weight: 400;
@@ -7,9 +14,12 @@
    
    
    color-scheme: light dark;
-   background-color: #242424; /* vite */
-   background: #1e2021;       /* dark reader */
-   background-color: #212329;  /* céo */
+   /* vite */
+   background-color: #242424; 
+   /* dark reader */
+   background: #1e2021;       
+   /* céo */
+   background-color: #212329;  
 
    --main-c: #f5f5f5;
 
@@ -21,10 +31,87 @@
 
 }
 
+/* == [ defaults ] 
+== == == == == == == == == */
 *,
 *::before,
 *::after {
    margin:0; padding:0; box-sizing:border-box;
+}
+
+h1, h2, h3, h4, h5, h6, 
+t1, t2, t3, t4, t5, t6 {
+   color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6, 
+t1, t2, t3, t4, t5, t6 {
+   display: block;
+   font-optical-sizing: auto;
+   /* font-weight: <weight>; */
+   font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, 
+t1, t2, t3, t4, t5, t6 {
+   font-family: "Montserrat", sans-serif;
+   font-weight: bold;
+}
+
+p, t, txt, li {
+   font-family: "Roboto", sans-serif;
+   font-weight: normal;
+   line-height: 1.75em;
+   color: #999;
+}
+
+p { margin: 1em 0; }
+
+
+h1 {
+   font-size: 2em; margin: 0.67em 0; 
+   line-height: 2.75em;
+}
+
+h2 {
+   font-size: 1.5em; margin: 0.83em 0; line-height: 2.25em;
+}
+
+h3 {
+   font-size: 1.4em; margin: 1em 0; line-height: 2.15em;
+}
+
+h4 {
+   font-size: 1.25em; margin: 1.33em 0; line-height: 2em;
+}
+
+h5 {
+   font-size: 1.15em; margin: 1.67em 0; line-height: 1.9em;
+}
+
+h6 {
+   font-size: 1em; margin: 2.33em 0; line-height: ;
+}
+
+t1, t2, t3, t4, t5, t6 { margin: 0; }
+
+t1 { font-size: 2em; line-height: 2.75em; }
+t2 { font-size: 1.5em; line-height: 2.25em; }
+t3 { font-size: 1.4em; line-height: 2.15em; }
+t4 { font-size: 1.25em; line-height: 2em; }
+t5 { font-size: 1.15em; line-height: 1.9em; }
+t6 { font-size: 1em; line-height: 1em; }
+
+ul, ol {
+   margin: 1em 0;
+   padding-left: 2.2em;
+}
+
+emphasis {
+   display: flex;
+   padding: 1.5em;
+   box-shadow: #9995 -6px 0 0 -1px;
+   line-height: 1.75em;
 }
 
 body {
@@ -41,7 +128,7 @@ homepage {
    display: flex;
    flex-direction: column;
    /* padding: 1rem; */
-   /* gap: 1rem; */
+   gap: 1rem;
    /* background: var(--main-c); */
 }
 
@@ -53,18 +140,47 @@ main {
    background: var(--main-c);
 }
 
+sub-header {
+   position: sticky;
+   top: 72px;
+   width: 100%;
+   height: 25px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #16181c;
+   color: #fc0fc0;
+}
+
+view {
+   display: flex;
+   flex-direction: column;
+   width: clamp( 100px, 100%, 950px );
+   margin: auto;
+   padding: 2em;
+}
+
 tema {
    display: flex;
    flex-direction: column;
-   /* padding: 1rem; */
    gap: 1rem;
-   background: var(--main-c);
+   /* padding: 1rem; */
+   /* background: var(--main-c); */
 }
 
 content {
    display: flex;
    flex-direction: column;
    gap: 1rem;
+}
+
+box {
+   display: flex;
+   flex-direction: column;
+   border-radius: 9px;
+   border: #9995 1px solid;
+   margin: 1em;
+   padding: 0 1em;
 }
 
 table {
@@ -114,6 +230,7 @@ t {
    :root {
       color: #bbb;
       background-color: #212329;
+      background-color: #1b1d22;
 
       --appbar-c: #1b1d22;
       --paper-c: #1b1d22;
@@ -139,6 +256,10 @@ t {
       white-space: break-spaces;
       backdrop-filter: blur( 12px );
    }
+
+   tema {
+      background: #212329;
+   }
 }
 
 
@@ -147,13 +268,13 @@ t {
 modulo {
    display: flex;
    flex-direction: column;
-   width: calc( 100% - 2rem );
+   /* width: calc( 100% - 2rem ); */
    margin: auto;
-   padding: 1rem;
+   /* padding: 1rem; */
    gap: 1rem;
    border-radius: .3rem;
-   box-shadow: var(--paper-border-c);
-   background: var( --paper-c );
+   /* box-shadow: var(--paper-border-c); */
+   /* background: var( --paper-c ); */
 }
 
 
@@ -199,5 +320,15 @@ respostas > opc {
    margin: auto;
 }
 
-[big] { width: 100%; }
-[medium] { width: 60%; }
+[big] { 
+   width: 100%;
+   max-width: 100%; 
+   max-height: 60dvh;
+   margin: auto;
+}
+[medium] { 
+   width: 60%; 
+   max-width: 100%;
+   max-height: 60dvh;
+   margin: auto;
+}
