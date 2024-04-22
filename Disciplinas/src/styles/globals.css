@@ -155,7 +155,7 @@ sub-header {
 view {
    display: flex;
    flex-direction: column;
-   width: clamp( 100px, 100%, 950px );
+   /* width: clamp( 100px, 100%, 950px ); */
    margin: auto;
    padding: 2em;
 }
@@ -172,6 +172,11 @@ content {
    display: flex;
    flex-direction: column;
    gap: 1rem;
+}
+
+modulo > content {
+   width: clamp( 100px, 100%, 750px );
+   margin: auto;
 }
 
 box {
@@ -231,7 +236,7 @@ t {
       color: #bbb;
       background-color: #212329;
       background-color: #1b1d22;
-
+      
       --appbar-c: #1b1d22;
       --paper-c: #1b1d22;
       --main-c: #212329;
@@ -331,4 +336,39 @@ respostas > opc {
    max-width: 100%;
    max-height: 60dvh;
    margin: auto;
+}
+
+
+
+/* stlesheet */
+[w-s] { width: clamp( 100px, 100%, 750px ); margin: auto; }
+[w-m] { width: clamp( 100px, 100%, 950px ); margin: auto; }
+[w-l] { width: clamp( 100px, 100%, 1250px ); margin: auto; }
+
+/* c-colors */
+c-red { color: crimson; }
+c-blue { color: #29f; }
+c-pink { color: #fc0fc0; }
+c-amber { color: #fc0; }
+
+gallery {
+   display: flex;
+   gap: 1em;
+}
+placeholder img {
+   display: block;
+   width: 100%;
+}
+es-card {
+   display: flex;
+   flex-direction: column;
+   width: clamp( 100px, 25dvw, 350px );
+   border-radius: 9px;
+   background: #fff1;
+   overflow: hidden;
+   flex: 1;
+}
+es-card > content {
+   gap: 0;
+   padding: 1em;
 }
