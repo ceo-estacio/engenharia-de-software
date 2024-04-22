@@ -303,13 +303,16 @@ exercicio > header {
    display: flex;
    align-items: center;
    justify-content: space-between;
+   height: 32px;
 }
 exercicio > header > n {
    display: grid;
    place-items: center;
-   padding: 1em;
-   clip-path: circle();
-   backdrop-filter: drop-shadow( #fff5 0 0 2px );
+   height: 100%;
+   aspect-ratio: 1 / 1;
+   /* padding: 1em; */
+   border-radius: 5em;
+   box-shadow: #fff5 0 0 0 1px;
 }
 
 respostas {
