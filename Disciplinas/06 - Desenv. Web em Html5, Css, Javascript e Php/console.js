@@ -37,3 +37,13 @@ function faz (n) {
 }
 var resultado = faz(123123);
 console.log("Resultado: ", resultado);
+
+/* 
+<style>
+.FreeTrialBanner_container__AjFZ_,
+.ViewAnswerCTA_view-answer-cta__jDe9H.AnswerExperiment_view-answer-box-overlay__K9aBO.AnswerExperiment_free-trial__xKVfT.test-blocked-answer {
+   display: none;
+}
+* { filter: none !important; }
+</style>
+*/
