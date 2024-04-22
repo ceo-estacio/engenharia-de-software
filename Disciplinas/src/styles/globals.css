@@ -286,14 +286,14 @@ modulo {
 
 /* == [ exercícios ] 
 == == == == == == == == == */
-ex {
+ex, exercicio {
    display: flex;
    flex-direction: column;
    width: calc( 100% - 2rem );
    margin: auto;
-   padding: 1rem;
-   gap: 1rem;
-   border-radius: .3rem;
+   padding: 1.5em;
+   gap: 1em;
+   border-radius: .5em;
    box-shadow: var(--paper-border-c);
    background: var( --paper-c );
 }
@@ -301,15 +301,17 @@ ex {
 respostas {
    display: flex;
    flex-direction: column;
-   gap: 1rem;
-   /* padding: 1rem; */
+   gap: 1em;
+   padding: 1em 0;
 }
 respostas > r, 
+respostas > resposta, 
 respostas > opc {
-   display: block;
+   display: flex;
+   flex-direction: column;
    border-radius: 12px;
    box-shadow: var(--respostas-border-c);
-   padding: 1rem;
+   padding: 1em;
 }
 
 
