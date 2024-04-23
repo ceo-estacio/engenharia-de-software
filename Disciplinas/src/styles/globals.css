@@ -109,6 +109,19 @@ ul, ol {
    padding-left: 2.2em;
 }
 
+dl {
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+}
+dt, dt > * {   
+   font-weight: bold;
+}
+
+dd {
+   padding-left: 2em;
+}
+
 emphasis {
    display: flex;
    padding: 1.5em;
@@ -180,6 +193,7 @@ content {
    display: flex;
    flex-direction: column;
    gap: 1rem;
+   width: 100%;
 }
 
 modulo > content {
