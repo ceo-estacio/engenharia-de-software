@@ -129,9 +129,15 @@ appbar {
 homepage {
    display: flex;
    flex-direction: column;
-   /* padding: 1rem; */
+   padding: 1em 0;
    gap: 1rem;
    /* background: var(--main-c); */
+}
+
+homepage > header {
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 main {
@@ -297,7 +303,7 @@ ex, exercicio {
    gap: 1em;
    border-radius: .5em;
    box-shadow: var(--paper-border-c);
-   background: var( --paper-c );
+   /* background: var( --paper-c ); */
 }
 exercicio > header {
    display: flex;
@@ -322,12 +328,13 @@ respostas {
    padding: 1em 0;
 }
 respostas > r, 
-respostas > resposta, 
+resposta, 
 respostas > opc {
    display: flex;
    flex-direction: column;
    border-radius: 12px;
    box-shadow: var(--respostas-border-c);
+   background: var( --paper-c) ;
    padding: 1em;
 }
 
