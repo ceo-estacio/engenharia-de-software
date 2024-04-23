@@ -71,4 +71,47 @@ window.addEventListener( "DOMContentLoaded", () => {
    Focus.forEach( img => img.addEventListener( "click", ev => {
    } ) );
 
-} );
+
+   /* == [ open image in another tab fullscreen ] 
+   == == == == == == == == == */
+   $$( "img" ).forEach( i => {
+      i.addEventListener(
+         "click", () => {
+            window.open( 
+            /* `<screen>
+               <style id="screenStyle">
+                  screen {
+                     display: grid;
+                     place-items: center;
+                     position: fixed;
+                     top: 0; left: 0;
+                     width: 100dvw;
+                     height: 100dvh;
+                     z-index: 999;
+                     background-image: linear-gradient(
+                        to bottom,
+                        #fc05 0%,
+                        #9225 40% 80%,
+                        #29F3 100% 150%
+                     );
+                     backdrop-filter: blur( 12px );
+                  }
+                  screen > img {
+                     max-height: 95dvh;
+                     filter: drop-shadow(#0009 0 0 5px);
+                  }
+               </style>
+               <img src="${ i.getAttribute( "src" ) }" />
+            </screen>
+         `, */
+               i.getAttribute( "src" ),
+               "_blank" ); 
+         // $( "screen" ).addEventListener( "click", () => {
+         //    $( "screen" ).outerHTML = "";  
+         // } );
+         }
+      );
+   } );
+
+
+} ); // window.addEventListener 
