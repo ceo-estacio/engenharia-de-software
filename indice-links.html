@@ -8,155 +8,375 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
+      <link rel="stylesheet" href="./Disciplinas/src/styles/globals.css">
+      <script src="./Disciplinas/src/lib/clb.js" defer></script>
+      <script src="./Disciplinas/src/Widgets/AppBar.js" defer></script>
+      <script src="./Disciplinas/src/Widgets/Drawer.js" defer></script>
       <style>
-         :root {
-            background: #16181c;
-            color: #bbb;
-         }   
-
-         body {
-            margin: 0;
-         }
-         
-         disciplinas {
-            display: flex;
-            flex-direction: column;
-            padding: 1.5rem;
-         }
-
-         header {
-            padding: 1.5rem;
-         }
-         
-         [dm] {
-            display: flex;
-            flex-direction: column;
-         }
-
-         content {
-            display: block;
-            padding: 1.5rem;
-         }
       </style>
    </head>
    <body>
+      <appbar></appbar>
+      <drawer></drawer>
 
       <disciplinas>
+         <semestre n="1">
+            <header>
+               <h2>Semestre 1</h2>
+            </header>
+            <content w-s>
+               <Arquitetura-De-Computadores>
+                  <header>
+                     <h4>01</h4>
+                     <ct2>Arquitetura De Computadores</ct2>
+                  </header>
+                  <content>
+                     <ul>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00403/index.html#">
+                              Base Computacional 
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="">
+                              Componentes De Hardware
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="">
+                              Representação De Dados
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="">
+                              Lógica Digital
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00394/index.html#">
+                              Processamento Em Paralelo
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00436/index.html#">
+                              Arquitetura Cisc X Risc
+                           </nav-link>
+                        </li>
+                     </ul>
+                  </content>
+               </Arquitetura-De-Computadores>
 
-         <Desenv-Web-em-Html5-Css-Javascript-e-Php dm>
-            <header>
-               <h4>06</h4>
-               <h2>Desenv. Web em Html5, Css, Javascript e Php</h2>
-            </header>
-            <content>
-               <nav-link 
-                  to="https://stecine.azureedge.net/repositorio/00212ti/00172/index.html?brand=estacio#imprimir" 
-                  txt="Tema 2: O Ambiente Web Cliente X Servidor e as Tecnologias"
-               ></nav-link>
-               <nav-link 
-                  to="https://stecine.azureedge.net/repositorio/00212ti/00084/index.html?brand=estacio#" 
-                  txt="Tema 3: Linguagem de Marcação de Hypertexto - Html"
-               ></nav-link>
-               <nav-link 
-                  to="https://stecine.azureedge.net/repositorio/00212ti/00468/index.html?brand=estacio#imprimir" 
-                  txt="Tema 4: Linguagem de Marcação e Estilos - Css"
-               ></nav-link>
-               <nav-link 
-                  to="https://stecine.azureedge.net/repositorio/00212ti/00385/index.html?brand=estacio#imprimir" 
-                  txt="Tema 5 - Linguagem Javascript"
-               ></nav-link>
-               <nav-link 
-                  to="https://stecine.azureedge.net/repositorio/00212ti/00297/index.html?brand=estacio#" 
-                  txt="Tema 6 - PROGRAMAÇÃO DE PÁGINAS DINÂMICAS COM PHP"
-               ></nav-link>
-               <nav-link 
-                  to="https://stecine.azureedge.net/repositorio/00212ti/00120/index.html?brand=estacio#imprimir" 
-                  txt="Tema 7: Integração do Php Com Banco de Dados"
-               ></nav-link>
-            </content>
-         </Desenv-Web-em-Html5-Css-Javascript-e-Php>
+               <Introducao-A-Seguranca-Da-Informacao>
+                  <header>
+                     <h4>02</h4>
+                     <ct2>Introdução À Segurança Da Informação</ct2>
+                  </header>
+                  <content>
+                     <ul>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00441/index.html#">
+                              Princípios Da Segurança E O Ciclo De Vida Da Informação
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00319/index.html#">
+                              Ameaças E Vulnerabilidades À Segurança De Informação
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00451/index.html#imprimir">
+                              Normas De Segurança Da Informação
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00278/index.html#">
+                              Boas Práticas Em Segurança Da Informação
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00182/index.html#">
+                              Gestão De Risco
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00217/index.html#">
+                              Gestão De Continuidade Do Negócio
+                           </nav-link>
+                        </li>
+                     </ul>
+                  </content>
+               </Introducao-A-Seguranca-Da-Informacao>
 
-         <Fundamentos-de-Redes-de-Computadores dm>
-            <header>
-               <h4>07</h4>
-               <h2>Fundamentos de Redes de Computadores</h2>
-            </header>
-            <content>
-               <nav-link 
-                  to="" 
-                  txt="Tema 1: "
-               ></nav-link>
-               <nav-link 
-                  to="https://stecine.azureedge.net/repositorio/00212ti/07397/index.html?brand=estacio#imprimir" 
-                  txt="Tema 2: Redes de Computadores e a Internet"
-               ></nav-link>
-               <nav-link 
-                  to="" 
-                  txt="Tema 3: Modelo de Referência Osi e Arquitetura Tcp/ip"
-               ></nav-link>
-               <nav-link 
-                  to="" 
-                  txt="Tema 4: Camadas de Aplicação e Transporte"
-               ></nav-link>
-               <nav-link 
-                  to="" 
-                  txt="Tema 5: Camada de Rede"
-               ></nav-link>
-               <nav-link 
-                  to="" 
-                  txt="Tema 6: Camadas de Enlace e Física"
-               ></nav-link>
-               <nav-link 
-                  to="" 
-                  txt="Tema 7: Fundamentos de Administração e Segurança em Rede de Computadores"
-               ></nav-link>
+               <Paradigmas-De-Linguagens-De-Programacao-Em-Python>
+                  <header>
+                     <h4>03</h4>
+                     <ct2>Paradigmas De Linguagens De Programação Em Python</ct2>
+                  </header>
+                  <content>
+                     <ul>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/paradigmas_linguagem_python/index.html#imprimir">
+                              Paradigmas E Linguagem Python
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00322/index.html#">
+                              Python Basico
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00213/index.html#">
+                              Python Estruturado
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00232/index.html#imprimir">
+                              Python Orientado A Objetos
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00426/index.html#">
+                              Python Em Outros Paradigmas
+                           </nav-link>
+                        </li>
+                     </ul>
+                  </content>
+               </Paradigmas-De-Linguagens-De-Programacao-Em-Python>
+
+               <Pensamento-Computacional>
+                  <header>
+                     <h4>04</h4>
+                     <ct2>Pensamento Computacional</ct2>
+                  </header>
+                  <content>
+                     <ul>
+                        <li>
+                           <nav-link to="">
+                              A Equação Que Representa A Essência Dos Computadores 
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00316/index.html#">
+                              Fundamentos De Softwares De Computadores
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="">
+                              Fundamentos De Hardware
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="">
+                              Representação De Imagens Em Computadores
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00187/index.html#imprimir">
+                              Noções De Programação: Exemplos Com Manipulação De Imagens Digitais
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/01201/index.html#">
+                              Pensamento Computacional E Aplicações Nas Áreas De Conhecimento
+                           </nav-link>
+                        </li>
+                     </ul>
+                  </content>
+               </Pensamento-Computacional>
+
+               <Processos-De-Desenvolvimento-De-Software>
+                  <header>
+                     <h4>05</h4>
+                     <ct2>Processos de Desenvolvimento de Software</ct2>
+                  </header>
+                  <content >
+                     <ul>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/fundamentos_de_software_e_gerenciamento_de_projetos/index.html#imprimir">
+                              Fundamentos de Software e Gerenciamento de Projetos
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/fases_do_desenvolvimento_de_software/index.html#imprimir">
+                              Fases do Desenvolvimento de Software
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="">
+                              Modelos de Processos de Desenvolvimento de Software
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/07389/index.html#">
+                              Normas e Modelos de Qualidades de Processo de Software
+                           </nav-link>
+                        </li>
+                     </ul>
+                  </content>
+               </Processos-De-Desenvolvimento-De-Software>
             </content>
-         </Fundamentos-de-Redes-de-Computadores>
-         
-         <Sistemas-de-Informacao-e-Sociedade dm>
+         </semestre>
+
+         <semestre n="2">
             <header>
-               <h4>10</h4>
-               <h2>Sistemas de Informação e Sociedade</h2>
+               <h2>Semestre 2</h2>
             </header>
-            <content>
-               <nav-link 
-                  to="" 
-                  txt="Tema 1: Caminho do Brilho: Saiba Quais Conteúdos Você Irá Aprender Conosco"
-               ></nav-link>
-               <nav-link 
-                  to="https://stecine.azureedge.net/repositorio/00212ti/07407/index.html?brand=estacio#" 
-                  txt="Tema 2: Sistemas de Informação"
-               ></nav-link>
-               <nav-link 
-                  to="[
-                     'web-serie', 'https://stecine.azureedge.net/repositorio/00212hu/46866/pages/inspirar/card02.html',
-                     'ep1': 'https://stecine.azureedge.net/repositorio/00212hu/46866/pages/inspirar/card03.html',
-                     'ep2': 'https://stecine.azureedge.net/repositorio/00212hu/46866/pages/inspirar/card04.html',
-                     'ep3': 'https://stecine.azureedge.net/repositorio/00212hu/46866/pages/inspirar/card05.html',
-                     'ep4': 'https://stecine.azureedge.net/repositorio/00212hu/46866/pages/inspirar/card06.html',
-                  ]" 
-                  txt="Tema 2: Relacionamento Interpessoal"
-               ></nav-link>
-               <nav-link 
-                  to="https://stecine.azureedge.net/repositorio/00212hu/00347/index.html?brand=estacio#imprimir" 
-                  txt="Tema 3: O Povo Brasileiro e a Questão do Negro e do Indígena"
-               ></nav-link>
-               <nav-link 
-                  to="https://stecine.azureedge.net/repositorio/meio_ambiente_e_sociedade/index.html?brand=estacio#imprimir" 
-                  txt="Tema 4: Meio Ambiente e Sociedade"
-               ></nav-link>
-               <nav-link 
-                  to="https://stecine.azureedge.net/repositorio/01598/index.html?brand=estacio#imprimir" 
-                  txt="Tema 5: Fundamentação Histórica Dos Direitos Humanos"
-               ></nav-link>
-               <!-- <nav-link 
-                  to="" 
-                  txt="Tema : "
-               ></nav-link> -->
+            <content w-s>
+               <Desenv-Web-em-Html5-Css-Javascript-e-Php>
+                  <header>
+                     <h4>06</h4>
+                     <ct2>Desenv. Web em Html5, Css, Javascript e Php</ct2>
+                  </header>
+                  <content>
+                     <ul>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00172/index.html?brand=estacio#imprimir" >
+                              O Ambiente Web Cliente X Servidor e as Tecnologias
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00084/index.html?brand=estacio#" >
+                              Linguagem de Marcação de Hypertexto - Html
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00468/index.html?brand=estacio#imprimir" >
+                              Linguagem de Marcação e Estilos - Css
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00385/index.html?brand=estacio#imprimir" >
+                              Linguagem Javascript
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00297/index.html?brand=estacio#" >
+                              PROGRAMAÇÃO DE PÁGINAS DINÂMICAS COM PHP
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/00120/index.html?brand=estacio#imprimir" >
+                              Integração do Php Com Banco de Dados
+                           </nav-link>
+                        </li>
+                     </ul>
+                  </content>
+               </Desenv-Web-em-Html5-Css-Javascript-e-Php>
+
+               <Fundamentos-de-Redes-de-Computadores>
+                  <header>
+                     <h4>07</h4>
+                     <ct2>Fundamentos de Redes de Computadores</ct2>
+                  </header>
+                  <content>
+                     <ul>
+                        <li>
+                           <nav-link to="" >
+                              Tema 1: 
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link  ="https://stecine.azureedge.net/repositorio/00212ti/07397/index.html?brand=estacio#imprimir" >
+                              Tema 2: Redes de Computadores e a Internet
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="" >
+                              Tema 3: Modelo de Referência Osi e Arquitetura Tcp/ip
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="" >
+                              Tema 4: Camadas de Aplicação e Transporte
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="" >
+                              Tema 5: Camada de Rede
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="" >
+                              Tema 6: Camadas de Enlace e Física
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="" >
+                              Tema 7: Fundamentos de Administração e Segurança em Rede de Computadores
+                           </nav-link>
+                        </li>
+                     </ul>
+                  </content>
+               </Fundamentos-de-Redes-de-Computadores>
                
+               <Sistemas-de-Informacao-e-Sociedade >
+                  <header>
+                     <h4>10</h4>
+                     <ct2>Sistemas de Informação e Sociedade</ct2>
+                  </header>
+                  <content>
+                     <ul>
+                        <li>
+                           <nav-link to="" >
+                              Caminho do Brilho: Saiba Quais Conteúdos Você Irá Aprender Conosco
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212ti/07407/index.html?brand=estacio#" >
+                              Sistemas de Informação
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212hu/46866/pages/inspirar/card02.html">
+                              Relacionamento Interpessoal - web-serie
+                           </nav-link>
+                           <ul>
+                              <li>
+                                 <nav-link to="https://stecine.azureedge.net/repositorio/00212hu/46866/pages/inspirar/card03.html">
+                                    episódio 1
+                                 </nav-link>
+                              </li>
+                              <li>
+                                 <nav-link to="https://stecine.azureedge.net/repositorio/00212hu/46866/pages/inspirar/card04.html">
+                                    episódio 2
+                                 </nav-link>
+                              </li>
+                              <li>
+                                 <nav-link to="https://stecine.azureedge.net/repositorio/00212hu/46866/pages/inspirar/card05.html">
+                                    episódio 3
+                                 </nav-link>
+                              </li>
+                              <li>
+                                 <nav-link to="https://stecine.azureedge.net/repositorio/00212hu/46866/pages/inspirar/card06.html">
+                                    episódio 4
+                                 </nav-link>
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/00212hu/00347/index.html?brand=estacio#imprimir" >
+                              O Povo Brasileiro e a Questão do Negro e do Indígena
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/meio_ambiente_e_sociedade/index.html?brand=estacio#imprimir" >
+                              Meio Ambiente e Sociedade
+                           </nav-link>
+                        </li>
+                        <li>
+                           <nav-link to="https://stecine.azureedge.net/repositorio/01598/index.html?brand=estacio#imprimir" >
+                              Fundamentação Histórica Dos Direitos Humanos
+                           </nav-link>
+                        </li>
+                        <!-- <nav-link 
+                           to="" 
+                           txt="Tema : "
+                        ></nav-link> -->
+                     </ul>
+                  </content>
+               </Sistemas-de-Informacao-e-Sociedade>
             </content>
-         </Sistemas-de-Informacao-e-Sociedade>
+         </semestre>
 
       </disciplinas>
       
@@ -190,7 +410,7 @@
                   </style>
                   <a href="${ l.attribute( "to" ) }"
                      target="_blank" >
-                     ${ l.attribute( "txt" ) }
+                     ${ l.innerText }
                   </a>
                </p>
             ` );
