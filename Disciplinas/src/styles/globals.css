@@ -361,6 +361,31 @@ respostas > opc {
 /* == [ properties ] 
 == == == == == == == == == */
 [block] { display: block; }
+flex {
+   display: flex;
+   width: 100%;
+   align-items: center;
+   /* justify-content: space-around; */
+   align-items: stretch;
+}
+[flex-division="2"] {}
+[flex-division="2"] > * {
+   display: flex;
+   background: #000;
+   flex: 1;
+}
+[flex-division="2"] img {
+   width: 100%;
+}
+grid-2 {
+   display: grid;
+   grid-template-columns: repeat( 2, 50% 50%);
+   width: 100%;
+}
+grid-2 img {
+   width: 100%;
+}
+
 [dm] {
    display: flex;
    flex-direction: column;
@@ -382,6 +407,8 @@ respostas > opc {
    max-height: 60dvh;
    margin: auto;
 }
+
+[pd="2em"] { padding: 2em; }
 
 
 
