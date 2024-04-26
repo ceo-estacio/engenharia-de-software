@@ -24,6 +24,7 @@
    background-color: #212329;  
 
    --main-c: #f5f5f5;
+   --appbar-shadow: rgba( 0 0 0 .25 ) 0 4px 8px;
 
    font-synthesis: none;
    text-rendering: optimizeLegibility;
@@ -197,7 +198,7 @@ tema {
 content {
    display: flex;
    flex-direction: column;
-   gap: 1rem;
+   gap: 2em;
    width: 100%;
 }
 
