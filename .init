@@ -1,0 +1,112 @@
+
+
+# install neovim
+
+npm install tree-sitter-cli
+
+git clone --depth 1 https://github.com/AstroNvim/template $env:LOCALAPPDATA\nvim
+Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
+nvim
+
+
+
+windows
+git clone https://github.com/NvChad/starter $ENV:USERPROFILE\AppData\Local\nvim
+
+nvim
+
+
+pkg install neovim lua-language-server -y
+
+nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+
+
+nvchad
+theme
+spc t h
+c> n
+c> p
+
+syntax highlight
+:TSInstall js
+
+keybindings
+C> n filetree
+spc ff 
+spc h
+spc v
+
+spc ch
+
+== [ lsp ] 
+== == == == == == == == == 
+.config/nvim/lua/custom/plugins.lua
+-- In order to modify the `lspconfig` configuration:
+local plugins = {
+  "neovim/nvim-lspconfig",
+   config = function()
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+   end,
+}
+return plugins
+-----------------------------------------
+
+.config/nvim/lua/custom/configs/lspconfig.lua
+local configs = require("nvchad.configs.lspconfig")
+
+local on_attach = configs.on_attach
+local on_init = configs.on_init
+local capabilities = configs.capabilities
+
+local lspconfig = require "lspconfig"
+local servers = { "html", "pyright", "cssls", "clangd"}
+
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    on_init = on_init,
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+end
+
+-- Without the loop, you would have to manually set up each LSP 
+-- 
+-- lspconfig.html.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- }
+--
+-- lspconfig.cssls.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- } 
+-- 
+lspconfig.pyright.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "python }
+}
+-----------------------------------
+:MasonInstall pyright
+
+chadrc.lua:
+local M = {}
+M.ui = { theme = "catppuccin" }
+M.plugins = "custom.plugins"
+
+return M
+
+
+
+
+
+
+
+
+📦 Setup
+h1 600 42 mt1r 
+⚡ Requirements
+h2 2.1875r lh1.2 35
+

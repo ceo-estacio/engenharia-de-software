@@ -94,7 +94,7 @@ function Drawer( props ) {
                flex: .1;
                align-items: center;
                justify-content: center;
-               padding: 1rem .5rem;
+               padding: 1rem 1.5rem;
                font-size: 1.7rem;
                color: #999;
                border-top: #fff3 solid 1px;
@@ -108,12 +108,20 @@ function Drawer( props ) {
                align-itens: center;
                justify-content: center;
                border-radius: 9px;
-               background: #29f;
-               padding: .3rem .8rem;
+               background: #29f0;
+               border: #27f 2px solid;
+               padding: 0 .8rem;
                color: #fff;
                cursor: pointer;
+            } drawer > footer > close-btn:hover {
+               background: #29f9;
+               transition: .2s;
+            } drawer > footer > close-btn:hover > t {
+               color: #333;
             }
             close-btn > t {
+               color: #fff;
+               font-weight: 700;
                transform: scale( .6 );
             }
 
