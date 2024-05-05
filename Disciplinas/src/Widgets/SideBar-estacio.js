@@ -2,8 +2,7 @@
 
 // import CLB from "../lib/clb";
 // const CLB = require( "../lib/clb" );
-import "../assets/img/iconus/home.svg";
-
+// import iconus from "../lib/iconus/icn_home";
 
 // export default function AppBar( props ) {
 function SideBar( props ) {
@@ -48,6 +47,14 @@ function SideBar( props ) {
                justify-content: flex-end;
                flex: 1 1 0%;
             }
+
+            sb-icon {
+               width: 24px;
+               height: 24px;
+            } sb-icon > * {
+               width: 100%;
+               height: 100%;
+            }
    
             @keyframes openD-anim {
                0% { width: 0; opacity: 0; }
@@ -64,7 +71,7 @@ function SideBar( props ) {
          <contents>
             <header>
                <sb-icon>
-                  <img src="${  }">
+                  ${ icn_home }
                </sb-icon>
             </header>
             <content></content>
