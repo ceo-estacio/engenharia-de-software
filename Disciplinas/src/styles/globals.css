@@ -207,6 +207,15 @@ video {
    width: clamp( 100px, 100%, 759.98px );
    aspect-ratio: 16 / 9;
 }
+
+[tag] { padding: 0 1ch; background: #f555; }
+
+[capa] {
+   background-size: cover;
+   background-repeat: no-repeat;
+   width: 100%;
+   min-height: calc( 100dvw * .467 );
+}
 page, [page] {
    display: flex;
    flex-direction: column;
