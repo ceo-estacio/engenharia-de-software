@@ -203,7 +203,25 @@ contents {
 
 [np] { padding: 0 !important; }
 
-content {
+video {
+   width: clamp( 100px, 100%, 759.98px );
+   aspect-ratio: 16 / 9;
+}
+page, [page] {
+   display: flex;
+   flex-direction: column;
+   width: clamp( 100px, 100%, 1092px );
+   margin: 0 auto;
+}
+sheet, [sheet] {
+   display: flex;
+   flex-direction: column;
+   width: clamp( 100px, 100%, 759.98px );
+   margin: 0 auto;
+   padding: 1.5em 0;
+}
+
+content, [content] {
    display: flex;
    flex-direction: column;
    gap: 2em;
