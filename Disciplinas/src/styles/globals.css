@@ -195,6 +195,14 @@ tema {
    /* background: var(--main-c); */
 }
 
+contents {
+   display: flex;
+   flex-direction: column;
+   padding: 2rem;
+}
+
+[np] { padding: 0 !important; }
+
 content {
    display: flex;
    flex-direction: column;
@@ -357,6 +365,7 @@ respostas > opc {
    background: var( --paper-c) ;
    padding: 1em;
 }
+
 
 
 /* == [ properties ] 

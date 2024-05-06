@@ -1,0 +1,1194 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title></title>
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../src/styles/globals.css">
+      <script src="../src/Widgets/AppBar.js" defer></script>
+      <style>
+      </style>
+   </head>
+   <body>
+      <appbar></appbar>
+      
+      <main>
+         <h2>Tema 7: Integração do Php Com Banco de Dados</h2>
+
+         <modulo n="1" dm="">
+            <h4>Módulo 1</h4>
+            <h2>A Classe PDO em banco de dados</h2>
+
+            <h4>conexão com mysql</h4>
+            <code>
+&lt;?php
+   $conn = myswli_connect(
+      HOST,
+      USER,
+      PASSWORD,
+      DBNAME
+   );
+   
+   $instrucaoSQL = "Select nome, cpf, telefone From Cliente";
+
+   $stmt = mysqli_prepare(
+      $conn,
+      $instrucaoSQL
+   );
+
+   mysqli_stmt_bind_result(
+      $stmt,
+      $nome,
+      $cpf,
+      $tel
+   );
+
+   mysqli_stmt_execute(
+      $stmt
+   );
+   
+   while( mysqli_stmt_fetch( $stmt ) ) {
+      echo $nome . "&lt;br /&gt;";
+   }
+
+   mysqli_close( $conn );
+?&gt;
+            </code>
+
+            <h4>conexão com postgreSQL</h4>
+            <code>
+&lt;?php
+   $connection = pg_connect( $stringConnection );
+   $instrucaoSQL = "Select nome, cpf, telefone, From Cliente";
+   $result = pg_query(
+      $connection,
+      $instrucaoSQL
+   );
+
+   while( $row = pg_fetch_array( $result ) ) {
+      echo $row[ "nome" ] . "&lt;br /&lt;";
+   }
+
+   pg_close( $connection );
+?&lt;
+            </code>
+
+            <h4>PDO ( PFP Data Objects ) </h4>
+            <code>
+&lt;?php
+   define ( "HOST", "127.0.0.1" );
+   define ( "PORT", "5432" );
+   define ( "DBNAME", "test" );
+   define ( "USER", "user" );
+   define ( "PASSWORD", "psswd" );
+
+   try {
+      $dsn = new PDO( "myswl:host=". HOST . 
+                      ";port=".PORT.";dbname=" . DBNAME . 
+                      ";password=" . PASSWORD );
+   } catch( PDOException $e ) {
+      echo "A conexão falhou : " . $e->getMessage();
+   }
+
+   $dsn = null;
+?&lt;
+            </code>
+
+            <h4>Classes no PHP</h4>
+            <code>
+&lt;?php
+   class Pessoa {
+      var $nome;
+      var $idade;
+
+      public function __construct() {
+      }
+      
+      public function setNome( $nome ) {
+         $this->nome = $nome;
+      }
+
+      public function getIdade() {
+         return $this->idade;
+      }
+   }
+
+   var $p1 = new Pessoa();
+
+   $p1->setNome( "Ana" );
+?&lt;
+            </code>
+
+            <h4>DML ( Data Manipulation Language )</h4>
+            <code>
+&lt;?php
+   $qtdDeLinhasAfetadas = $dsn->exec(
+      "Delete From Cliente Where codigo_cliente = 1"
+   );
+?&lt;
+            </code>
+
+            <h4>consulta ( query )</h4>
+            <code>
+&lt;?php
+   $instrucaoSQL = "Select nome, cpf, telefone From Cliente";
+
+   $resultSet = $dsn->query( $sql );
+
+   while( $row = $resultSet->fetch() ) {
+      echo $row[ "nome" ] . "\n\t";
+      echo $row[ "cpf" ] . "\n\t";
+      echo $row[ "telefone" ] . "\n\t";
+   }
+?&lt;
+            </code>
+
+            <h4>proteção contra injection</h4>
+            <code>
+&lt;?php
+   $login = #_POST[ "login" ];
+   $pswd = $_POST[ "pswd" ];
+   $stmt = $dsn->prepare(
+      "Select * From Usuario "."Where login = :login And password = :password"
+   );
+
+   $stmt->execute(
+      [
+         ":login" => $login,
+         ":password" => $pswd
+      ]
+   );
+
+   /* Aqui entraria a lógica com $_SESSION... */
+
+   $stmt = null;
+   $dsn = null;
+?&lt;
+            </code>
+
+            <h4>Conexão com MySQL</h4>
+            <code>
+&lt;?php
+
+   //Constantes para armazenamento das variáveis de conexão.
+   define('HOST', '127.0.0.1');
+   define('DBNAME', 'test');
+   define('USER', 'user');
+   define('PASSWORD', 'psswd');
+   
+   //Conectando com o Servidor
+   $conn = mysqli_connect(HOST, USER, PASSWORD, DBNAME) or die( ' Não foi possível conectar.' );
+   
+   //Realizando uma consulta no BD
+   $instrucaoSQL = "Select nome, cpf, telefone From Cliente";
+   $stmt = mysqli_prepare($conn, $instrucaoSQL);
+   mysqli_stmt_bind_result($stmt, $nome, $cpf, $tel);
+   mysqli_stmt_execute($stmt);
+   
+   while (mysqli_stmt_fetch($stmt)) {
+      echo $nome . "\t";
+      echo $cpf . "\t";
+      echo $tel . "\n";
+   }
+   
+   //Encerrando a conexão
+   mysqli_close($conn);
+?&gt;
+            </code>
+
+            <h4>Conexão com PostegreSQL</h4>
+            <code>
+   &lt;?php
+      //Constantes para armazenamento das variáveis de conexão.
+      define('HOST', '127.0.0.1');
+      define('DBNAME', 'test');
+      define('USER', 'user');
+      define('PASSWORD', 'psswd');
+
+      //Conectando com o Banco de dados
+      $stringConn = "host=".HOST." dbname=".DBNAME." user=".USER." password=".PASSWORD;
+      $conn = pg_connect($stringConn) or die( ' Ocorreu um erro e não foi possível conectar ao banco de dados.' );
+
+      //Realizando uma consulta no BD
+      $instrucaoSQL = "Select nome, cpf, telefone From Cliente";
+      $result = pg_query( $conn, $instrucaoSQL ) or die(' Ocorreu um erro na execução da instrução: ' . $instrucaoSQL );
+
+      //pg_query($dbcon, "SELECT id, nome FROM clientes");
+
+      //Imprimindo os dados da consulta
+      while ($row = pg_fetch_array( $result )){
+         echo $row['nome'] . "\t";
+         echo $row['cpf'] . "\t";
+         echo $row['telefone'] . "\n";
+      }
+
+      //Encerrando a conexão
+      pg_close($conn);
+   ?&gt;
+            </code>
+            
+
+            <h3>PHP PDO Conection - ( camada de abstração )</h3>
+            <small>PHP Data Object</small>
+
+            <code>
+   &lt;?php
+      // environment variables
+      define( "HOST", "127.0.0.1" );
+      define( "port", "8080" );
+      define( "DBNAME", "test" );
+      define( "USER", "user" );
+      define( "PASSWORD", "123456" );
+
+      try {
+         // conexão MySQL
+         $dsn = new PDO( 
+            "mysql:host=".HOST . ";port=".PORT."dbname=" . DBNAME . ";user=" . USER . ";password=" . PASSWORD
+         );
+
+         // conexão PostgreSQL
+         $dsn = new PDO( 
+            "pdsql:host=".HOST . ";port=".PORT."dbname=" . DBNAME . ";user=" . USER . ";password=" . PASSWORD
+         );
+
+         // conexão nativa com Postgres 
+         $conn = pg_connect(
+            "host=".HOST." dbname=".DBNAME." user=".USER." password=".PASSWORD
+         );
+      } catch( PDOException $e ) {
+         echo "A conexão falhou e retornou o erro: " . $e->getMessage();
+      }
+
+      $dsn = null;
+   ?&gt;
+            </code>
+            
+            <h3>Drivers PDO</h3>
+            <table border="1px #fc0">
+               <thead>
+                  <th>Driver </th>
+                  <th>SGBD Suportados </th>
+               </thead>
+               <tr>
+                  <td>PDO_CUBRID</td>
+                  <td>Cubrid</td>
+               </tr>
+               
+               <tr>
+                  <td>PDO_DBLIB</td>
+                  <td>FreeTDS / Microsoft SQL Server / Sybase</td>
+               </tr>
+               
+               <tr>
+                  <td>PDO_FIREBIRD</td>
+                  <td>Firebird</td>
+               </tr>
+               
+               <tr>
+                  <td>PDO_IBM</td>
+                  <td>IBM DB2</td>
+               </tr>
+               
+               <tr>
+                  <td>PDO_INFORMIX</td>
+                  <td>IBM Informix Dynamic Server</td>
+               </tr>
+               
+               <tr>
+                  <td>PDO_MYSQL</td>
+                  <td>MySQL 3.x/4.x/5.x</td>
+               </tr>
+               
+               <tr>
+                  <td>PDO_OCI</td>
+                  <td>Oracle Call Interface</td>
+               </tr>
+               
+               <tr>
+                  <td>PDO_ODBC</td>
+                  <td>ODBC v3 (IBM DB2, unixODBC e win32 ODBC)</td>
+               </tr>
+               
+               <tr>
+                  <td>PDO_PGSQL</td>
+                  <td>PostgreSQL</td>
+               </tr>
+               
+               <tr>
+                  <td>PDO_SQLITE</td>
+                  <td>SQLite 3 e SQLite 2</td>
+               </tr>
+               
+               <tr>
+                  <td>PDO_SQLSRV</td>
+                  <td>Microsoft SQL Server / SQL Azure</td>
+               </tr>
+               
+               <tr>
+                  <td>PDO_4D</td>
+                  <td>4D</td>
+               </tr>
+               
+            </table>
+
+            <h3>Conexão com o SGBD utilizando PDO</h3>
+            <code>
+$dsn = new PDO("mysql:host=localhost;dbname=test", $user, $pass);
+$dsn = new PDO("pgsql:host=localhost;dbname=test"; $user, $pass);
+            </code>
+
+            <hr>
+
+            <h3>Tratamento de exceções</h3>
+            <p>
+               try/catch 
+               <br>
+               <code>
+try {
+   $dsn = new PDO("mysql:host=". HOST . ";port=".PORT.";dbname=" . DBNAME .";user=" . USER . ";password=" . PASSWORD);
+} catch (PDOException $e) {
+   echo 'A conexão falhou e retornou a seguinte mensagem de erro: ' .$e->getMessage();
+}
+               </code>
+            </p>
+
+            <h3>Encerramento de conexões</h3>
+            
+            <code>
+$dsn = null;
+            </code>
+
+            <h3>Conexões persistentes</h3>
+            <code>
+try {
+
+   $dsn = new PDO("pgsql:host=". HOST . ";port=".PORT.";dbname=" . DBNAME .";user=" . USER . ";password=" . PASSWORD, array(PDO::ATTR_PERSISTENT => true)) ;
+
+} catch (PDOException $e) {
+   echo 'A conexão falhou e retornou a seguinte mensagem de erro: ' .$e->getMessage();
+}
+            </code>
+         </modulo>
+
+         <modulo n="2" dm="">
+            <h4>Módulo 2</h4>
+            <h2>Métodos da Classe PDO</h2>
+
+            <h3>Classes em php</h3>
+            <code>
+class Pessoa {
+   private $nome;
+   private $idade;
+
+   public function __construct( $nome="", $idade=0 ) {
+      $this->nome = $nome;
+      $this->idade = $idade;
+   }
+
+   function __destruct() {
+      echo( "this->nome foi removido(a)." );
+   }
+
+   public function getNome() {
+      return $this->nome;
+   }
+   public function setNome( $nome ) {
+      $this->nome = $nome;
+   }
+
+   public function getIdade() {
+      return $this->idade;
+   }
+   public function setIdade( $idade ) {
+      $this->idade = $idade;
+   }
+
+   public function exibirDados() {
+      echo "h2>$this->nome tem $this->idade ano(s)/h2>";
+   }
+}
+            </code>
+
+            <h3>Herança: profissional</h3>
+            <code>
+require_once "pessoa.php";
+
+class Profissional extends Pessoa {
+   private $profissao;
+
+   function __construct( $nome="", $idade=0, $profissao="" ) {
+      parent:: __construct( $nome, $idade );
+      $this->profissao = $profissao 
+   }
+
+   public function getProfissao() {
+      return $this->profissao;
+   }
+   public function setProfissao( $profissao ) {
+      $this->profissao = $profissao;
+   }
+   
+   public function exibirDados() {
+      parent::exibirDados();
+      echo "h3>Trabalha como $this->profissao/h2";
+   }
+}
+            </code>
+
+            <h3>Interface</h3>
+            <code>
+interface Sonora {
+   function emitirSom();
+};
+            </code>
+
+            <h3>Implementação</h3>
+            <code>
+require_once "sonora.php";
+
+class ANimal {
+};
+
+class Cachorro extends Animal implements Sonora {
+   public function emitirSom() {
+      echo( "h2>Au-Au/h2" );
+   }
+};
+            </code>
+
+            <h3>Classe basic DAO</h3>
+            <code>
+   protected function execQUERY( $sql ) {
+      global $dsn, $user, $pass,
+      $pdo = new PDO( $dsn, $user, $pass,
+      [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ] );
+      $stm = $pdo->prepare( $sql );
+      $stm->execute();
+      $objetos = $stm->fetchAll( PDO::FETCH_OBJ );
+      $pdo = null;
+      return $objetos;
+   }
+}
+            </code>
+
+            <h3>classe aluno</h3>
+            <code>
+require_once "basicdao.php";
+
+class Aluno {
+   public $matricula;
+   public $nome;
+   public $entrada;
+
+   // poderiam ser usados getters & setters
+   public function __construct( $matricula = "",
+                                 $nome = "",
+                                 $entrada = 0 ) {
+      $this->matricula = #matricula;
+      $this->nome = #nome;
+      $this->entrada = #entrada;
+   }
+}
+            </code>
+
+            <h3>classe alunodao</h3>
+            <code>
+require_once "basicdao.php";
+
+class AlunoDAO extends BasicDAO {
+   
+   function obterTodos() {
+      return parent::execQUERY(
+         "SELECT * FROM alunos"
+      );
+   }
+
+   function inserir( Aluno $aluno ) {
+      parent::execDML(
+         "INSERT INTO ALUNOS VALUES ( ?, ?, ? )",
+         $aluno->matricula,
+         $aluno->nome,
+         $aluno->entrada,
+      );
+   }
+}
+            </code>
+
+            <h3>Utilização</h3>
+            <code>
+ul> 
+?php
+   require_once "aluno.php";
+
+   $dao = new AlunoDAO();
+   $aluno = new Aluno( "2022003W", "Donald Duck", 2022 );
+   $dao->inserir( $aluno );
+   foreach( $dao->obterTodos() as $aluno ) {
+      echo( "li>$aluno->matricula :: $aluno->nome/li>" );
+   }
+?
+/ul>
+            </code>
+
+<code>
+<?php
+   class Fruta
+   {
+   //Propriedades ou atributos da Classe
+   var $nome;
+   var $tipo;
+   //Construtor da Classe: Essa função é executada todas as vezes em que uma instância da classe é criada.
+   //Como abaixo, essa função pode ser vazia. Ou seja, não realiza nenhuma ação.
+   public function __construct(){ }
+   public function setNome($nome)
+   {
+   $this->nome = $nome;
+   }
+   public function getNome()
+   {
+   return $this->nome;
+   }
+   public function setTipo($tipo)
+   {
+   $this->tipo = $tipo;
+   }
+   public function getTipo()
+   {
+   return $this->tipo;
+   }
+}
+</code>
+
+<code>
+   // instanciando um objeto da classe Fruta
+   $fruta1 = new Fruta(); 
+   // utilizando o objeto criado para chamar o método “setNome”
+   $fruta1->setNome("morango"); 
+   // utilizando o objeto criado para chamar o método “setTipo”
+   $fruta1->setTipo("vermelha");
+   // utilizando o comando “echo” para imprimir o resultado da chamada ao método “getNome” 
+   echo $fruta1->getNome(); 
+   // utilizando o comando “echo” para imprimir o resultado da chamada ao método “getTipo” 
+   echo $fruta1->getTipo(); 
+</code>
+
+<h3>Teste</h3>
+<p>
+   Após o código da classe, instancie novos objetos “Fruta” e utilize os seus métodos, como demonstrado no código anterior. Lembre-se de utilizar o comando “echo” para imprimir o valor de retorno dos métodos “getNome” e “getTipo”.
+</p>
+<code>
+   <?php
+   class Fruta{
+       var $nome;
+       var $tipo;
+   
+       public function __construct(){ } 
+       
+       public function setNome($nome)
+       {
+           $this->nome = $nome;
+       }
+       public function getNome()
+       {
+           return $this->nome;
+       }
+       public function setTipo($tipo)
+       {
+           $this->tipo = $tipo;
+       }
+       public function getTipo()
+       {
+           return $this->tipo;
+       }
+   }
+</code>
+
+<h2>a classe PDO tem dois metodos</h2>
+<h3>a própria PDO</h3>
+<small>métodos para conexão com os SGBDs, controle de transações, execução de queries</small>
+<code>
+   PDO {
+      public __construct ( string $dsn [, string $username [, string $passwd [, array $options ]]] )
+      public beginTransaction ( void ) : bool
+      public commit ( void ) : bool
+      public errorCode ( void ) : string
+      public errorInfo ( void ) : array
+      public exec ( string $statement ) : int
+      public getAttribute ( int $attribute ) : mixed
+      public static getAvailableDrivers ( void ) : array
+      public inTransaction ( void ) : bool
+      public lastInsertId ([ string $name = NULL ] ) : string
+      public prepare ( string $statement [, array $driver_options = array() ] ) : PDOStatement
+      public query ( string $statement ) : PDOStatement
+      public quote ( string $string [, int $parameter_type = PDO::PARAM_STR ] ) : string
+      public rollBack ( void ) : bool
+      public setAttribute ( int $attribute , mixed $value ) : bool
+}
+</code>
+
+<h3>PDOStatement</h3>
+<small>contém outros métodos relacionados às instruções executadas e ao seu retorno</small>
+<code>
+   PDOStatement implements Traversable {
+      /* Propriedades */
+      readonly string $queryString;
+
+      /* Métodos */
+      public bindColumn ( mixed $column , mixed &$param [, int $type [, int $maxlen [, mixed $driverdata ]]] ) : bool
+      public bindParam ( mixed $parameter , mixed &$variable [, int $data_type = PDO::PARAM_STR [, int $length [, mixed $driver_options ]]] ) : bool
+      public bindValue ( mixed $parameter , mixed $value [, int $data_type = PDO::PARAM_STR ] ) : bool
+      public closeCursor ( void ) : bool
+      public columnCount ( void ) : int
+      public debugDumpParams ( void ) : void
+      public errorCode ( void ) : string
+      public errorInfo ( void ) : array
+      public execute ([ array $input_parameters = NULL ] ) : bool
+      public fetch ([ int $fetch_style [, int $cursor_orientation = PDO::FETCH_ORI_NEXT [, int       $cursor_offset = 0 ]]] ) : mixed
+      public fetchAll ([ int $fetch_style [, mixed $fetch_argument [, array $ctor_args = array() ]]] ) : array
+      public fetchColumn ([ int $column_number = 0 ] ) : mixed
+      public fetchObject ([ string $class_name = "stdClass" [, array $ctor_args ]] ) : mixed
+      public getAttribute ( int $attribute ) : mixed
+      public getColumnMeta ( int $column ) : array
+      public nextRowset ( void ) : bool
+      public rowCount ( void ) : int
+      public setAttribute ( int $attribute , mixed $value ) : bool
+      public setFetchMode ( int $mode ) : bool
+}
+</code>
+
+<h3>Método EXEC</h3>
+<small>
+   Este método, pertencente à Classe PDO, executa uma instrução SQL e retorna o número de linhas afetadas pela instrução, exceto quando executada a instrução SELECT. A partir do seu retorno, é necessário utilizar recursos da linguagem PHP, como estruturas de decisão, para verificar se a operação executada obteve sucesso ou não. Sua sintaxe pode ser vista a seguir:
+</small>
+<code>
+?php
+   /*a variável $dsn, abaixo, corresponde à instação da classe PDO, inicializada na conexão com o BD*/
+   $qtdeLinhasAfetadas = $dsn->exec("Delete From Cliente Where codigo_cliente = 1");
+   echo "Quantidade de linhas afetadas: " . $qtdeLinhasAfetadas
+</code>
+
+<h3>Método Query</h3>
+<small>
+   O método Query, também pertencente à Classe PDO, tem função parecida com o método Exec. Entretanto, ele, além de executar uma instrução SQL, retorna – quando houver – um conjunto de resultados (result set) como um objeto PDOStatement. Em caso de falhas, é retornado o booleano FALSE. Vejamos um exemplo de sua utilização:
+   <br>
+   <br>
+   O método Query executa uma instrução SQL, retornando, quando houver, um conjunto de resultados como objeto PDOStatement. Com isso, para acessar os dados em uma instrução SELECT, por exemplo, é preciso fazer uso de um método da Classe PDOStatement, como o fetch, a partir do objeto que contém o conjunto de resultados.
+</small>
+<code>
+   ?php
+   $instrucaoSQL = "Select nome, cpf, telefone From Cliente";
+   //a variável $dsn, abaixo, corresponde à instação da classe PDO, inicializada na conexão com o BD
+   $resultSet = $dsn->query($sql);
+   while ($row = $resultSet->fetch()) {
+     echo $row['nome'] . "\t";
+     echo $row['cpf'] . "\t";
+     echo $row['telefone'] . "\n";
+   }
+</code>
+
+<h3>Ataque SQL Injection</h3>
+<code>
+?php
+   //...
+   //Realizando uma consulta no BD através do login e senha recebidos por POST
+   $login = $_POST['login'];
+   $pswd = $_POST['pswd'];
+   $instrucaoSQL = "Select * From Usuario Where login = '$login' And password = '$pswd'";
+   $result = mysql_query( $instrucaoSQL ) or die(' Ocorreu um erro na execução da instrução: ' . $instrucaoSQL . ' ' .
+   mysql_error() );
+</code>
+
+<img src="./assets/img/ataque sql injection.jpg" alt="">
+
+<p>
+   Os valores inseridos no formulário mostrado na imagem anterior seriam recebidos no código PHP da seguinte maneira:
+</p>
+
+<code>
+?php
+   //...
+   //Realizando uma consulta no BD através do login e senha recebidos por POST
+   $login = $_POST['login'];
+   $pswd = $_POST['pswd'];
+   $instrucaoSQL = "Select * From Usuario Where login = '' OR true = true;/* And password = '*/--'";
+   //...
+</code>
+
+<h3>Método Prepare</h3>
+<code>
+   ?php
+
+   //Constantes para armazenamento das variáveis de conexão.
+   define('HOST', '127.0.0.1');
+   define('PORT', '5432');
+   define('DBNAME', 'test');
+   define('USER', 'user');
+   define('PASSWORD', 'psswd');
+   
+   try {
+      $dsn = new PDO("mysql:host=". HOST . ";port=".PORT.";dbname=" . DBNAME .";user=" . USER . ";password=" . PASSWORD);
+   } catch (PDOException $e) {
+      echo 'A conexão falhou e retorno a seguinte mensagem de erro: ' .$e->getMessage();
+   }
+   
+   //Realizando uma consulta no BD através do login e senha recebidos por POST
+   $login = $_POST['login'];
+   $pswd = $_POST['pswd'];
+   
+   $stmt = $dsn->prepare("Select * From Usuario Where login = :login And password =:password");
+   $stmt->execute([':login' => $login, ':password' => $pswd]);
+   
+   /*Aqui entraria o código para tratar o resultado da instrução SQL acima*/
+   
+   
+   //Destruindo o objecto statement e fechando a conexão
+   $stmt = null;
+   $dsn = null;
+</code>
+
+<h2>
+   Teoria na prática
+</h2>
+<p>
+   Para te ajudar na assimilação do conteúdo apresentado até aqui, chegou a hora de praticar! Todos os códigos anteriores, usados como exemplos, são funcionais. Logo, a começar pelo código responsável pela conexão com o SGBD (e tomando o cuidado de alterar as credenciais, nas constantes PHP, para refletirem os dados de seu ambiente), copie e execute cada um deles relacionados à Classe PDO.
+</p>
+<p>
+   Veja, por exemplo, as diferenças, na prática, entre os métodos Exec e Query; e entre esses dois métodos e os métodos Prepare e Execute. Tente realizar uma mesma consulta ou instrução SQL usando os dois e analise o resultado
+</p>
+<p>
+   Ou seja, você deve:
+</p>
+<ul>
+   <li>
+      <p>
+         Incluir ao menos uma instrução para cada tipo possível: insert, update, delete e select.
+      </p>
+   </li>
+   <li>
+      <p>
+         Fazer o tratamento de erros e exceções.
+      </p>
+   </li>
+   <li>
+      <p>
+         Observar onde é possível melhorar os códigos utilizados. Você pode, por exemplo, incluir algumas verificações extras etc.
+      </p>
+   </li>
+</ul>
+
+         </modulo>
+         
+         <modulo n="3" dm="">
+            <h4>Módulo 3</h4>
+            <h2>Construir uma aplicação com banco de dados</h2>
+
+            <h3>Desafio</h3>
+            <p>
+               Deverá ser criado um formulário para armazenar os dados de clientes, contendo o seu nome completo (obrigatório), o seu CPF (obrigatório; apenas os números), um endereço de e-mail válido (obrigatório) e sua data de nascimento (obrigatório; dia, mês e ano). Além disso, deverá ser criada uma listagem para exibição dos clientes cadastrados.
+            </p>
+
+            <p>
+               Os dados dos clientes deverão ser armazenados em uma tabela. Tal tabela deverá possuir um campo identificador, autoincremental e único.
+            </p>
+
+            <h3>O formulário HTML e o script PHP</h3>
+
+            <p>um exemplo de como a tabela cliente pode ser criada</p>
+
+            <code>
+CREATE TABLE cliente (
+   id_cliente serial NOT NULL,
+   nome_cliente varchar(255),
+   cpf_cliente varchar(11),
+   email_cliente varchar(255),
+   data_nascimento_cliente timestamp,
+   PRIMARY KEY (id_cliente)
+);
+            </code>
+
+            <h3>Tabela de elementos do form</h3>
+            <table border="1px">
+               <thead style="background: #fc0fc055;">
+                  <th>Elemento</th>
+                  <th>Atributo </th>
+                  <th>Obrigatório </th>
+                  <th>description</th>
+               </thead>
+               <tr>
+                  <td>form </td>
+                  <td>action </td>
+                  <td>yes </td>
+                  <td>URL ou nome do script, quando na mesma pasta que o arquivo HTML, que processará o documento. </td>
+               </tr>
+               <tr>
+                  <td>form </td>
+                  <td>method </td>
+                  <td>Não. O padrão é POST</td>
+                  <td>Define o método HTTP a ser utilizado para transmissão dos dados – GET ou POST.</td>
+               </tr>
+               <tr>
+                  <td>input </td>
+                  <td>name </td>
+                  <td>sim </td>
+                  <td>Contém o nome do campo que será recebido no PHP como índice associativo no array $_GET, $_POST ou $_REQUEST.</td>
+               </tr>
+               <tr>
+                  <td>button ou input </td>
+                  <td>type </td>
+                  <td>sim </td>
+                  <td>O valor “submit”, atribuído ao atributo type em um desses campos, cria o evento de envio do formulário.</td>
+               </tr>
+            </table>
+
+            <p>
+               é recomendado validar os dados a serem submetidos tanto no lado cliente, ou seja, no código HTML diretamente, com a utilização dos recursos introduzidos pela HTML5, ou através de Javascript, assim como no lado servidor. Com isso, caso a validação falhe, por algum motivo, do lado cliente, teremos a garantia de validação do lado servidor. Veremos a seguir como realizar a validação de nosso formulário nos dois ambientes – cliente e servidor.
+            </p>
+
+            <h3>Validação no lado cliente - HTML</h3>
+
+            <p>
+               é possível marcar um elemento como de preenchimento obrigatório fazendo uso do atributo required. No código do formulário, visto ao final deste módulo, os campos “Nome”, “CPF”, “Endereço de E-mail” e “Data de Nascimento” receberam esse atributo. Além disso, foram incluídas outras regras de validação: o campo CPF precisa ter exatos 11 caracteres (definidos com o uso dos atributos minlength e maxlength) e o endereço de e-mail precisa ser válido – tal validação é feita diretamente pela HTML, ao definirmos a tag < input > sendo do tipo (type) “email”.
+            </p>
+
+            <h3>Validação no lado cliente - Javascript</h3>
+
+            <code>
+function validarFormulario(formulario){
+   if(formulario.nome_cliente.value === "" || formulario.nome_cliente.value === null) {
+      alert("O campo Nome não pode ficar vazio.");
+      formulario.nome_cliente.focus();
+      return false;
+   }
+   if(formulario.cpf_cliente.value.length != 11) {
+      alert("O campo CPF precisa ter 11 caracteres.");
+      formulario.cpf_cliente.focus();
+      return false;
+   }
+   //o campo e-mail precisa ser válido, ou seja, deve : "@" e "."
+   if(formulario.email_cliente.value.indexOf("@") == -1 || formulario.email_cliente.value.indexOf(".") == -1) {
+      alert("O campo E-mail não é válido.");
+      formulario.email_cliente.focus();
+      return false;
+   }
+   if(formulario.data_nascimento_cliente.value === "" || formulario.data_nascimento_cliente.value === null) {
+      alert("O campo Data de Nascimento não pode ficar vazio.");
+      formulario.data_nascimento_cliente.focus();
+      return false;
+   }
+}
+            </code>
+
+            <h3>Codificando o script PHP que processará o formulário</h3>
+
+            <p>
+               O script PHP definido no atributo “action” da tag “form”, no arquivo HTML, é o responsável por receber os dados do formulário, validar os dados recebidos, conectar com o banco de dados e inserir as informações.
+               <br></br>
+               O atributo method, do formulário HTML, define o método HTTP utilizado para a transmissão dos dados – POST ou GET, sendo POST o valor padrão, caso esse atributo seja omitido no formulário. Para tratar os dados transmitidos por cada um desses métodos, há uma variável global pré-definida em PHP: $_POST e $_GET. Além disso, há também a variável $_REQUEST, que recebe os dados transmitidos por ambos os métodos.
+               <br></br>
+               Essas variáveis pré-definidas são, na verdade, um array associativo, cujos índices equivalem ao valor definido para o atributo name, em cada campo do formulário. Logo, se um input no formulário HTML for definido com “name=nome_cliente”, em PHP ele poderá ser lido dessa forma: $_REQUEST[‘nome_cliente’] - ou através de $_POST[‘nome_cliente’] ou $_GET[‘nome_cliente’], dependendo do método utilizado.
+            </p>
+
+            <h3>Recuperação da informação</h3>
+            <h4>Listando os dados cadastrados</h4>
+
+            <hr>
+
+            <h3>Código do formulário HTML para inserção de clientes</h3>
+
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Formulário HTML - Cadastro de Clientes
+   &lt;meta charset="utf-8"&gt;
+   &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;!-- Bootstrap --&gt;
+   &lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;div class="container"&gt;
+   &lt;div class="row"&gt;
+   &lt;div class="col-md-12"&gt;
+   &lt;form action="processa_cliente.php" method="post"&gt;
+   &lt;div class="row"&gt;
+   &lt;div class="col-md-8"&gt;
+   &lt;div class="card"&gt;
+   &lt;div class="card-header"&gt;
+   &lt;h3&gt;Cadastro de Clientes&lt;/h3&gt;
+   &lt;/div&gt;
+   &lt;div class="card-body"&gt;
+   &lt;div class="form-group"&gt;
+   &lt;label for="nome_cliente"&gt;Nome
+   &lt;input type="text" class="form-control" id="nome_cliente" name="nome_cliente" placeholder="Seu nome" required&gt;
+   &lt;/div&gt;
+   &lt;div class="form-group"&gt;
+   &lt;label for="cpf_cliente"&gt;CPF
+   &lt;input type="text" class="form-control" minlength="11" maxlength="11" id="cpf_cliente" name="cpf_cliente" placeholder="Seu CPF" title="Digite apenas números" required&gt;
+   &lt;/div&gt;
+   &lt;div class="form-group"&gt;
+   &lt;label for="email_cliente"&gt;Endereço de E-mail&lt;/label&gt;
+   &lt;input type="email" class="form-control" id="email_cliente" name="email_cliente" aria-describedby="emailHelp" placeholder="Seu e-mail" required&gt;
+   &lt;small id="emailHelp" class="form-text text-muted"&gt;Nunca vamos compartilhar seu email, com ninguém.
+   &lt;/div&gt;
+   &lt;div class="form-group"&gt;
+   &lt;label for="data_nascimento_cliente"&gt;Data de Nascimento &lt;input type="date" class="form-control" id="data_nascimento_cliente" name="data_nascimento_cliente" placeholder="Sua data de nascimento" required&gt;
+   &lt;/div&gt;
+   &lt;div class="form-group text-center"&gt;
+   &lt;button type="submit" class="btn btn-primary"&gt;Enviar
+   &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;/form&gt;
+   &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;script src="https://code.jquery.com/jquery-3.5.1.min.js"&gt;&gt;
+   &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"&gt;&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+
+            <h3>Código do formulário com validação em Javascript</h3>
+            <code>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+
+&lt;head&gt;
+   &lt;title&gt;Formulário HTML - Cadastro de Clientes
+      &lt;meta charset="utf-8"&gt;
+      &lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" /&gt;
+      &lt;script type="text/javascript"&gt;
+         function validarFormulario(formulario) {
+            //o código da função está no tópico “Validação no lado Cliente – Javascript”
+         }
+      &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+   &lt;div class="container"&gt;
+      &lt;div class="row"&gt;
+         &lt;div class="col-md-12"&gt;
+            &lt;form action="processa_cliente.php" name="form_clientes" method="post"
+               onsubmit="return validarFormulario(this);"&gt;
+               &lt;div class="row"&gt;
+                  &lt;div class="col-md-8"&gt;
+                     &lt;div class="card"&gt;
+                        &lt;div class="card-header"&gt;
+                           &lt;h3&gt;Cadastro de Clientes&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;div class="card-body"&gt;
+                           &lt;div class="form-group"&gt;
+                              &lt;label for="nome_cliente"&gt;Nome&lt;/label&gt;
+                              &lt;input type="text" class="form-control" id="nome_cliente" name="nome_cliente"
+                                 placeholder="Seu nome"&gt;
+                           &lt;/div&gt;
+                           &lt;div class="form-group"&gt;
+                              &lt;label for="cpf_cliente"&gt;CPF&lt;/label&gt;
+                              &lt;input type="text" class="form-control" id="cpf_cliente" name="cpf_cliente"
+                                 placeholder="Seu CPF" title="Digite apenas números"&gt;
+                           &lt;/div&gt;
+                           &lt;div class="form-group"&gt;
+                              &lt;label for="email_cliente"&gt;Endereço de E-mail&lt;/label&gt;
+                              &lt;input type="text" class="form-control" id="email_cliente" name="email_cliente"
+                                 placeholder="Seu e-mail"&gt;
+                           &lt;/div&gt;
+                           &lt;div class="form-group"&gt;
+                              &lt;label for="data_nascimento_cliente"&gt;Data de Nascimento&lt;/label&gt;
+                              &lt;input type="text" class="form-control" id="data_nascimento_cliente"
+                                 name="data_nascimento_cliente" placeholder="Sua data de nascimento"&gt;
+                           &lt;/div&gt;
+                           &lt;div class="form-group text-center"&gt;
+                              &lt;button type="submit" class="btn btn-primary"&gt;Enviar&lt;/button&gt;
+                           &lt;/div&gt;
+                        &lt;/div&gt;
+                     &lt;/div&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+            &lt;/form&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;script src="https://code.jquery.com/jquery-3.5.1.min.js"&gt;&lt;/script&gt;
+   &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+            </code>
+
+            <h3>Script PHP para processamento do formulário HTML</h3>
+            <code>
+&lt;?php
+/***VALIDAÇÃO DOS DADOS RECEBIDOS DO FORMULÁRIO ***/
+if($_REQUEST['nome_cliente'] == ""){
+   echo "O campo Nome não pode ficar vazio.";
+   exit;
+}
+
+if(strlen($_REQUEST['cpf_cliente']) != 11){
+   echo "O campo CPF precisa ter 11 caracteres.";
+   exit;
+}
+
+if(!stripos($_REQUEST['email_cliente'], "@") || !stripos($_REQUEST['email_cliente'],".")){
+   echo "O campo E-mail não é válido.";
+   exit;
+}
+
+if($_REQUEST['data_nascimento_cliente'] == ""){
+   echo "O campo Data de Nascimento não pode ficar vazio.";
+   exit;
+}
+/***FIM DA VALIDAÇÃO DOS DADOS RECEBIDOS DO FORMULÁRIO ***/
+
+
+/***CONEXÃO COM O BD ***/
+//Constantes para armazenamento das variáveis de conexão.
+define('HOST', '192.168.52.128');
+define('PORT', '5432');
+define('DBNAME', 'minimundo');
+define('USER', 'postgres');
+define('PASSWORD', '159753');
+
+try {
+   $dsn = new PDO("pgsql:host=". HOST . ";port=".PORT.";dbname=" . DBNAME .";user=" . USER . ";password=" . PASSWORD);
+} catch (PDOException $e) {
+   echo 'A conexão falhou e retorno a seguinte mensagem de erro: ' .$e-&gt;getMessage();
+}
+/*** FIM DOS CÓDIGOS DE CONEXÃO COM O BD ***/
+
+
+/***PREPARAÇÃO E INSERÇÃO NO BANCO DE DADOS ***/
+$stmt = $dsn-&gt;prepare("INSERT INTO 
+                     cliente(nome_cliente, cpf_cliente, email_cliente, data_nascimento_cliente)
+                     VALUES (?, ?, ?, ?)
+                  ");
+
+$resultSet = $stmt-&gt;execute([$_REQUEST['nome_cliente'], $_REQUEST['cpf_cliente'], $_REQUEST['email_cliente'], $_REQUEST['data_nascimento_cliente']]);
+
+if($resultSet){
+   echo "Os dados foram inseridos com sucesso.";
+}else{
+   echo "Ocorreu um erro e não foi possível inserir os dados.";
+}
+
+//Destruindo o objecto statement e fechando a conexão
+$stmt = null;
+$dsn = null;
+            </code>
+
+            <h3>Script PHP para listagem de clientes</h3>
+            <code>
+&lt;?php
+/***CONEXÃO COM O BD ***/
+//O código de validação server side pode ser visto no exemplo de código 3.
+//Constantes para armazenamento das variáveis de conexão.
+define('HOST', '192.168.52.128');
+define('PORT', '5432');
+define('DBNAME', 'minimundo');
+define('USER', 'postgres');
+define('PASSWORD', '159753');
+try {
+   $dsn = new PDO("pgsql:host=". HOST . ";port=".PORT.";dbname=" . DBNAME .";user=" . USER . ";password=" . PASSWORD);
+} catch (PDOException $e) {
+   echo 'A conexão falhou e retorno a seguinte mensagem de erro: ' .$e-&gt;getMessage();
+}
+/***PREPARAÇÃO E INSERÇÃO NO BANCO DE DADOS ***/
+$instrucaoSQL = "Select id_cliente, nome_cliente, cpf_cliente, email_cliente,data_nascimento_cliente From cliente";
+$resultSet = $dsn-&gt;query($instrucaoSQL);
+?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+   &lt;title&gt;Formulário HTML - Cadastro de Clientes&lt;/title&gt;
+   &lt;meta charset="utf-8"&gt;
+   &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;!-- Bootstrap --&gt;
+   &lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+   &lt;div class="container"&gt;
+      &lt;div class="row"&gt;
+         &lt;div class="col-md-12"&gt;
+            &lt;div class="row"&gt;
+               &lt;div class="col-md-8"&gt;
+                  &lt;div class="card"&gt;
+                     &lt;div class="card-header"&gt;
+                        &lt;h3&gt;Listagem de Clientes&lt;/h3&gt;
+                     &lt;/div&gt;
+                     &lt;div class="card-body"&gt;
+                        &lt;table class="table"&gt;
+                           &lt;thead class="thead-dark"&gt;
+                              &lt;tr&gt;
+                                 &lt;th scope="col"&gt;#&lt;/th&gt;
+                                 &lt;th scope="col"&gt;Nome&lt;/th&gt;
+                                 &lt;th scope="col"&gt;CPF&lt;/th&gt;
+                                 &lt;th scope="col"&gt;E-mail&lt;/th&gt;
+                                 &lt;th scope="col"&gt;Data de Nascimento&lt;/th&gt;
+                              &lt;/tr&gt;
+                           &lt;/thead&gt;
+                           &lt;tbody&gt;
+                              &lt;?php
+   while ($row = $resultSet-&gt;fetch(PDO::FETCH_ASSOC)):
+   ?&gt;
+                              &lt;tr&gt;
+                                 &lt;th scope="row"&gt;
+                                    &lt;?php echo $row['id_cliente']; ?&gt;
+                                 &lt;/th&gt;
+                                 &lt;td&gt;
+                                    &lt;?php echo $row['nome_cliente']; ?&gt;
+                                 &lt;/td&gt;
+                                 &lt;td&gt;
+                                    &lt;?php echo preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "\$1.\$2.\$3-\$4",$row['cpf_cliente']); ?&gt;
+                                 &lt;/td&gt;
+                                 &lt;td&gt;
+                                    &lt;?php echo $row['email_cliente']; ?&gt;
+                                 &lt;/td&gt;
+                                 &lt;td&gt;
+                                    &lt;?php echo date('d/m/Y', strtotime($row['data_nascimento_cliente'])); ?&gt;
+                                 &lt;/td&gt;
+                              &lt;/tr&gt;
+                              &lt;?php
+   endwhile;
+   ?&gt;
+                           &lt;/tbody&gt;
+                        &lt;/table&gt;
+                     &lt;/div&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;script src="https://code.jquery.com/jquery-3.5.1.min.js"&gt;&lt;/script&gt;
+   &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+            </code>
+
+            
+
+         </modulo>
+         
+         &#9776;
+      </main>
+      
+      <script type="module">
+         // import AppBar from "../../Components/AppBar.js";
+
+         
+         AppBar();
+      </script>
+   </body>
+</html>
+
