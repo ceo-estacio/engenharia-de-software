@@ -140,7 +140,7 @@ appbar {
 homepage {
    display: flex;
    flex-direction: column;
-   padding: 1em 0;
+   /* padding: 1em 0; */
    gap: 1rem;
    /* background: var(--main-c); */
 }
@@ -209,8 +209,9 @@ video {
 }
 
 [tag] { padding: 0 1ch; background: #f555; }
+[gap] { gap: 2em; }
 
-[capa] {
+[capa], [cover] {
    background-size: cover;
    background-repeat: no-repeat;
    width: 100%;

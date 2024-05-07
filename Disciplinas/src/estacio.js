@@ -1,11 +1,18 @@
 
 
 addEventListener( "load", () => {
+
+   /* == [ [capa] ]
+   == == == == == == == == == */
    $$( "[capa]" ).forEach(
-      cp => {
+      cp => { return(
          cp.style.backgroundImage = `
             url( "${ cp.getAttribute( "capa" ) }" )
-         `;
-      }
+         `
+      ); }
    );
+
+
+   /* == [  ]
+   == == == == == == == == == */
 } );

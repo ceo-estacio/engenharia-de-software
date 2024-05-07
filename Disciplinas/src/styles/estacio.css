@@ -13,9 +13,9 @@ homepage {
    display: flex;
    flex-direction: column;
    flex: 1;
-   width: calc( 100% - 64px );
+   /* width: calc( 100% - 64px ); */
    height: 100%;
-   margin-left: auto;
+   /* margin-left: auto; */
    background: #1e222a;
    background: #212329;
    border-radius: 1.5em;

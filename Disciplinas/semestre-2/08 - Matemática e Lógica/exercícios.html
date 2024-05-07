@@ -8,12 +8,14 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="../src/styles/globals.css">
-      <script src="../src/lib/clb.js" defer></script>
-      <script src="../src/Widgets/AppBar.js" defer></script>
-      <script src="../src/Widgets/Drawer.js" defer></script>
+      <link rel="stylesheet" href="../../src/styles/globals.css">
+      <link rel="stylesheet" href="../../src/styles/estacio.css">
+      <script src="../../src/lib/clb.js" defer></script>
+      <script src="../../src/estacio.js" defer></script>
+      <script src="../../src/Widgets/AppBar.js" defer></script>
+      <script src="../../src/Widgets/Drawer.js" defer></script>
       <!-- StyleSheet js -->
-      <script src="../src/StyleSheet.js" defer></script>
+      <script src="../../src/StyleSheet.js" defer></script>
       <style>
       </style>
    </head>
@@ -25,9 +27,548 @@
          <header>
             <h3>Exercícios</h3>
          </header>
-         (tema[n="$"]>sub-header{Tema $: }^(exercicio[n="$"]>header>n{$}^p+respostas>resposta^^{})*10)*10
+         <page>
+            <header>
+               <sheet>
+                  <b>
+                     Tema 2: 
+                  </b>
+                  Teoria Dos Conjuntos e Princípios de Contagem
+               </sheet>
+            </header>
+            <sheet gap>
+               <exercicio n="1">
+                  <header>
+                     <n>1</n>
+                  </header>
+                  <p>
+                     1. Se Q designa o conjunto dos números racionais e A = { 1; 3; -4; 2/3; 0,111...; π(pi) }, podemos afirmar que A ∩ Q é igual a:
+                  </p>
+                  <resposta>
+                     { 1; 3; −4; ²/3; 0,111... }
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="2">
+                  <header>
+                     <n>2</n>
+                  </header>
+                  <p>
+                     Assinale a opção que corresponde à representação explícita dos conjuntos:
+<br>
+A ={x ∈ Z | x² ≤ 1} e {x ∈ R | x² < 4}
+                  </p>
+                  <resposta>
+                     A = { −1; 0; 1 } e B = ] −2; 2 [.
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="3">
+                  <header>
+                     <n>3</n>
+                  </header>
+                  <p>
+                     Considere as seguintes igualdades, em que A, B e C são conjuntos arbitrários:
+                     <br>A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+                     <br>A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+                     <br>(A − B) ∪ C = A − (B ∩ C)
+                     <br>Das afirmativas realizadas acima estão corretas:
+                  </p>
+                  <resposta>
+                     Apenas (1) e (2)
+                  </resposta>
+                  <br>
+                  <img src="./assets/imgs/ft_base14.jpg" w-s alt="">
+               </exercicio>
+               
+               <exercicio n="4">
+                  <header>
+                     <n>4</n>
+                  </header>
+                  <p>
+                     Considerando os conjuntos X = {x ∈ Z | 2x − 4 > 3} e Y = {x ∈ Z | 3x − 5 > 11}, podemos afirmar que X ∩ Y vale:
+                  </p>
+                  <resposta>
+                     { 4; 5 }
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="5">
+                  <header>
+                     <n>5</n>
+                  </header>
+                  <p>
+                     Considere o conjunto A = {x ∈ R| −4 < x < 5}. Então, o conjunto B = {x² | x ∈ X} vale:
+                  </p>
+                  <resposta>
+                     [ 0; 25 [
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="6">
+                  <header>
+                     <n>6</n>
+                  </header>
+                  <p>
+                     A solução da inequação |x − 3| < 5, no universo dos números reais, pode ser expressa pelo intervalo:
+                  </p>
+                  <resposta>
+                     ] −2; 8 [
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="7">
+                  <header>
+                     <n>7</n>
+                  </header>
+                  <p>
+                     Se somarmos todos os números reais do intervalo ] −2; 5 ] com todos os números do intervalo [ 1; 7 [ qual conjunto obtemos?
+                  </p>
+                  <resposta>
+                     ] -1; 12 [
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="8">
+                  <header>
+                     <n>8</n>
+                  </header>
+                  <p>
+                     DADOS OS CONJUNTOS A = { 1, 3, 5 } E B = { 3; 5; 7 } QUANTOS ELEMENTOS POSSUI O CONJUNTO (A − B) ∪ (B − A).
+                  </p>
+                  <resposta>
+                     2
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="9">
+                  <header>
+                     <n>9</n>
+                  </header>
+                  <p>
+                     Quantas senhas com algarismos diferentes podem ser formadas com no mínimo 4 e no máximo 6 dígitos, usando os algarismos de 0 a 9?
+                  </p>
+                  <resposta>
+                     186.480
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="10">
+                  <header>
+                     <n>10</n>
+                  </header>
+                  <p>
+                     Dado o conjunto A = { 1, 3, 5; 7; 9 }, quantos são os subconjuntos de A, com 2 elementos, mas que não possuem o número 5?
+                  </p>
+                  <resposta>
+                     6
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="11">
+                  <header>
+                     <n>11</n>
+                  </header>
+                  <p>
+                     Em um saco com 50 bolas, 20 são azuis e 30 são verdes. Qual o menor número de bolas que devemos retirar do saco para garantirmos que retiramos pelo menos duas bolas azuis?
+                  </p>
+                  <resposta>
+                     32
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="12">
+                  <header>
+                     <n>12</n>
+                  </header>
+                  <p>
+                     Quantos são os anagramas da palavra ALFREDO?
+                  </p>
+                  <resposta>
+                     7!
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="13">
+                  <header>
+                     <n>13</n>
+                  </header>
+                  <p>
+                     Se as placas de carro de um país são formadas por 2 letras distintas, seguidas de 4 algarismos, também diferentes, quantas são as possíveis placas?
+                  </p>
+                  <resposta>
+                     26 × 25 × 10 × 9 × 8 × 7.
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="14">
+                  <header>
+                     <n>14</n>
+                  </header>
+                  <p>
+                     Utilizando os algarismos de 1 a 8, quantos números pares podemos formar de 4 algarismos distintos?
+                  </p>
+                  <resposta>
+                     4 × 7 × 6 × 5 = 840
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="15">
+                  <header>
+                     <n>15</n>
+                  </header>
+                  <p>
+                     Os artigos em uma loja são codificados da forma que se segue: Três letras maiúsculas diferentes e consecutivas, seguidas de um hífen; mais 6 algarismos quaisquer (de 0 a 6); mais um hífen e, finalmente, mais uma letra qualquer do alfabeto.
+                     <br>Considere, como exemplo, o conjunto de códigos: {AHD-4193678-K, GEQ-093044-Q, AAA-9497-X}.
+                     <br>Qual o número total de produtos que podem ser codificados dessa maneira?
+                  </p>
+                  <resposta>
+                     262 × 25 × 24 × 76
+                  </resposta>
+               </exercicio>
+
+               <exercicio n="b*1">
+                  <header>
+                     <n>1</n>
+                  </header>
+                  <p>
+                     Dado o conjunto A = { a; b; c; d; e; f; g }, quantos são os subconjuntos de A que não possuem os objetos a e b mas necessariamente possuem os objetos f e g?
+                  </p>
+                  <resposta>
+                     8
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="b*2">
+                  <header>
+                     <n>2</n>
+                  </header>
+                  <p>
+                     Quantos são os anagramas da palavra ARRANJO?
+                  </p>
+                  <resposta>
+                     1260
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="b*3">
+                  <header>
+                     <n>3</n>
+                  </header>
+                  <p>
+                     Determine de quantas maneiras posso construir senhas de exatamente 4 caracteres, a partir exclusivamente das 26 letras minúsculas, dos 10 algarismos, e dos 3 símbolos especiais @, # e &?
+                  </p>
+                  <resposta>
+                     39e4
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="b*4">
+                  <header>
+                     <n>4</n>
+                  </header>
+                  <p>Numa padaria, há 10 tipos de biscoitos doces e 7 tipos de biscoitos salgados. Você deseja comprar 4 pacotes de biscoito doce e 3 pacotes de biscoito salgado. Se você poderá comprar pacotes iguais de biscoitos, de quantas maneiras os 7 pacotes de biscoitos que você pretende comprar podem ser escolhidos?</p>
+                  <resposta>CR104 × CR73</resposta>
+               </exercicio>
+               
+               <exercicio n="b*5">
+                  <header>
+                     <n>5</n>
+                  </header>
+                  <p>Desejamos arrumar 5 livros de Probabilidade, 7 livros de Cálculo e 8 de Álgebra linear em uma prateleira de uma estante, de tal forma que livros sobre o mesmo assunto fiquem juntos. Quantas são as formas de arrumá-los?</p>
+                  <resposta>3! × 5! × 7! × 8!
+
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="b*6">
+                  <header>
+                     <n>6</n>
+                  </header>
+                  <p>Vamos retornar à análise de problemas de contagem priorizando a estratégia mais importante, o Princípio da Multiplicação, ao invés dos agrupamentos.
+                     “Numa eleição para um clube, um grupo de 20 amigos deseja formar uma chapa para se candidatar, sendo necessário um nome para presidente, outro para vice-presidente e outro para diretor tesoureiro, sendo que tais cargos não podem ser preenchidos pela mesma pessoa. No estatuto do clube há uma restrição quanto à escolha do tesoureiro, que deve ser um contador. Sabendo-se que no grupo de amigos há apenas 4 contadores, quantas chapas diferentes podem ser formadas pelos amigos?</p>
+                  <resposta>4 × 19 × 18</resposta>
+               </exercicio>
+               
+               <exercicio n="b*7">
+                  <header>
+                     <n>7</n>
+                  </header>
+                  <p>Quantos subconjuntos possui um conjunto com 7 elementos?</p>
+                  <resposta>128</resposta>
+               </exercicio>
+               
+               <exercicio n="b*8">
+                  <header>
+                     <n>8</n>
+                  </header>
+                  <p>Quantos são os anagramas da palavra ANAGRAMA?</p>
+                  <resposta>8! ÷ 4!</resposta>
+               </exercicio>
+               
+               <exercicio n="b*9">
+                  <header>
+                     <n>9</n>
+                  </header>
+                  <p>Um grupo de 10 crianças forma uma roda para brincar da dança das cadeiras. De quantas maneiras diferentes essas crianças podem formar a roda inicial?</p>
+                  <resposta>10! ÷ 10</resposta>
+               </exercicio>
+               
+               <exercicio n="b*10">
+                  <header>
+                     <n>10</n>
+                  </header>
+                  <p>Considere os intervalos a seguir:
+                     <br>
+                     <img src="./assets/imgs/img-5.jpg" alt="" w-s="">
+                  </p>
+                  <resposta>
+                     {x ∈ R; −1 < x ≤ 5} e {x ∈ R; 0,5 ≤ x < 3,14}
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="b*11">
+                  <header>
+                     <n>11</n>
+                  </header>
+                  <p>
+                     Veja, a seguir, o desempenho de um corredor durante uma competição dos 100 metros rasos. A reta em questão mostra a marcação da distância na pista e, a cada 10 metros, é apresentado o desempenho do corredor em comparação à sua velocidade máxima.
+                     <br>
+                     <img src="./assets/imgs/img-6.jpg" alt="" w-s="">
+                  </p>
+                  <resposta>[ 50, 80 ]</resposta>
+               </exercicio>
+               
+               <exercicio n="b*12">
+                  <header>
+                     <n>12</n>
+                  </header>
+                  <p>
+                     A figura abaixo apresenta um gráfico de setores de uma cidade. Esses setores foram divididos de A a H, e de 0 a 3, assim a identificação de um setor pode ser feita da seguinte forma, como exemplo: A0, B3, F2 etc. Considere que todos os setores foram divididos em áreas iguais (considere os retângulos idênticos), e que existe a necessidade de se realizar uma entrega que saia de B0 e chegue em G0. O gráfico abaixo apresentam duas rotas para que seja realizada a entrega.
+                     <br>
+                     <img src="./assets/imgs/Screenshot from 2024-05-06 21-13-13.png" alt="" w-s="">
+                     <br>
+                     Após observar essas rotas, analise as afirmativas abaixo:
+<br>
+<br>                     A rota vermelha é a mais longa
+<br>                     A rota verde é a mais curta
+<br>                     A rota vermelha é a mais adequada
+<br>                     Sabendo que a entrega deve ser feita o mais rápido possível, percorrendo a menor distância permitida, assinale a opção correta, sobre a veracidade das afirmações acima:
+                  </p>
+                  <resposta>
+                     v, v, f
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="b*13">
+                  <header>
+                     <n>13</n>
+                  </header>
+                  <p>
+                     No gráfico abaixo é mostrada a relação da altura de 7 indivíduos, com sua idade:
+                     <br>
+                     <img src="./assets/imgs/img-13.jpg" alt="" w-s="">
+                     <br>
+                     Após observar o gráfico, assinale a opção que apresenta, respectivamente, o indivíduo de maior idade e o indivíduo de maior altura.
+                  </p>
+                  <resposta>
+                     A e C
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="b*14">
+                  <header>
+                     <n>14</n>
+                  </header>
+                  <p>
+                     Qual das opções a seguir não apresenta um gráfico de função?
+                     <br>
+                     <img src="./assets/imgs/img-23.jpg" alt="" w-s="">
+                     <br>
+                     Marque a opção correta:
+                  </p>
+                  <resposta>
+                     c
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="b*15">
+                  <header>
+                     <n>15</n>
+                  </header>
+                  <p>
+                     Em 2020, houve uma pandemia global provocada pelo vírus SARS-CoV-2. Tal pandemia trouxe danos incalculáveis às economias globais e provocou milhares de mortes pelo mundo inteiro. O estudo do epidemiologista Neil Ferguson, do Imperial College, apresentou um gráfico mostrando requisitos de leito de cuidados intensivos (UTI) por 100 mil habitantes em diferentes cenários:
+                     <br>
+                     <img src="./assets/imgs/img-24.jpg" alt="" w-s="">
+                     <br>
+                     Assinale a alternativa correta:
+                  </p>
+                  <resposta>
+                     O sistema de saúde inglês volta ao normal em todos os cenários em agosto.
+                  </resposta>
+               </exercicio>
+               
+               
+               <exercicio n="1">
+                  <header>
+                     <n>1</n>
+                  </header>
+                  <p>
+                     O gráfico abaixo apresenta a taxa de desemprego de 2013.
+                     <br>
+                     <img src="./assets/imgs/img-28.jpg" alt="" w-s="">
+                     <br>
+                     Em quais meses há o maior índice de desemprego e o menor índice?
+                  </p>
+                  <resposta>
+                     Maior índice: fevereiro; menor índice: setembro.
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="2">
+                  <header>
+                     <n>2</n>
+                  </header>
+                  <p>O gráfico a seguir mostra o nível de água em um reservatório durante o ano de 2015.
+
+                     Se os níveis de água no reservatório dependem dos níveis de chuva na região, assinale, respectivamente, os meses do ano em que mais choveu e em que menos choveu no ano de 2015.
+                     <br>
+                     <img src="./assets/imgs/img-29.jpg" alt="" w-s="">
+                  </p>
+                  <resposta>Fevereiro e Setembro</resposta>
+               </exercicio>
+               
+               <exercicio n="3">
+                  <header>
+                     <n>3</n>
+                  </header>
+                  <p>(PETROBRAS - 2008) Considere que f é uma função definida do conjunto D em R por: ƒ(x) = x² − 4x + 8. Sendo Im a imagem de f, é correto afirmar que, se:</p>
+                  <resposta>D = [0; 2], então Im(ƒ) = [4; 8]</resposta>
+               </exercicio>
+               
+               <exercicio n="4">
+                  <header>
+                     <n>4</n>
+                  </header>
+                  <p>
+                     Considere a função f(x) = 120x ÷ (300−x). Podemos afirmar que o domínio da função f é:
+                  </p>
+                  <resposta>
+                     Todo número real x, exceto x = 300.
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="5">
+                  <header>
+                     <n>5</n>
+                  </header>
+                  <p>Considere a função bijetora ƒ: [1,+ ∞) → (−∞, 3] definida por ƒ(x) = −x² + 2x + 2 e seja (a, b) o ponto de interseção de ƒ com sua inversa ƒ−1. O valor numérico da expressão a + b é:</p>
+                  <resposta>4</resposta>
+               </exercicio>
+               
+               <exercicio n="6">
+                  <header>
+                     <n>6</n>
+                  </header>
+                  <p>
+                     Considere a função ƒ:[−1, 2] → R, dada por:
+                     <br>
+                     <img src="./assets/imgs/Screenshot from 2024-05-06 22-15-22.png" alt="" w-s="">
+                     <br>
+                     Nestas condições, é correto afirmar que:
+                  </p>
+                  <resposta>Im(ƒ) = [0, 1].</resposta>
+               </exercicio>
+               
+               <exercicio n="7">
+                  <header>
+                     <n>7</n>
+                  </header>
+                  <p>
+                     (Adaptada de: UFPE - 2017) No gráfico a seguir, temos o nível da água armazenada em uma barragem ao longo de três anos:
+                     <br>
+                     <img src="./assets/imgs/43.jpg" alt="" w-s="">
+                     <br>
+                     De acordo com o gráfico, podemos afirmar que:
+                  </p>
+                  <resposta>O nível de 40m foi atingido 2 vezes nesse período.</resposta>
+               </exercicio>
+               
+               <exercicio n="8">
+                  <header>
+                     <n>8</n>
+                  </header>
+                  <p>
+                     Uma função ƒ : R+ → R+ é crescente e satisfaz a seguinte condição: ƒ(3x) = 3ƒ(x), para todo x ∈ R+.
+                     <br>
+                     Se ƒ(9) = 27, qual o valor de ƒ(1)?
+                  </p>
+                  <resposta>
+                     3
+                  </resposta>
+               </exercicio>
+               
+               <exercicio n="9">
+                  <header>
+                     <n>9</n>
+                  </header>
+                  <p>Sendo ƒ: R → R uma função periódica de período 2, podemos afirmar que:</p>
+                  <resposta>A função g(x) = ƒ(2x) é periódica de período 1.</resposta>
+               </exercicio>
+               
+               <exercicio n="10">
+                  <header>
+                     <n>10</n>
+                  </header>
+                  <p>Considere que a função ƒ : [4, +∞[→ [−3, 7] seja periódica com período 6 e seja estritamente crescente no intervalo [4, 10]. Logo, podemos afirmar que:</p>
+                  <resposta>ƒ(18) = ƒ(24) e ƒ(28) < ƒ(27)</resposta>
+               </exercicio>
+               
+               <exercicio n="11">
+                  <header>
+                     <n>11</n>
+                  </header>
+                  <p></p>
+                  <resposta></resposta>
+               </exercicio>
+               
+               <exercicio n="12">
+                  <header>
+                     <n>12</n>
+                  </header>
+                  <p></p>
+                  <resposta></resposta>
+               </exercicio>
+               
+               <exercicio n="13">
+                  <header>
+                     <n>13</n>
+                  </header>
+                  <p></p>
+                  <resposta></resposta>
+               </exercicio>
+               
+               <exercicio n="14">
+                  <header>
+                     <n>14</n>
+                  </header>
+                  <p></p>
+                  <resposta></resposta>
+               </exercicio>
+               
+               <exercicio n="15">
+                  <header>
+                     <n>15</n>
+                  </header>
+                  <p></p>
+                  <resposta></resposta>
+               </exercicio>
+               
+            </sheet>
+         </page>
       </homepage>
       
+      <!-- (exercicio[n="$"]>header>n{$}^p+resposta^{})*15 -->
       <script type="module">
          // import AppBar from "../../Components/AppBar.js";
 
