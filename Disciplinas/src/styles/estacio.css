@@ -41,3 +41,31 @@ competencias {
 competencias > * {
    flex: 1 0 40%;
 }
+
+
+
+
+
+
+
+/* == [ solução tables ]
+== == == == == == == == == */
+solucao table {
+   width: clamp(100px, 100%, 350px);
+   margin: 1rem auto;
+}
+
+solucao thead > tr > th {
+   background: #282a36;
+}
+
+solucao tr > th {
+   background: #156;
+}
+
+solucao td {
+   background: aqua;
+   color: #18161c;
+   text-transform: uppercase;
+}
+
