@@ -21,6 +21,10 @@ homepage {
    border-radius: 1.5em;
 }
 
+progress {
+   width: 100%;
+}
+
 card[estacio], [card-estacio] {
    display: flex;
    flex-direction: column;
