@@ -11,3 +11,15 @@ const CLB = [
 ];
 
 // export default CLB;
+
+addEventListener( "load", () => {
+
+   $$( "navlink" ).forEach( link => {
+      link.outerHTML = `<p>
+         <a href="${ link.getAttribute( "to" ) }" target="_blank">
+            ${ link.innerText }
+         </a>
+      </p>`;
+   } );
+
+} );

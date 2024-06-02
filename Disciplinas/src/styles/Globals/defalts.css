@@ -189,3 +189,10 @@ template {
 [hidden] {
    display: none;
 }
+
+/* == [ mídias ]
+== == == == == == == == == */
+vid {
+   width: 100%;
+   aspect-ratio: 16 / 9;
+}

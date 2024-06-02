@@ -480,3 +480,14 @@ es-card > content {
    gap: 0;
    padding: 1em;
 }
+
+
+/* == [ mídias ]
+== == == == == == == == == */
+vid {
+   width: 100%;
+   aspect-ratio: 16 / 9;
+} vid > iframe {
+   width: 100%;
+   height: 100%;
+}
