@@ -7,6 +7,11 @@
 body {
    min-height: calc( 100dvh - 72px );
    height: 100%;
+   background: #1b1d22;
+}
+
+appbar {
+   background: #1b1d22;
 }
 
 homepage {

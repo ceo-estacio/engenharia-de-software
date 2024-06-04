@@ -10,7 +10,7 @@ function SideBar( props ) {
       return( d.innerHTML = `
          <style>
             sidebar {
-               //display: none;
+               display: none;
                flex-direction: column;
                width: 64px;
                height: 100dvh;
