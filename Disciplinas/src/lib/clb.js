@@ -67,5 +67,11 @@ window.addEventListener( "load", ev => {
    $$( "[gap]" ).forEach( g => {
       g.style.gap = g.getAttribute( "gap" );
    } );
+   
+   /* == [ aspect ratio ] 
+   == == == == == == == == == */
+   $$( "[ratio]" ).forEach( ratio => {
+      ratio.style.aspectRatio = ratio.getAttribute( "ratio" );
+   } );
 
 } );
