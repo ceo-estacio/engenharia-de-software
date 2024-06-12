@@ -158,9 +158,22 @@ t4, ct4 { font-size: 1.25em; }
 t5, ct5 { font-size: 1.15em; }
 t6, ct6 { font-size: 1em; }
 
-ul, ol {
+ul, ol, list {
+   /* display: block; */
+   display: flex ;
+   flex-direction: column;
    margin: 1em 0;
    padding-left: 2.2em;
+   unicode-bidi: isolate;
+   gap: 1rem;
+}
+ol { list-style-type: decimal; }
+ul { list-style-type: disc; }
+list > li {
+   list-style: none;
+}
+li {
+
 }
 
 dl {
